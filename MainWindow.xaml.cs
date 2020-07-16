@@ -23,6 +23,7 @@ namespace AgroVeterinaria
         public MainWindow()
         {
             /*Constructor*/
+            /*Este comentario es para ver si anna no esta bugueada xd*/
             InitializeComponent();
         }
     }

@@ -6,4 +6,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="BLL\" />
+    <Folder Include="DAL\" />
+    <Folder Include="Entidades\" />
+    <Folder Include="DATA\" />
+    <Folder Include="UI\Consulta\" />
+    <Folder Include="UI\Registros\" />
+    <Folder Include="UI\Reportes\" />
+  </ItemGroup>
+
 </Project>

@@ -22,6 +22,7 @@ namespace AgroVeterinaria
     {
         public MainWindow()
         {
+            /*Constructor*/
             InitializeComponent();
         }
     }

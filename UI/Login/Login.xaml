@@ -35,32 +35,32 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,20" Width="250">
                 <Image Source="/UI/Login/name_user_3716.png" Height="25" Width="60"></Image>
-                <TextBox FontFamily=" helvetica"
+                <Label FontFamily=" helvetica"
                              FontWeight="Light"
-                             Text="Usuario"
-                             FontSize="20" Height="20"
+                             Content="Usuario"
+                             FontSize="20" Height="30"
                              Background="Transparent" Width="100"/>
             </StackPanel>
             <StackPanel>
-                <TextBox x:Name="UsuarioNameTextBox" Width="125" Height="20"/>
+                <TextBox x:Name="UsuarioNameTextBox" Width="150" Height="25"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="250">
                 <Image Source="/UI/Login/icons8-contraseña-1-50.png" Height="33" Width="60" Opacity="0.75"></Image>
-                <TextBox FontFamily=" helvetica"
+                <Label FontFamily=" helvetica"
                              FontWeight="Light"
-                             Text="Contraseña"
-                             FontSize="20" Height="25"
+                             Content="Contraseña"
+                             FontSize="20"
                              Background="Transparent" Width="150"/>
             </StackPanel>
 
             <StackPanel Margin="0,20,0,20">
 
-                <PasswordBox x:Name="ClaveTextBox" Width="125" Height="20"/>
+                <PasswordBox x:Name="ClaveTextBox" Width="150" Height="25"/>
 
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="225">
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="224" Height="35">
                 <Button x:Name="IniciarButton" Width="100" Click="IniciarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/UI/Login/icons8-comprobado-100.png" Height="25" Width="35"></Image>

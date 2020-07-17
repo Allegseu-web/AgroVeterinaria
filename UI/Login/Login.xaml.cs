@@ -21,5 +21,15 @@ namespace AgroVeterinaria.UI.Login
         {
             InitializeComponent();
         }
+
+        private void ClaveTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void UsuarioNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

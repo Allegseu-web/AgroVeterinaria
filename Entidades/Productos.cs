@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgroVeterinaria.Entidades
 {
-    class Productos
+    public class Productos
     {
         [Key]
         public int ProductoId { get; set; }
@@ -22,6 +22,6 @@ namespace AgroVeterinaria.Entidades
         public int UsuarioId { get; set; }
 
         [ForeignKey("ProductoId")]
-        public virtual List<ProductosDetalle> DetallesProducto { get; set; } = new List<ProductosDetalle>();
+        public virtual List<ProductosDetalle> ProductosDetalles { get; set; } = new List<ProductosDetalle>();
     }
 }

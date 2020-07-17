@@ -9,6 +9,12 @@ namespace AgroVeterinaria.DAL
     class Contexto : DbContext
     {
         public DbSet <Usuarios> Usuarios { get; set; }
+        public DbSet <Direcciones> Direcciones { get; set; }
+        public DbSet <Compras> Compras { get; set; }
+        public DbSet <Productos> Productos { get; set; }
+        public DbSet <Monedas> Monedas { get; set; }
+        public DbSet <Suplidores> Suplidores { get; set; }
+        public DbSet <Unidades> Unidades { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source= DATA/DataBase.db");
@@ -19,10 +25,10 @@ namespace AgroVeterinaria.DAL
             modelBuilder.Entity<Usuarios>().HasData(new Entidades.Usuarios
             {
                 UsuarioId = 1,
-                Clave = "HolaMundo",
+                Clave = "123456",
                 FechaCreacion = DateTime.Now,
                 Nombres = "Admin",
-                NivelUsuario = "Null",
+                NivelUsuario = "Administrador",
                 Email = "Admin@admin.com",
                 NombreUsuario = "Administrador"
             });

@@ -9,7 +9,7 @@ namespace AgroVeterinaria.DAL
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("DATA SOURCE=DATA/DATABASE.db");
+            optionsBuilder.UseSqlite("Data Source= DATA/DataBase.db");
         }
     }
 }

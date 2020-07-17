@@ -22,12 +22,12 @@ namespace AgroVeterinaria.UI.Login
             InitializeComponent();
         }
 
-        private void ClaveTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void CancelarBotton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
-        private void UsuarioNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void IniciarButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

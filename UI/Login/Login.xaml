@@ -5,16 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Login"
         mc:Ignorable="d"
-        Title="Login" Height="475" Width="380"
+        Title="Login" Height="475" Width="400"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize">
     <Grid>
         <Grid Margin="-29,-5,29,5">
             <Grid.RowDefinitions>
-                <RowDefinition>
-                </RowDefinition>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Border CornerRadius="10" Grid.Row="2">
+            <Border CornerRadius="10" Margin="0,10,10,0" HorizontalAlignment="Right" Width="370">
                 <Border.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#7be9f6" Offset="0.0"/>
@@ -24,7 +23,7 @@
 
 
                 </Border.Background>
-                
+
             </Border>
             <StackPanel Orientation="Vertical">
                 <StackPanel VerticalAlignment="Center" Margin="0,10,0,0">
@@ -34,47 +33,42 @@
                                FontFamily="Georgia" Width="105"
                                Foreground="Black"
                                HorizontalAlignment="Center"/>
-                    <Label x:Name="label" Content="Label" Height="16" Width="22" >
-                        <Label.Background>
-                            <ImageBrush ImageSource="/UI/Login/name_user_3716.png"/>
-                        </Label.Background>
-                    </Label>
                 </StackPanel>
-                <StackPanel Margin="0,30,0,30">
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,20" Width="250">
+                    <Image Source="/UI/Login/name_user_3716.png" Height="25" Width="60"></Image>
                     <TextBox FontFamily=" helvetica"
                              FontWeight="Light"
                              Text="Usuario"
-                             FontSize="20"
-                             HorizontalAlignment="Center" Height="20"
-                             Background="Transparent"/>
+                             FontSize="20" Height="20"
+                             Background="Transparent" Width="100"/>
                 </StackPanel>
                 <StackPanel>
-                    <TextBox x:Name="UsuarioNameTextBox" Width="110" Height="20" TextChanged="UsuarioNameTextBox_TextChanged"/>
+                    <TextBox x:Name="UsuarioNameTextBox" Width="125" Height="20"/>
                 </StackPanel>
 
-                <StackPanel Margin="0,30,0,10">
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="250">
+                    <Image Source="/UI/Login/icons8-contraseña-1-50.png" Height="33" Width="60" Opacity="0.75"></Image>
                     <TextBox FontFamily=" helvetica"
                              FontWeight="Light"
                              Text="Contraseña"
-                             FontSize="20"
-                             HorizontalAlignment="Center" Height="20"
-                             Background="Transparent"/>
+                             FontSize="20" Height="25"
+                             Background="Transparent" Width="150"/>
                 </StackPanel>
 
-                <StackPanel Margin="0,30,0,0">
+                <StackPanel Margin="0,20,0,20">
 
-                    <TextBox x:Name="ClaveTextBox" Width="110" Height="20" TextChanged="ClaveTextBox_TextChanged"/>
+                    <PasswordBox x:Name="ClaveTextBox" Width="125" Height="20"/>
 
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
-                    <Button Margin="75,0,0,0" Width="100">
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="225">
+                    <Button x:Name="IniciarButton" Width="100" Click="IniciarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/UI/Login/icons8-comprobado-100.png" Height="25" Width="35"></Image>
                             <Label Content="Iniciar"></Label>
                         </StackPanel>
                     </Button>
-                    <Button Margin="25,0,0,0" Width="100">
+                    <Button x:Name="CancelarBotton" Margin="25,0,0,0" Width="100" Click="CancelarBotton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/UI/Login/icons8-cancelar-100.png" Height="25" Width="35"></Image>
                             <Label Content="Cancelar"></Label>
@@ -83,8 +77,6 @@
                 </StackPanel>
 
             </StackPanel>
-            <Image x:Name="image" Source="/UI/Login/YERVA.png" 
-                       HorizontalAlignment="Right" Margin="0,-10,0,0"/>
         </Grid>
     </Grid>
 </Window>

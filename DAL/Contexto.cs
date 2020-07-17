@@ -19,10 +19,10 @@ namespace AgroVeterinaria.DAL
             modelBuilder.Entity<Usuarios>().HasData(new Entidades.Usuarios
             {
                 UsuarioId = 1,
-                Clave = "HolaMundo",
+                Clave = "123456",
                 FechaCreacion = DateTime.Now,
                 Nombres = "Admin",
-                NivelUsuario = "Null",
+                NivelUsuario = "Administrador",
                 Email = "Admin@admin.com",
                 NombreUsuario = "Administrador"
             });

@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="UI\Login\perrito-2.jpg" />
+    <None Remove="UI\Login\perrito.png" />
+    <None Remove="UI\Login\Sin título-2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="BLL\" />
     <Folder Include="DATA\" />
     <Folder Include="UI\Consulta\" />
@@ -15,11 +21,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.3.0" />
     <PackageReference Include="MICROSOFT.ENTITYFRAMEWORKCORE.SQLITE" Version="3.1.6" />
     <PackageReference Include="MICROSOFT.ENTITYFRAMEWORKCORE.TOOLS" Version="3.1.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="UI\Login\perrito-2.jpg" />
+    <Resource Include="UI\Login\perrito.png" />
+    <Resource Include="UI\Login\Sin título-2.png" />
   </ItemGroup>
 
 </Project>

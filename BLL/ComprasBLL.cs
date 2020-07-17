@@ -5,12 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Security.Cryptography;
 using System.Text;
 
 namespace AgroVeterinaria.BLL
 {
-    public class UsuariosBLL
+    class ComprasBLL
     {
         public static bool Existe(int id)
         {
@@ -19,7 +18,7 @@ namespace AgroVeterinaria.BLL
 
             try
             {
-                esOk = contexto.Usuarios.Any(e => e.UsuarioId == id);
+                esOk = contexto.Compras.Any(e => e.UsuarioId == id);
             }
             catch (Exception)
             {
@@ -32,21 +31,20 @@ namespace AgroVeterinaria.BLL
             return esOk;
         }
 
-        public static bool Guardar(Usuarios Usuario)
+        public static bool Guardar(Compras Compra)
         {
-            if (!Existe(Usuario.UsuarioId)) { return Insertar(Usuario); }
-            else { return Modificar(Usuario); } 
+            if (!Existe(Compra.UsuarioId)) { return Insertar(Compra); }
+            else { return Modificar(Compra); }
         }
 
-        private static bool Insertar(Usuarios Usuario)
+        private static bool Insertar(Compras Compra)
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
 
             try
             {
-                Usuario.Clave = GetSHA256(Usuario.Clave);
-                if (contexto.Usuarios.Add(Usuario) != null) { esOk = (contexto.SaveChanges() > 0); }
+                if (contexto.Compras.Add(Compra) != null) { esOk = contexto.SaveChanges() > 0; }
             }
             catch (Exception)
             {
@@ -59,15 +57,14 @@ namespace AgroVeterinaria.BLL
             return esOk;
         }
 
-        private static bool Modificar(Usuarios Usuario)
+        private static bool Modificar(Compras Compra)
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-            Usuario.Clave = GetSHA256(Usuario.Clave);
             try
             {
-                contexto.Entry(Usuario).State = EntityState.Modified;
-                esOk = (contexto.SaveChanges() > 0);
+                contexto.Entry(Compra).State = EntityState.Modified;
+                esOk = contexto.SaveChanges() > 0;
             }
             catch (Exception)
             {
@@ -87,12 +84,12 @@ namespace AgroVeterinaria.BLL
 
             try
             {
-                var Usuario = contexto.Usuarios.Find(id);
+                var Compra = contexto.Compras.Find(id);
 
-                if (Usuario != null)
+                if (Compra != null)
                 {
-                    contexto.Usuarios.Remove(Usuario);
-                    esOk = (contexto.SaveChanges() > 0);
+                    contexto.Compras.Remove(Compra);
+                    esOk = contexto.SaveChanges() > 0;
                 }
 
             }
@@ -107,14 +104,14 @@ namespace AgroVeterinaria.BLL
             return esOk;
         }
 
-        public static Usuarios Buscar(int id)
+        public static Compras Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            Usuarios Usuario = new Usuarios();
+            Compras Compra = new Compras();
 
             try
             {
-                Usuario = contexto.Usuarios.Find(id);
+                Compra = contexto.Compras.Find(id);
 
             }
             catch (Exception)
@@ -125,17 +122,17 @@ namespace AgroVeterinaria.BLL
             {
                 contexto.Dispose();
             }
-            return Usuario;
+            return Compra;
         }
 
-        public static List<Usuarios> GetList(Expression<Func<Usuarios, bool>> Usuario)
+        public static List<Compras> GetList(Expression<Func<Compras, bool>> Compra)
         {
             Contexto contexto = new Contexto();
-            List<Usuarios> Lista = new List<Usuarios>();
+            List<Compras> Lista = new List<Compras>();
 
             try
             {
-                Lista = contexto.Usuarios.Where(Usuario).ToList();
+                Lista = contexto.Compras.Where(Compra).ToList();
 
             }
             catch (Exception)
@@ -147,17 +144,6 @@ namespace AgroVeterinaria.BLL
                 contexto.Dispose();
             }
             return Lista;
-        }
-
-        private static string GetSHA256(string str)
-        {
-            SHA256 sha256 = SHA256Managed.Create();
-            ASCIIEncoding encoding = new ASCIIEncoding();
-            byte[] stream = null;
-            StringBuilder sb = new StringBuilder();
-            stream = sha256.ComputeHash(encoding.GetBytes(str));
-            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
-            return sb.ToString();
         }
     }
 }

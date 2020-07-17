@@ -64,7 +64,7 @@ namespace AgroVeterinaria.BLL
             try
             {
                 contexto.Entry(Suplidor).State = EntityState.Modified;
-                esOk = (contexto.SaveChanges() > 0);
+                esOk = contexto.SaveChanges() > 0;
             }
             catch (Exception)
             {
@@ -89,7 +89,7 @@ namespace AgroVeterinaria.BLL
                 if (Suplidor != null)
                 {
                     contexto.Suplidores.Remove(Suplidor);
-                    eliminado = (contexto.SaveChanges() > 0);
+                    eliminado = contexto.SaveChanges() > 0;
                 }
 
             }

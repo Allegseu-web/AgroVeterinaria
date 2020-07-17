@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgroVeterinaria.Entidades
 {
-    class Usuarios
+    public class Usuarios
     {
         [Key]
         public int UsuarioId { get; set; }

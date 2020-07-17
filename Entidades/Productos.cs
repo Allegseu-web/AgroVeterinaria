@@ -20,8 +20,5 @@ namespace AgroVeterinaria.Entidades
         public double Precio { get; set; }
         public double Ganacia { get; set; }
         public int UsuarioId { get; set; }
-
-        [ForeignKey("ProductoId")]
-        public virtual List<ProductosDetalle> ProductosDetalles { get; set; } = new List<ProductosDetalle>();
     }
 }

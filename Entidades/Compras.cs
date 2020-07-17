@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace AgroVeterinaria.Entidades
@@ -13,5 +14,8 @@ namespace AgroVeterinaria.Entidades
         public int SuplidorId { get; set; }
         public double SubTotal { get; set; }
         public int UsuarioId { get; set; }
+
+        [ForeignKey("CompraId")]
+        public virtual List<ProductosDetalle> ProductosDetalles { get; set; } = new List<ProductosDetalle>();
     }
 }

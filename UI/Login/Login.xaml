@@ -27,7 +27,7 @@
             </Border>
             <StackPanel Orientation="Vertical">
                 <StackPanel VerticalAlignment="Center">
-                    <Image Source="perritofin.png"  Width="100"/>
+                    <Image Source="/UI/Login/perritofin.png"  Width="100"/>
                     <TextBlock Text=" Agropecuaria Emil"
                  FontWeight="Light"  
                  FontFamily="Georgia" Width="103"   

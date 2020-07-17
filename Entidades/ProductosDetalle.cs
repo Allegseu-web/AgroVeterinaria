@@ -10,6 +10,7 @@ namespace AgroVeterinaria.Entidades
         [Key]
         public int ProductoDetalleId { get; set; }
         public int ProductoId { get; set; }
+        public int CompraId { get; set; }
         public double Cantidad { get; set; }
         public double Precio { get; set; }
         public double Importe { get; set; }

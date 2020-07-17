@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgroVeterinaria.Entidades
 {
-    class Compras
+    public class Compras
     {
         [Key]
         public int CompraId { get; set; }

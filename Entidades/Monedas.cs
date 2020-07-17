@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgroVeterinaria.Entidades
 {
-    class Monedas
+    public class Monedas
     {
         public int MonedaId { get; set; }
         public int UsuarioId { get; set; }

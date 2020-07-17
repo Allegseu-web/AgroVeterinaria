@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgroVeterinaria.Entidades
 {
-    class Suplidores
+    public class Suplidores
     {
         [Key]
         public int SuplidoresId { get; set; }

@@ -5,7 +5,7 @@ using System.Windows.Markup;
 
 namespace AgroVeterinaria.Entidades
 {
-    class Unidades
+    public class Unidades
     {
         public int UnidadId { get; set; }
         public string Descripcion { get; set; }

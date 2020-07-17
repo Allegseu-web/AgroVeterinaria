@@ -24,8 +24,7 @@
 
 
                 </Border.Background>
-                <Image x:Name="image" Source="/UI/Login/YERVA.png" 
-                       HorizontalAlignment="Right"/>
+                
             </Border>
             <StackPanel Orientation="Vertical">
                 <StackPanel VerticalAlignment="Center" Margin="0,10,0,0">
@@ -35,6 +34,11 @@
                                FontFamily="Georgia" Width="105"
                                Foreground="Black"
                                HorizontalAlignment="Center"/>
+                    <Label x:Name="label" Content="Label" Height="16" Width="22" >
+                        <Label.Background>
+                            <ImageBrush ImageSource="/UI/Login/name_user_3716.png"/>
+                        </Label.Background>
+                    </Label>
                 </StackPanel>
                 <StackPanel Margin="0,30,0,30">
                     <TextBox FontFamily=" helvetica"
@@ -47,7 +51,7 @@
                 <StackPanel>
                     <TextBox x:Name="UsuarioNameTextBox" Width="110" Height="20" TextChanged="UsuarioNameTextBox_TextChanged"/>
                 </StackPanel>
-                
+
                 <StackPanel Margin="0,30,0,10">
                     <TextBox FontFamily=" helvetica"
                              FontWeight="Light"
@@ -56,11 +60,11 @@
                              HorizontalAlignment="Center" Height="20"
                              Background="Transparent"/>
                 </StackPanel>
-                
+
                 <StackPanel Margin="0,30,0,0">
-                    
+
                     <TextBox x:Name="ClaveTextBox" Width="110" Height="20" TextChanged="ClaveTextBox_TextChanged"/>
-                    
+
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
@@ -77,8 +81,10 @@
                         </StackPanel>
                     </Button>
                 </StackPanel>
-                
+
             </StackPanel>
+            <Image x:Name="image" Source="/UI/Login/YERVA.png" 
+                       HorizontalAlignment="Right" Margin="0,-10,0,0"/>
         </Grid>
     </Grid>
 </Window>

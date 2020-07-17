@@ -13,5 +13,10 @@ namespace AgroVeterinaria.Entidades
         public int CompraId { get; set; }
         public DateTime FechaPago { get; set; } = DateTime.Now;
         public double ValorPago { get; set; }
+
+        /*public NotasCreditoDetalle()
+        {
+        Pendiente.
+        }*/
     }
 }

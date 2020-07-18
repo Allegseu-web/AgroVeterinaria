@@ -44,7 +44,7 @@
                              Background="Transparent" Width="100"/>
             </StackPanel>
             <StackPanel>
-                <TextBox x:Name="UsuarioNameTextBox" Width="156" Height="25" TextChanged="UsuarioNameTextBox_TextChanged">
+                <TextBox x:Name="UsuarioNameTextBox" Width="156" Height="25" >
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="12"/>
@@ -63,7 +63,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,20" >
-                <TextBox x:Name="txtClaveTextBox" Width="156" Height="25" Margin="120,0,0,0" Visibility="Collapsed"  TextChanged="UsuarioNameTextBox_TextChanged">
+                <TextBox x:Name="txtClaveTextBox" Width="156" Height="25" Margin="120,0,0,0" Visibility="Collapsed"  >
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="12"/>

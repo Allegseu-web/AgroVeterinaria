@@ -9,74 +9,72 @@
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize">
     <Grid>
-        <Grid Margin="-29,-5,29,5">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Border CornerRadius="10" Margin="0,10,10,0" HorizontalAlignment="Right" Width="370">
-                <Border.Background>
-                    <LinearGradientBrush>
-                        <GradientStop Color="#7be9f6" Offset="0.0"/>
-                        <GradientStop Color="#f083da" Offset="1"/>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="10" HorizontalAlignment="Center" Width="400">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7be9f6" Offset="0.0"/>
+                    <GradientStop Color="#f083da" Offset="1"/>
 
-                    </LinearGradientBrush>
+                </LinearGradientBrush>
 
 
-                </Border.Background>
+            </Border.Background>
 
-            </Border>
-            <StackPanel Orientation="Vertical">
-                <StackPanel VerticalAlignment="Center" Margin="0,10,0,0">
-                    <Image Source="/UI/Login/perritofin.png"  Width="100"/>
-                    <TextBlock Text=" Agropecuaria Emil"
+        </Border>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Margin="0,10,0,0" Width="164">
+                <Image Source="/UI/Login/perritofin.png"  Width="100"/>
+                <TextBlock Text=" Agropecuaria Emil"
                                FontWeight="Light"
                                FontFamily="Georgia" Width="105"
                                Foreground="Black"
                                HorizontalAlignment="Center"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="0,10,0,20" Width="250">
-                    <Image Source="/UI/Login/name_user_3716.png" Height="25" Width="60"></Image>
-                    <TextBox FontFamily=" helvetica"
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,20" Width="250">
+                <Image Source="/UI/Login/name_user_3716.png" Height="25" Width="60"></Image>
+                <Label FontFamily=" helvetica"
                              FontWeight="Light"
-                             Text="Usuario"
-                             FontSize="20" Height="20"
+                             Content="Usuario"
+                             FontSize="20" Height="30"
                              Background="Transparent" Width="100"/>
-                </StackPanel>
-                <StackPanel>
-                    <TextBox x:Name="UsuarioNameTextBox" Width="125" Height="20"/>
-                </StackPanel>
+            </StackPanel>
+            <StackPanel>
+                <TextBox x:Name="UsuarioNameTextBox" Width="150" Height="25"/>
+            </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="250">
-                    <Image Source="/UI/Login/icons8-contraseña-1-50.png" Height="33" Width="60" Opacity="0.75"></Image>
-                    <TextBox FontFamily=" helvetica"
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="250">
+                <Image Source="/UI/Login/icons8-contraseña-1-50.png" Height="33" Width="60" Opacity="0.75"></Image>
+                <Label FontFamily=" helvetica"
                              FontWeight="Light"
-                             Text="Contraseña"
-                             FontSize="20" Height="25"
+                             Content="Contraseña"
+                             FontSize="20"
                              Background="Transparent" Width="150"/>
-                </StackPanel>
+            </StackPanel>
 
-                <StackPanel Margin="0,20,0,20">
+            <StackPanel Margin="0,20,0,20">
 
-                    <PasswordBox x:Name="ClaveTextBox" Width="125" Height="20"/>
-
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="225">
-                    <Button x:Name="IniciarButton" Width="100" Click="IniciarButton_Click">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/UI/Login/icons8-comprobado-100.png" Height="25" Width="35"></Image>
-                            <Label Content="Iniciar"></Label>
-                        </StackPanel>
-                    </Button>
-                    <Button x:Name="CancelarBotton" Margin="25,0,0,0" Width="100" Click="CancelarBotton_Click">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/UI/Login/icons8-cancelar-100.png" Height="25" Width="35"></Image>
-                            <Label Content="Cancelar"></Label>
-                        </StackPanel>
-                    </Button>
-                </StackPanel>
+                <PasswordBox x:Name="ClaveTextBox" Width="150" Height="25"/>
 
             </StackPanel>
-        </Grid>
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="224" Height="35">
+                <Button x:Name="IniciarButton" Width="100" Click="IniciarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/UI/Login/icons8-comprobado-100.png" Height="25" Width="35"></Image>
+                        <Label Content="Iniciar"></Label>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="CancelarBotton" Margin="25,0,0,0" Width="100" Click="CancelarBotton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/UI/Login/icons8-cancelar-100.png" Height="25" Width="35"></Image>
+                        <Label Content="Cancelar"></Label>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+        </StackPanel>
     </Grid>
 </Window>

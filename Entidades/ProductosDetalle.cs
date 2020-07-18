@@ -15,13 +15,13 @@ namespace AgroVeterinaria.Entidades
         public double Precio { get; set; }
         public double Importe { get; set; }
 
-        public ProductosDetalle(int compraid, double cantidad, double precio, double importe)
+        /*public ProductosDetalle(int compraid, double cantidad, double precio, double importe)
         {
             ProductoDetalleId = 0;
             CompraId = compraid;
             Cantidad = cantidad;
             Precio = precio;
             Importe = importe;
-        }
+        }*/
     }
 }

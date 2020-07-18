@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgroVeterinaria.BLL;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -29,7 +30,23 @@ namespace AgroVeterinaria.UI.Login
 
         private void IniciarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (UsuarioNameTextBox.Text.Length == 0 || ClaveTextBox.Password.Length == 0)
+            {
+                MessageBox.Show("No puede dejar campos vacios.", "Llenar campos", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
+            else
+            {
+                var usuario = UsuariosBLL.Buscar(1);
+                if (usuario.NombreUsuario == UsuarioNameTextBox.Text && usuario.Clave == ClaveTextBox.Password)
+                {
+                    MainWindow ventana = new MainWindow(true);
+                    ventana.Show();
+                }
+                else
+                {
+                    MessageBox.Show("El nombre de usuario o la contraseña es incorrecta.", "No se pudo conectar", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
         }
     }
 }

@@ -16,6 +16,13 @@
     <None Remove="UI\Login\YERVA.png" />
     <None Remove="UI\Registros\arreglando.png" />
     <None Remove="UI\Registros\flor.png" />
+    <None Remove="UI\Registros\icon_child.ico" />
+    <None Remove="UI\Registros\icon_envelope.ico" />
+    <None Remove="UI\Registros\icon_key.ico" />
+    <None Remove="UI\Registros\icon_plus.ico" />
+    <None Remove="UI\Registros\icon_save.ico" />
+    <None Remove="UI\Registros\icon_star.ico" />
+    <None Remove="UI\Registros\icon_trash.ico" />
     <None Remove="UI\Registros\icon_user-plus.ico" />
     <None Remove="UI\Registros\icon_user-plus.png" />
     <None Remove="UI\Registros\New Mockup .png" />
@@ -47,6 +54,13 @@
     <Resource Include="UI\Login\YERVA.png" />
     <Resource Include="UI\Registros\arreglando.png" />
     <Resource Include="UI\Registros\flor.png" />
+    <Resource Include="UI\Registros\icon_child.ico" />
+    <Resource Include="UI\Registros\icon_envelope.ico" />
+    <Resource Include="UI\Registros\icon_key.ico" />
+    <Resource Include="UI\Registros\icon_plus.ico" />
+    <Resource Include="UI\Registros\icon_save.ico" />
+    <Resource Include="UI\Registros\icon_star.ico" />
+    <Resource Include="UI\Registros\icon_trash.ico" />
     <Resource Include="UI\Registros\icon_user-plus.ico" />
     <Resource Include="UI\Registros\icon_user-plus.png" />
     <Resource Include="UI\Registros\New Mockup .png" />

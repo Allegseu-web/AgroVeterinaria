@@ -7,8 +7,14 @@
         mc:Ignorable="d"
         Title="RegistroUsuario" Height="491" Width="360">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF7BE9F6"/>
+                <GradientStop Color="#FFF083DA" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Image x:Name="image" HorizontalAlignment="Left" Height="114" Margin="103,23,0,0" VerticalAlignment="Top" Width="172" Source="/UI/Registros/flor.png"/>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="72" Margin="151,44,0,0" VerticalAlignment="Top" Width="102" Source="/UI/Registros/arreglando.png" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="74" Margin="151,44,0,0" VerticalAlignment="Top" Width="117" Source="/UI/Registros/arreglando.png" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -18,8 +24,48 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image2" HorizontalAlignment="Left" Height="16" Margin="10,150,0,0" VerticalAlignment="Top" Width="16" Source="/UI/Registros/icon_user-plus.ico"/>
-        <Label x:Name="label" Content="UsuarioID" HorizontalAlignment="Left" Margin="30,146,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="image2" HorizontalAlignment="Left" Height="18" Margin="13,153,0,0" VerticalAlignment="Top" Width="12" Source="/UI/Registros/icon_user-plus.ico"/>
+        <Label x:Name="label" Content="UsuarioID" HorizontalAlignment="Left" Margin="24,146,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="104,150,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="image3" HorizontalAlignment="Left" Height="12" Margin="13,189,0,0" VerticalAlignment="Top" Width="18" Source="/UI/Registros/icon_key.ico"/>
+        <TextBox HorizontalAlignment="Left" Margin="70,187,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Height="21"/>
+        <Label x:Name="Clave" Content="Clave" HorizontalAlignment="Left" Margin="24,182,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="image4" HorizontalAlignment="Left" Height="12" Margin="162,189,0,0" VerticalAlignment="Top" Width="18" Source="/UI/Registros/icon_key.ico"/>
+        <Label x:Name="label1" Content="Confirmar Clave" HorizontalAlignment="Left" Margin="172,183,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="273,187,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" Height="19"/>
+        <Image x:Name="image5" HorizontalAlignment="Left" Height="16" Margin="17,231,0,0" VerticalAlignment="Top" Width="16" Source="/UI/Registros/icon_child.ico"/>
+        <Label x:Name="label2" Content="Nombre" HorizontalAlignment="Left" Margin="29,226,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="88,233,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="19"/>
+        <Image x:Name="image6" HorizontalAlignment="Left" Height="13" Margin="32,269,0,0" VerticalAlignment="Top" Width="13" Source="/UI/Registros/icon_envelope.ico"/>
+        <Label x:Name="label3" Content="Email" HorizontalAlignment="Left" Margin="43,262,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="88,269,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="19"/>
+        <Image x:Name="image7" HorizontalAlignment="Left" Height="13" Margin="31,308,0,0" VerticalAlignment="Top" Width="27" Source="/UI/Registros/icon_star.ico"/>
+        <Label x:Name="label4" Content="Nivel de Usuario" HorizontalAlignment="Left" Margin="53,302,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="156,309,0,0" VerticalAlignment="Top" Width="27" Height="16"/>
+        <Button x:Name="button" Content="Guardar" HorizontalAlignment="Left" Margin="17,434,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top"  RenderTransformOrigin="0.5,0.5" Width="33" Height="26" FontSize="8">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.918"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.317"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/Registros/icon_save.ico" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.65" />
+            </Button.Background>
+        </Button>
+        <Button x:Name="button1" Content="Nuevo" HorizontalAlignment="Left" Margin="157,434,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="33" Height="24"  FontSize="8">
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/Registros/icon_plus.ico" Stretch="Uniform" Viewport="0,0,1,0.65"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button2" Content="Eliminar" HorizontalAlignment="Left" Margin="303,434,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="33" Height="24"  FontSize="8" RenderTransformOrigin="0.744,0.754">
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/Registros/icon_trash.ico" Stretch="Uniform" Viewport="0,0,1,0.65" AlignmentY="Top"/>
+            </Button.Background>
+        </Button>
+
 
     </Grid>
 </Window>

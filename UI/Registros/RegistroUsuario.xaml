@@ -31,7 +31,7 @@
         <TextBox HorizontalAlignment="Left" Margin="70,187,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Height="21"/>
         <Label x:Name="Clave" Content="Clave" HorizontalAlignment="Left" Margin="24,182,0,0" VerticalAlignment="Top"/>
         <Image x:Name="image4" HorizontalAlignment="Left" Height="12" Margin="162,189,0,0" VerticalAlignment="Top" Width="18" Source="/UI/Registros/icon_key.ico"/>
-        <Label x:Name="label1" Content="Confirmar Clave" HorizontalAlignment="Left" Margin="172,183,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Confirmar Clave" HorizontalAlignment="Left" Margin="172,182,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="273,187,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" Height="19"/>
         <Image x:Name="image5" HorizontalAlignment="Left" Height="16" Margin="17,231,0,0" VerticalAlignment="Top" Width="16" Source="/UI/Registros/icon_child.ico"/>
         <Label x:Name="label2" Content="Nombre" HorizontalAlignment="Left" Margin="29,226,0,0" VerticalAlignment="Top"/>

@@ -50,5 +50,15 @@ namespace AgroVeterinaria.UI.Login
                 }
             }
         }
+
+        private void UsuarioNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Ocultar_Mostrar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

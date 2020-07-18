@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Registros"
         mc:Ignorable="d"
-        Title="RegistroUsuario" Height="450" Width="360"
+        Title="RegistroUsuario" Height="550" Width="360"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize">
     <Grid>
@@ -26,57 +26,52 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <!--Si quieres agregar un componente a la misma linea, colocalo en el mismo stackpanel-->
-
-        <!---UsuarioId-->
         <StackPanel Orientation="Vertical" Margin="0,150,0,0">
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
-                <Image x:Name="image2" Source="/UI/Registros/icon_user-plus.ico" Margin="25,0,5,0" Height="14" Width="19"/>
-                <Label x:Name="UsuarioIdLabel" Content="UsuarioID" Margin="0,0,5,0" Width="75" FontSize="9"/>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="25">
+                <Image x:Name="image2" Source="/UI/Registros/icon_user-plus.ico" Margin="25,0,5,0"/>
+                <Label x:Name="UsuarioIdLabel" Content="UsuarioID" Margin="0,0,5,0" Width="75" FontSize="14"/>
                 <TextBox x:Name="UsuarioIdTextBox" Text="{Binding UsuarioId}" Width="125" Margin="0,0,5,0"/>
                 <Button x:Name="BuscarButton" Width="50" Content="Buscar" Click="BuscarButton_Click"></Button>
             </StackPanel>
 
-            <!---Nombre-->
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
-                <Image x:Name="image5" Source="/UI/Registros/icon_child.ico" Margin="25,0,5,0" Height="17" Width="16"/>
-                <Label x:Name="NombreLabel" Content="Nombre" Margin="0,0,19,0" FontSize="9"/>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="25">
+                <Image x:Name="image5" Source="/UI/Registros/icon_child.ico" Margin="25,0,5,0"/>
+                <Label x:Name="NombreLabel" Content="Nombre" Margin="0,0,19,0" FontSize="14"/>
                 <TextBox x:Name="NombreTextBox" Text="{Binding Nombres}" Width="180" Margin="0,0,0,0"/>
             </StackPanel>
 
-            <!---Nombre de usuario-->
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
-                <Image x:Name="imagen" Source="/UI/Registros/icon_child.ico" Margin="25,0,5,0" Height="17" Width="16"/>
-                <Label x:Name="NombreUsuarioLabel" Content="Nombre de Usuario" Margin="0,0,5,0" FontSize="9"/>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="25">
+                <Image x:Name="imagen" Source="/UI/Registros/icon_child.ico" Margin="25,0,5,0"/>
+                <Label x:Name="NombreUsuarioLabel" Content="Nombre de Usuario" Margin="0,0,5,0" FontSize="14"/>
                 <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" Width="125" Margin="0,0,0,0"/>
             </StackPanel>
 
-            <!---Email-->
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
-                <Image x:Name="image6" Source="/UI/Registros/icon_envelope.ico" Margin="25,0,5,0" Height="13" Width="16"/>
-                <Label x:Name="EmailLabel" Content="Email" Margin="0,0,38,0" FontSize="9"/>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="25">
+                <Image x:Name="image6" Source="/UI/Registros/icon_envelope.ico" Margin="25,0,5,0"/>
+                <Label x:Name="EmailLabel" Content="Email" Margin="0,0,38,0" FontSize="14"/>
                 <TextBox x:Name="EmailTextBox" Text="{Binding Email}" Width="180" Margin="0,0,0,0"/>
             </StackPanel>
 
-            <!---Contraseñas-->
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
-                <Image x:Name="image3" Source="/UI/Registros/icon_key.ico" Margin="25,0,5,0" Height="12" Width="19"/>
-                <Label x:Name="ClaveLabel" Content="Clave" Margin="0,0,5,0" FontSize="9"/>
-                <PasswordBox x:Name="ClaveTextBox" Width="50" Margin="0,0,0,0"/>
-                <Image x:Name="image4" Source="/UI/Registros/icon_key.ico" Margin="5,0,5,0" Height="13" Width="19"/>
-                <Label x:Name="ConfirmarLabel" Content="Confirmar Clave" Margin="0,0,5,0" FontSize="9"/>
-                <PasswordBox x:Name="ConfirmarClaveTextBox" Width="50" Margin="0,0,0,0"/>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="25">
+                <Image x:Name="image3" Source="/UI/Registros/icon_key.ico" Margin="25,0,5,0"/>
+                <Label x:Name="ClaveLabel" Content="Clave" Margin="0,0,37,0" FontSize="14"/>
+                <PasswordBox x:Name="ClaveTextBox" Width="180" Margin="0,0,0,0"/>
             </StackPanel>
 
-            <!---Nivel de usuario-->
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
-                <Image x:Name="image7" Source="/UI/Registros/icon_star.ico" Margin="25,0,5,0" Height="12" Width="20"/>
-                <Label x:Name="NivelUsuarioLabel" Content="Nivel de Usuario" Margin="0,0,5,0" FontSize="9"/>
-                <ComboBox x:Name="NivelUsuarioComboBox" ItemsSource="{Binding NivelUsuario}" Width="27" Margin="0,0,0,0" Height="16"/>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="25">
+                <Image x:Name="image4" Source="/UI/Registros/icon_key.ico" Margin="25,0,5,0"/>
+                <Label x:Name="ConfirmarLabel" Content="Confirmar Clave" Margin="0,0,5,0" FontSize="14"/>
+                <PasswordBox x:Name="ConfirmarClaveTextBox" Width="147" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="25">
+                <Image x:Name="image7" Source="/UI/Registros/icon_star.ico" Margin="25,0,5,0"/>
+                <Label x:Name="NivelUsuarioLabel" Content="Nivel de Usuario" Margin="0,0,5,0" FontSize="14"/>
+                <ComboBox x:Name="NivelUsuarioComboBox" ItemsSource="{Binding NivelUsuario}" Width="144" Margin="0,0,0,0"/>
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="49,392,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top"  RenderTransformOrigin="0.5,0.5" Width="32" Height="22" FontSize="8" Click="GuardarButton_Click">
+        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="17,472,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top"  RenderTransformOrigin="0.5,0.5" Width="64" Height="32" FontSize="8" Click="GuardarButton_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -89,12 +84,12 @@
                 <ImageBrush ImageSource="/UI/Registros/icon_save.ico" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.65" />
             </Button.Background>
         </Button>
-        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Center" Margin="0,391,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="30" Height="24"  FontSize="8" Click="NuevoButton_Click">
+        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Center" Margin="0,472,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="64" Height="32"  FontSize="8" Click="NuevoButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_plus.ico" Stretch="Uniform" Viewport="0,0,1,0.65"/>
             </Button.Background>
         </Button>
-        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="291,391,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="23" Height="24"  FontSize="8" RenderTransformOrigin="0.744,0.754" Click="EliminarButton_Click">
+        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="272,472,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="64" Height="32"  FontSize="8" RenderTransformOrigin="0.744,0.754" Click="EliminarButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_trash.ico" Stretch="Uniform" Viewport="0,0,1,0.65" AlignmentY="Top"/>
             </Button.Background>

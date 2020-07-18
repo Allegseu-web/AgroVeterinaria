@@ -14,6 +14,11 @@
     <None Remove="UI\Login\name_user_3716.png" />
     <None Remove="UI\Login\perritofin.png" />
     <None Remove="UI\Login\YERVA.png" />
+    <None Remove="UI\Registros\flor.png" />
+    <None Remove="UI\Registros\icon_user-plus.ico" />
+    <None Remove="UI\Registros\icon_user-plus.png" />
+    <None Remove="UI\Registros\New Mockup .png" />
+    <None Remove="UI\Registros\registro.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,6 +44,11 @@
     <Resource Include="UI\Login\name_user_3716.png" />
     <Resource Include="UI\Login\perritofin.png" />
     <Resource Include="UI\Login\YERVA.png" />
+    <Resource Include="UI\Registros\flor.png" />
+    <Resource Include="UI\Registros\icon_user-plus.ico" />
+    <Resource Include="UI\Registros\icon_user-plus.png" />
+    <Resource Include="UI\Registros\New Mockup .png" />
+    <Resource Include="UI\Registros\registro.png" />
   </ItemGroup>
 
 </Project>

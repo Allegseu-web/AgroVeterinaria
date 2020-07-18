@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Registros"
         mc:Ignorable="d"
-        Title="RegistroUsuario" Height="550" Width="360"
+        Title="RegistroUsuario" Height="450" Width="360"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize">
     <Grid>
@@ -27,7 +27,7 @@
             </Image.RenderTransform>
         </Image>
         <!--Si quieres agregar un componente a la misma linea, colocalo en el mismo stackpanel-->
-        
+
         <!---UsuarioId-->
         <StackPanel Orientation="Vertical" Margin="0,150,0,0">
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
@@ -76,7 +76,7 @@
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="17,472,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top"  RenderTransformOrigin="0.5,0.5" Width="64" Height="32" FontSize="8" Click="GuardarButton_Click">
+        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="17,371,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top"  RenderTransformOrigin="0.5,0.5" Width="64" Height="32" FontSize="8" Click="GuardarButton_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -89,12 +89,12 @@
                 <ImageBrush ImageSource="/UI/Registros/icon_save.ico" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.65" />
             </Button.Background>
         </Button>
-        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Center" Margin="0,472,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="64" Height="32"  FontSize="8" Click="NuevoButton_Click">
+        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Center" Margin="0,373,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="64" Height="32"  FontSize="8" Click="NuevoButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_plus.ico" Stretch="Uniform" Viewport="0,0,1,0.65"/>
             </Button.Background>
         </Button>
-        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="272,472,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="64" Height="32"  FontSize="8" RenderTransformOrigin="0.744,0.754" Click="EliminarButton_Click">
+        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="272,373,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="64" Height="32"  FontSize="8" RenderTransformOrigin="0.744,0.754" Click="EliminarButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_trash.ico" Stretch="Uniform" Viewport="0,0,1,0.65" AlignmentY="Top"/>
             </Button.Background>

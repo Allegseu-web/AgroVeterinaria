@@ -26,12 +26,14 @@ namespace AgroVeterinaria
             /*Constructor*/
             /*Este comentario es para ver si anna no esta bugueada xd*/
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
             Login ventana = new Login();
             ventana.Show();
+            this.Close();
+        }
+
+        public MainWindow(bool esFacil)
+        {
+            InitializeComponent();
         }
     }
 }

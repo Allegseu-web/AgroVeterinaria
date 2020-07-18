@@ -26,6 +26,9 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+        <!--Si quieres agregar un componente a la misma linea, colocalo en el mismo stackpanel-->
+        
+        <!---UsuarioId-->
         <StackPanel Orientation="Vertical" Margin="0,150,0,0">
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
                 <Image x:Name="image2" Source="/UI/Registros/icon_user-plus.ico" Margin="25,0,5,0"/>
@@ -34,24 +37,28 @@
                 <Button x:Name="BuscarButton" Width="50" Content="Buscar" Click="BuscarButton_Click"></Button>
             </StackPanel>
 
+            <!---Nombre-->
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
                 <Image x:Name="image5" Source="/UI/Registros/icon_child.ico" Margin="25,0,5,0"/>
                 <Label x:Name="NombreLabel" Content="Nombre" Margin="0,0,19,0" FontSize="9"/>
                 <TextBox x:Name="NombreTextBox" Text="{Binding Nombres}" Width="180" Margin="0,0,0,0"/>
             </StackPanel>
 
+            <!---Nombre de usuario-->
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
                 <Image x:Name="imagen" Source="/UI/Registros/icon_child.ico" Margin="25,0,5,0"/>
                 <Label x:Name="NombreUsuarioLabel" Content="Nombre de Usuario" Margin="0,0,5,0" FontSize="9"/>
                 <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" Width="125" Margin="0,0,0,0"/>
             </StackPanel>
 
+            <!---Email-->
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
                 <Image x:Name="image6" Source="/UI/Registros/icon_envelope.ico" Margin="25,0,5,0"/>
                 <Label x:Name="EmailLabel" Content="Email" Margin="0,0,38,0" FontSize="9"/>
                 <TextBox x:Name="EmailTextBox" Text="{Binding Email}" Width="180" Margin="0,0,0,0"/>
             </StackPanel>
 
+            <!---Contraseñas-->
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
                 <Image x:Name="image3" Source="/UI/Registros/icon_key.ico" Margin="25,0,5,0"/>
                 <Label x:Name="ClaveLabel" Content="Clave" Margin="0,0,5,0" FontSize="9"/>
@@ -61,10 +68,7 @@
                 <PasswordBox x:Name="ConfirmarClaveTextBox" Width="50" Margin="0,0,0,0"/>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
-                
-            </StackPanel>
-
+            <!---Nivel de usuario-->
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="20">
                 <Image x:Name="image7" Source="/UI/Registros/icon_star.ico" Margin="25,0,5,0"/>
                 <Label x:Name="NivelUsuarioLabel" Content="Nivel de Usuario" Margin="0,0,5,0" FontSize="9"/>

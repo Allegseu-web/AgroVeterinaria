@@ -24,7 +24,9 @@
             </Border.Background>
 
         </Border>
+        <Image Source="/UI/Login/YERVA.png"  VerticalAlignment="Top" HorizontalAlignment="Right"/>
         <StackPanel Orientation="Vertical">
+            
             <StackPanel Margin="0,10,0,0" Width="164">
                 <Image Source="/UI/Login/perritofin.png"  Width="100"/>
                 <TextBlock Text=" Agropecuaria Emil"

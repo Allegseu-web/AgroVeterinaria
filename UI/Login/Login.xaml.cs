@@ -1,4 +1,5 @@
 ﻿using AgroVeterinaria.BLL;
+using AgroVeterinaria.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,40 +37,17 @@ namespace AgroVeterinaria.UI.Login
             }
             else
             {
-                var usuario = UsuariosBLL.Buscar(1);
-                if (usuario.NombreUsuario == UsuarioNameTextBox.Text && usuario.Clave == ClaveTextBox.Password)
+                bool usuario = UsuariosBLL.Validar(UsuarioNameTextBox.Text, ClaveTextBox.Password);
+                if (usuario == true)
                 {
-                    MainWindow ventana = new MainWindow(true);
+                    RegistroUsuario ventana = new RegistroUsuario();
                     ventana.Show();
+                    this.Close();
                 }
                 else
                 {
                     MessageBox.Show("El nombre de usuario o la contraseña es incorrecta.", "No se pudo conectar", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-            }
-        }
-
-        private void UsuarioNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-        bool pssw = false;
-        private void Ocultar_Mostrar_Click(object sender, RoutedEventArgs e)
-        {
-            if(pssw==false)
-            {
-                ClaveTextBox.Visibility = Visibility.Collapsed;
-                txtClaveTextBox.Text = ClaveTextBox.Password;
-                txtClaveTextBox.Visibility = Visibility.Visible;
-                pssw = true;
-            }
-            else
-            {
-                txtClaveTextBox.Visibility = Visibility.Collapsed;
-                ClaveTextBox.Password = txtClaveTextBox.Text;
-                ClaveTextBox.Visibility = Visibility.Visible;
-                
-                pssw = false;
             }
         }
     }

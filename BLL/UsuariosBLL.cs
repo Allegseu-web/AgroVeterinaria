@@ -32,6 +32,33 @@ namespace AgroVeterinaria.BLL
             return esOk;
         }
 
+        public static bool Validar(string nombreusuario, string clave)
+        {
+            bool paso = false;
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                var validar = from usuario in contexto.Usuarios
+                              where usuario.NombreUsuario == nombreusuario
+                              && usuario.Clave == GetSHA256(clave)
+                              select usuario;
+                if (validar.Count() > 0) { paso = true; }
+                else { paso = false; }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return paso;
+        }
+
         public static bool Guardar(Usuarios Usuario)
         {
             if (!Existe(Usuario.UsuarioId)) { return Insertar(Usuario); }

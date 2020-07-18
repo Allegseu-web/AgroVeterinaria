@@ -53,10 +53,24 @@ namespace AgroVeterinaria.UI.Login
         {
 
         }
-
+        bool pssw = false;
         private void Ocultar_Mostrar_Click(object sender, RoutedEventArgs e)
         {
-
+            if(pssw==false)
+            {
+                ClaveTextBox.Visibility = Visibility.Collapsed;
+                txtClaveTextBox.Text = ClaveTextBox.Password;
+                txtClaveTextBox.Visibility = Visibility.Visible;
+                pssw = true;
+            }
+            else
+            {
+                txtClaveTextBox.Visibility = Visibility.Collapsed;
+                ClaveTextBox.Password = txtClaveTextBox.Text;
+                ClaveTextBox.Visibility = Visibility.Visible;
+                
+                pssw = false;
+            }
         }
     }
 }

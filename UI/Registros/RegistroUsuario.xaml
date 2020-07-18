@@ -8,7 +8,16 @@
         Title="RegistroUsuario" Height="491" Width="360">
     <Grid>
         <Image x:Name="image" HorizontalAlignment="Left" Height="114" Margin="103,23,0,0" VerticalAlignment="Top" Width="172" Source="/UI/Registros/flor.png"/>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="72" Margin="155,44,0,0" VerticalAlignment="Top" Width="67" Source="/UI/Registros/New Mockup .png"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="72" Margin="151,44,0,0" VerticalAlignment="Top" Width="102" Source="/UI/Registros/arreglando.png" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.716"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.488"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
         <Image x:Name="image2" HorizontalAlignment="Left" Height="16" Margin="10,150,0,0" VerticalAlignment="Top" Width="16" Source="/UI/Registros/icon_user-plus.ico"/>
         <Label x:Name="label" Content="UsuarioID" HorizontalAlignment="Left" Margin="30,146,0,0" VerticalAlignment="Top"/>
 

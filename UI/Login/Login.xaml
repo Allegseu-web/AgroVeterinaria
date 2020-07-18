@@ -26,7 +26,7 @@
         </Border>
         <Image Source="/UI/Login/YERVA.png"  VerticalAlignment="Top" HorizontalAlignment="Right"/>
         <StackPanel Orientation="Vertical">
-            
+
             <StackPanel Margin="0,10,0,0" Width="164">
                 <Image Source="/UI/Login/perritofin.png"  Width="100"/>
                 <TextBlock Text=" Agropecuaria Emil"
@@ -44,7 +44,13 @@
                              Background="Transparent" Width="100"/>
             </StackPanel>
             <StackPanel>
-                <TextBox x:Name="UsuarioNameTextBox" Width="150" Height="25"/>
+                <TextBox x:Name="UsuarioNameTextBox" Width="156" Height="25" TextChanged="UsuarioNameTextBox_TextChanged">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="12"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="250">
@@ -56,10 +62,23 @@
                              Background="Transparent" Width="150"/>
             </StackPanel>
 
-            <StackPanel Margin="0,20,0,20">
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,20">
 
-                <PasswordBox x:Name="ClaveTextBox" Width="150" Height="25"/>
 
+                <PasswordBox Template="{StaticResource passwordbox}" x:Name="ClaveTextBox" Width="159" Height="24" Margin="120,0,0,0">
+                    <PasswordBox.BorderBrush>
+                        <ImageBrush Stretch="None"/>
+                    </PasswordBox.BorderBrush>
+
+                </PasswordBox>
+
+                <Button x:Name="Ocultar_Mostrar"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0"  Width="36" Margin="10,0,0,0" Height="34" Click="Ocultar_Mostrar_Click">
+                    <Button.Background>
+                        <ImageBrush Stretch="None" ImageSource="/UI/Login/3844441-eye-see-show-view-watch_110305.ico"/>
+                    </Button.Background>
+
+                </Button>
+                
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="224" Height="35">
@@ -78,5 +97,6 @@
             </StackPanel>
 
         </StackPanel>
+
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
 ﻿using AgroVeterinaria.BLL;
+using AgroVeterinaria.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,11 +37,12 @@ namespace AgroVeterinaria.UI.Login
             }
             else
             {
-                var usuario = UsuariosBLL.Buscar(1);
-                if (usuario.NombreUsuario == UsuarioNameTextBox.Text && usuario.Clave == ClaveTextBox.Password)
+                bool usuario = UsuariosBLL.Validar(UsuarioNameTextBox.Text, ClaveTextBox.Password);
+                if (usuario == true)
                 {
-                    MainWindow ventana = new MainWindow(true);
+                    RegistroUsuario ventana = new RegistroUsuario();
                     ventana.Show();
+                    this.Close();
                 }
                 else
                 {

@@ -1,4 +1,5 @@
 ﻿using AgroVeterinaria.UI.Login;
+using AgroVeterinaria.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,11 +30,6 @@ namespace AgroVeterinaria
             Login ventana = new Login();
             ventana.Show();
             this.Close();
-        }
-
-        public MainWindow(bool esFacil)
-        {
-            InitializeComponent();
         }
     }
 }

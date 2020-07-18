@@ -103,6 +103,7 @@ namespace AgroVeterinaria.UI.Registros
         {
             if (!Validar()) { return; }
             this.Usuario.Clave = ClaveTextBox.Password;
+            this.Usuario.NivelUsuario = NivelUsuarioComboBox.Text;
             var user = UsuariosBLL.Guardar(Usuario);
 
             if (user)
@@ -131,10 +132,11 @@ namespace AgroVeterinaria.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var estudiante = UsuariosBLL.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
+            var cuenta = UsuariosBLL.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
 
-            if (Usuario != null) { this.Usuario = estudiante; }
+            if (Usuario != null) { this.Usuario = cuenta; }
             else { Limpiar(); }
+            NivelUsuarioComboBox.Text = this.Usuario.NivelUsuario;
             this.DataContext = this.Usuario;
         }
     }

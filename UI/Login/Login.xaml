@@ -17,12 +17,8 @@
                 <LinearGradientBrush>
                     <GradientStop Color="#7be9f6" Offset="0.0"/>
                     <GradientStop Color="#f083da" Offset="1"/>
-
                 </LinearGradientBrush>
-
-
             </Border.Background>
-
         </Border>
         <Image Source="/UI/Login/YERVA.png"  VerticalAlignment="Top" HorizontalAlignment="Right"/>
         <StackPanel Orientation="Vertical">
@@ -44,7 +40,7 @@
                              Background="Transparent" Width="100"/>
             </StackPanel>
             <StackPanel>
-                <TextBox x:Name="UsuarioNameTextBox" Width="156" Height="25" TextChanged="UsuarioNameTextBox_TextChanged">
+                <TextBox x:Name="UsuarioNameTextBox" Width="156" Height="25">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="12"/>
@@ -72,7 +68,7 @@
 
                 </PasswordBox>
 
-                <Button x:Name="Ocultar_Mostrar"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0"  Width="36" Margin="10,0,0,0" Height="34" Click="Ocultar_Mostrar_Click">
+                <Button x:Name="Ocultar_Mostrar"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0"  Width="36" Margin="10,0,0,0" Height="34">
                     <Button.Background>
                         <ImageBrush Stretch="None" ImageSource="/UI/Login/3844441-eye-see-show-view-watch_110305.ico"/>
                     </Button.Background>

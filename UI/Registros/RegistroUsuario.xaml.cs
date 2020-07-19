@@ -139,5 +139,10 @@ namespace AgroVeterinaria.UI.Registros
             NivelUsuarioComboBox.Text = this.Usuario.NivelUsuario;
             this.DataContext = this.Usuario;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

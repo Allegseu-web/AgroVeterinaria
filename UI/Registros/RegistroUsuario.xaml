@@ -15,8 +15,13 @@
                 <GradientStop Color="#FFF083DA" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="114" Margin="103,23,0,0" VerticalAlignment="Top" Width="172" Source="/UI/Registros/flor.png"/>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="74" Margin="151,44,0,0" VerticalAlignment="Top" Width="117" Source="/UI/Registros/arreglando.png" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+        <Button Margin="166,56,148,430" Height="48" Opacity="0" Click="Button_Click"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="114" Margin="103,23,0,0" VerticalAlignment="Top" Width="172"
+               Source="/UI/Registros/flor.png"/>
+        <Image x:Name="CloseHidden" HorizontalAlignment="Left" Height="74" Margin="151,44,0,0" VerticalAlignment="Top" Width="117"
+               Source="/UI/Registros/arreglando.png"
+               Opacity="0.7"
+               RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -71,7 +76,8 @@
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="17,472,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top"  RenderTransformOrigin="0.5,0.5" Width="64" Height="32" FontSize="8" Click="GuardarButton_Click">
+        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="17,472,0,0" VerticalContentAlignment="Bottom"
+                VerticalAlignment="Top"  RenderTransformOrigin="0.5,0.5" Width="64" Height="32" FontSize="8" Click="GuardarButton_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -84,12 +90,14 @@
                 <ImageBrush ImageSource="/UI/Registros/icon_save.ico" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.65" />
             </Button.Background>
         </Button>
-        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Center" Margin="0,472,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="64" Height="32"  FontSize="8" Click="NuevoButton_Click">
+        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Center" Margin="0,472,0,0" VerticalContentAlignment="Bottom"
+                VerticalAlignment="Top" Width="64" Height="32"  FontSize="8" Click="NuevoButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_plus.ico" Stretch="Uniform" Viewport="0,0,1,0.65"/>
             </Button.Background>
         </Button>
-        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="272,472,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="64" Height="32"  FontSize="8" RenderTransformOrigin="0.744,0.754" Click="EliminarButton_Click">
+        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="272,472,0,0" VerticalContentAlignment="Bottom"
+                VerticalAlignment="Top" Width="64" Height="32"  FontSize="8" RenderTransformOrigin="0.744,0.754" Click="EliminarButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_trash.ico" Stretch="Uniform" Viewport="0,0,1,0.65" AlignmentY="Top"/>
             </Button.Background>

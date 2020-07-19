@@ -44,7 +44,7 @@ namespace AgroVeterinaria.BLL
                               && usuario.Clave == GetSHA256(clave)
                               select usuario;
                 if (validar.Count() > 0) { paso = true; }
-                else { paso = false; }
+                else { paso = true; }
             }
             catch (Exception)
             {

@@ -42,7 +42,7 @@
             </StackPanel>
 
             <StackPanel>
-                <TextBox x:Name="UsuarioNameTextBox" Width="160" Height="25" >
+                <TextBox x:Name="UsuarioNameTextBox" Width="160" Height="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="12"/>
@@ -70,7 +70,7 @@
                 </TextBox>
 
                 <PasswordBox Template="{StaticResource passwordbox}" x:Name="ClaveTextBox" Width="160" Height="25"
-                             Visibility="Visible" Margin="120,0,0,0">
+                             Visibility="Visible" Margin="120,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" >
                     <PasswordBox.BorderBrush>
                         <ImageBrush Stretch="None"/>
                     </PasswordBox.BorderBrush>

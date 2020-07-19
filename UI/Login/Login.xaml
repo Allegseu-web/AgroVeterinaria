@@ -17,12 +17,8 @@
                 <LinearGradientBrush>
                     <GradientStop Color="#7be9f6" Offset="0.0"/>
                     <GradientStop Color="#f083da" Offset="1"/>
-
                 </LinearGradientBrush>
-
-
             </Border.Background>
-
         </Border>
         <Image Source="/UI/Login/yerva.png"  VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0"/>
         <StackPanel Orientation="Vertical">

@@ -31,6 +31,7 @@
                                Foreground="Black"
                                HorizontalAlignment="Center"/>
             </StackPanel>
+
             <StackPanel Orientation="Horizontal" Margin="0,10,0,20" Width="250">
                 <Image Source="/UI/Login/name_user_3716.png" Height="25" Width="60"></Image>
                 <Label FontFamily=" helvetica"
@@ -39,6 +40,7 @@
                              FontSize="20" Height="30"
                              Background="Transparent" Width="100"/>
             </StackPanel>
+
             <StackPanel>
                 <TextBox x:Name="UsuarioNameTextBox" Width="156" Height="25" >
                     <TextBox.Resources>
@@ -71,16 +73,13 @@
                     <PasswordBox.BorderBrush>
                         <ImageBrush Stretch="None"/>
                     </PasswordBox.BorderBrush>
-
                 </PasswordBox>
 
                 <Button x:Name="Ocultar_Mostrar"  BorderThickness="0"  Width="36" Margin="10,0,0,0" Height="34" Click="Ocultar_Mostrar_Click">
                     <Button.Background>
                         <ImageBrush Stretch="None" ImageSource="/UI/Login/3844441-eye-see-show-view-watch_110305.ico"/>
                     </Button.Background>
-
                 </Button>
-                
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="224" Height="35">
@@ -90,6 +89,7 @@
                         <Label Content="Iniciar"></Label>
                     </StackPanel>
                 </Button>
+
                 <Button x:Name="CancelarBotton" Margin="25,0,0,0" Width="100" Click="CancelarBotton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/UI/Login/icons8-cancelar-100.png" Height="25" Width="35"></Image>
@@ -97,8 +97,6 @@
                     </StackPanel>
                 </Button>
             </StackPanel>
-
         </StackPanel>
-
     </Grid>
 </Window>

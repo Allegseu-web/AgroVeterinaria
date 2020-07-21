@@ -1,4 +1,5 @@
 ﻿using AgroVeterinaria.BLL;
+using AgroVeterinaria.Entidades;
 using AgroVeterinaria.UI.Registros;
 using System;
 using System.Collections.Generic;
@@ -40,13 +41,13 @@ namespace AgroVeterinaria.UI.Login
                 bool usuario = UsuariosBLL.Validar(UsuarioNameTextBox.Text, ClaveTextBox.Password);
                 if (usuario == true)
                 {
-                    RegistroUsuario ventana = new RegistroUsuario();
-                    ventana.Show();
-                    this.Close();
+                    NivelUsuario(1);
                 }
                 else
                 {
-                    MessageBox.Show("El nombre de usuario o la contraseña es incorrecta.", "No se pudo conectar", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("El nombre de usuario o la contraseña es incorrecta.", "No se pudo conectar", MessageBoxButton.OK,
+                        MessageBoxImage.Information);
+                    return;
                 }
             }
 
@@ -69,7 +70,43 @@ namespace AgroVeterinaria.UI.Login
 
                 pssw = false;
             }
-
+        }
+        private void NivelUsuario(int contador)
+        {
+            while (true)
+            {
+                var cuenta = UsuariosBLL.Buscar(contador);
+                if (cuenta.NombreUsuario == UsuarioNameTextBox.Text)
+                {
+                    if (cuenta.NivelUsuario == "Administrador")
+                    {
+                        RegistroUsuario ventana = new RegistroUsuario();
+                        ventana.Show();
+                        this.Close();
+                        return;
+                    }
+                    else if (cuenta.NivelUsuario == "Cliente")
+                    {
+                        /*Pendiente para crear facturas.*/
+                        this.Close();
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("El cliente no tiene expecificado su nivel de acceso.", "Aviso",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
+                        return;
+                    }
+                }
+                else if (cuenta == null)
+                {
+                    return;
+                }
+                else
+                {
+                    contador++;
+                }
+            }
         }
     }
 }

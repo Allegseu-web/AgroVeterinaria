@@ -39,7 +39,6 @@ namespace AgroVeterinaria.UI.Login
                 {
                     MessageBox.Show("El nombre de usuario o la contraseña es incorrecta.", "No se pudo conectar", MessageBoxButton.OK,
                         MessageBoxImage.Information);
-                    return;
                 }
             }
 

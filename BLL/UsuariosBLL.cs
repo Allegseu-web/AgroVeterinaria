@@ -44,7 +44,7 @@ namespace AgroVeterinaria.BLL
                               && usuario.Clave == GetSHA256(clave)
                               select usuario;
                 if (validar.Count() > 0) { paso = true; }
-                else { paso = true; }
+                else { paso = false; }
             }
             catch (Exception)
             {
@@ -61,8 +61,7 @@ namespace AgroVeterinaria.BLL
 
         public static bool Guardar(Usuarios Usuario)
         {
-            if (!Existe(Usuario.UsuarioId)) { return Insertar(Usuario); }
-            else { return Modificar(Usuario); } 
+            return Insertar(Usuario);
         }
 
         private static bool Insertar(Usuarios Usuario)
@@ -86,7 +85,7 @@ namespace AgroVeterinaria.BLL
             return esOk;
         }
 
-        private static bool Modificar(Usuarios Usuario)
+        public static bool Modificar(Usuarios Usuario)
         {
             Contexto contexto = new Contexto();
             bool esOk = false;

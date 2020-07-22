@@ -114,18 +114,34 @@ namespace AgroVeterinaria.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!Validar()) { return; }
-            this.Usuario.Clave = ClaveTextBox.Password;
-            this.Usuario.NivelUsuario = NivelUsuarioComboBox.Text;
-            var user = UsuariosBLL.Guardar(Usuario);
-
-            if (user)
+            if(UsuarioIdTextBox.Text != "0")
             {
-                Limpiar();
-                MessageBox.Show("Transaccion exitosa!", "Exito",
-                    MessageBoxButton.OK, MessageBoxImage.Information);
+                this.Usuario.Clave = ClaveTextBox.Password;
+                this.Usuario.NivelUsuario = NivelUsuarioComboBox.Text;
+                var esOk = UsuariosBLL.Modificar(Usuario);
+                if (esOk)
+                {
+                    Limpiar();
+                    MessageBox.Show("Modificacion exitosa!", "Exito",
+                        MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else { MessageBox.Show("Modificacion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error); }
             }
-            else { MessageBox.Show("Transaccion Fallida", "Fallo",MessageBoxButton.OK, MessageBoxImage.Error); }
+            else
+            {
+                if (!Validar()) { return; }
+                this.Usuario.Clave = ClaveTextBox.Password;
+                this.Usuario.NivelUsuario = NivelUsuarioComboBox.Text;
+                var user = UsuariosBLL.Guardar(Usuario);
+
+                if (user)
+                {
+                    Limpiar();
+                    MessageBox.Show("Transaccion exitosa!", "Exito",
+                        MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else { MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error); }
+            }
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
@@ -151,11 +167,6 @@ namespace AgroVeterinaria.UI.Registros
             else { Limpiar(); }
             NivelUsuarioComboBox.Text = this.Usuario.NivelUsuario;
             this.DataContext = this.Usuario;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

@@ -1,7 +1,10 @@
 ﻿using AgroVeterinaria.BLL;
+using AgroVeterinaria.DAL;
 using AgroVeterinaria.Entidades;
+using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -95,6 +98,16 @@ namespace AgroVeterinaria.UI.Registros
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 ConfirmarClaveTextBox.Focus();
                 GuardarButton.IsEnabled = true;
+            }
+
+            Contexto context = new Contexto();
+            if (context.Usuarios.Any(p => p.NombreUsuario == NombreUsuarioTextBox.Text))
+            {
+                MessageBox.Show("Este nombre de usuario ->" + NombreUsuarioTextBox.Text + "<- ya existe, por favor usar otro.",
+                    "Usuario ya existente", MessageBoxButton.OK, MessageBoxImage.Error);
+                NombreUsuarioTextBox.Clear();
+                NombreUsuarioTextBox.Focus();
+                esValido = false;
             }
             return esValido;
         }

@@ -1,17 +1,9 @@
 ﻿using AgroVeterinaria.BLL;
+using AgroVeterinaria.DAL;
 using AgroVeterinaria.Entidades;
 using AgroVeterinaria.UI.Registros;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace AgroVeterinaria.UI.Login
 {
@@ -41,7 +33,7 @@ namespace AgroVeterinaria.UI.Login
                 bool usuario = UsuariosBLL.Validar(UsuarioNameTextBox.Text, ClaveTextBox.Password);
                 if (usuario == true)
                 {
-                    NivelUsuario(1);
+                    NivelUsuario();
                 }
                 else
                 {
@@ -67,15 +59,23 @@ namespace AgroVeterinaria.UI.Login
                 txtClaveTextBox.Visibility = Visibility.Collapsed;
                 ClaveTextBox.Password = txtClaveTextBox.Text;
                 ClaveTextBox.Visibility = Visibility.Visible;
-
                 pssw = false;
             }
         }
-        private void NivelUsuario(int contador)
+
+        private Usuarios getUsuario()
         {
-            while (true)
-            {
-                var cuenta = UsuariosBLL.Buscar(contador);
+            Contexto db = new Contexto();
+            Usuarios usuario;
+
+            usuario = db.Usuarios.Where(p => p.NombreUsuario == UsuarioNameTextBox.Text).SingleOrDefault();
+
+            return usuario;
+        }
+
+        private void NivelUsuario()
+        {
+           var cuenta = getUsuario();
                 if (cuenta.NombreUsuario == UsuarioNameTextBox.Text)
                 {
                     if (cuenta.NivelUsuario == "Administrador")
@@ -98,15 +98,6 @@ namespace AgroVeterinaria.UI.Login
                         return;
                     }
                 }
-                else if (cuenta == null)
-                {
-                    return;
-                }
-                else
-                {
-                    contador++;
-                }
             }
         }
-    }
 }

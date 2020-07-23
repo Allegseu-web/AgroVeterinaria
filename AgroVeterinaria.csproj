@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="icons8-tarjeta-de-empleado-100.png" />
     <None Remove="UI\Login\3844441-eye-see-show-view-watch_110305.ico" />
     <None Remove="UI\Login\icons8-cancelar-100.png" />
     <None Remove="UI\Login\icons8-comprobado-100.png" />
@@ -34,6 +35,7 @@
     <Folder Include="BLL\" />
     <Folder Include="DATA\" />
     <Folder Include="UI\Consulta\" />
+    <Folder Include="UI\Compras\" />
     <Folder Include="UI\Reportes\" />
   </ItemGroup>
 
@@ -47,6 +49,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="icons8-tarjeta-de-empleado-100.png" />
     <Resource Include="UI\Login\3844441-eye-see-show-view-watch_110305.ico" />
     <Resource Include="UI\Login\icons8-cancelar-100.png" />
     <Resource Include="UI\Login\icons8-comprobado-100.png" />

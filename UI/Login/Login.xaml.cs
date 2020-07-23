@@ -33,7 +33,9 @@ namespace AgroVeterinaria.UI.Login
                 bool usuario = UsuariosBLL.Validar(UsuarioNameTextBox.Text, ClaveTextBox.Password);
                 if (usuario == true)
                 {
-                    NivelUsuario();
+                    MainWindow main = new MainWindow(getUsuario());
+                    main.Show();
+                    this.Close();
                 }
                 else
                 {
@@ -71,32 +73,5 @@ namespace AgroVeterinaria.UI.Login
 
             return usuario;
         }
-
-        private void NivelUsuario()
-        {
-           var cuenta = getUsuario();
-                if (cuenta.NombreUsuario == UsuarioNameTextBox.Text)
-                {
-                    if (cuenta.NivelUsuario == "Administrador")
-                    {
-                        RegistroUsuario ventana = new RegistroUsuario();
-                        ventana.Show();
-                        this.Close();
-                        return;
-                    }
-                    else if (cuenta.NivelUsuario == "Cliente")
-                    {
-                        /*Pendiente para crear facturas.*/
-                        this.Close();
-                        return;
-                    }
-                    else
-                    {
-                        MessageBox.Show("El cliente no tiene expecificado su nivel de acceso.", "Aviso",
-                            MessageBoxButton.OK, MessageBoxImage.Information);
-                        return;
-                    }
-                }
-            }
-        }
+    }
 }

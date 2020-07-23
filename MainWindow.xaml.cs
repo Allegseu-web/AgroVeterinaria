@@ -1,4 +1,5 @@
-﻿using AgroVeterinaria.UI.Login;
+﻿using AgroVeterinaria.Entidades;
+using AgroVeterinaria.UI.Login;
 using AgroVeterinaria.UI.Registros;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,59 @@ namespace AgroVeterinaria
             Login ventana = new Login();
             ventana.Show();
             this.Close();
+        }
+
+        public MainWindow(Usuarios Empleado)
+        {
+            InitializeComponent();
+            NombreEmpleadoLabel.Content = Empleado.Nombres;
+        }
+
+        private void UsuarioMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            RegistroUsuario registroUsuario = new RegistroUsuario();
+            registroUsuario.Show();
+            this.Close();
+        }
+
+        private void DireccioesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ProductosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SuplidoresMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NotasCreditosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ComprasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ConsultaEstudianteMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ConsultaAdicionalesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ConsultaTareasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

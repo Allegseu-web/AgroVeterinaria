@@ -46,19 +46,25 @@ namespace AgroVeterinaria
             this.WindowState = WindowState.Minimized;
         }
 
-        private void DireccioesMenuItem_Click(object sender, RoutedEventArgs e)
+        private void DireccionesMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            RegistroDirecciones registroDirecciones = new RegistroDirecciones();
+            registroDirecciones.Show();
+            this.WindowState = WindowState.Minimized;
         }
 
         private void ProductosMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            RegistroProdutos registroProdutos = new RegistroProdutos();
+            registroProdutos.Show();
+            this.WindowState = WindowState.Minimized;
         }
 
         private void SuplidoresMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            RegistroSuplidores registroSuplidores = new RegistroSuplidores();
+            registroSuplidores.Show();
+            this.WindowState = WindowState.Minimized;
         }
 
         private void NotasCreditosMenuItem_Click(object sender, RoutedEventArgs e)
@@ -68,22 +74,9 @@ namespace AgroVeterinaria
 
         private void ComprasMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void ConsultaEstudianteMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ConsultaAdicionalesMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ConsultaTareasMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
+            RegistroCompras registroCompras = new RegistroCompras();
+            registroCompras.Show();
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

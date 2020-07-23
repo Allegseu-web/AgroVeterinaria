@@ -13,7 +13,7 @@
                     <MenuItem x:Name="UsuarioMenuItem" Header="Registro Usuario"
                               Click="UsuarioMenuItem_Click"></MenuItem>
                     <MenuItem x:Name="DireccioesMenuItem" Header="Registro Direcciones"
-                              Click="DireccioesMenuItem_Click"></MenuItem>
+                              Click="DireccionesMenuItem_Click"></MenuItem>
                     <MenuItem x:Name="ProductosMenuItem" Header="Registro Productos"
                               Click="ProductosMenuItem_Click"/>
                     <MenuItem x:Name="SuplidoresMenuItem" Header="Registro Suplidores"
@@ -25,12 +25,7 @@
                 </MenuItem>
 
                 <MenuItem Header="Consultas">
-                    <MenuItem x:Name="ConsultaEstudianteMenuItem" Header="Consulta Estudiante"
-                              Click="ConsultaEstudianteMenuItem_Click"/>
-                    <MenuItem x:Name="ConsultaAdicionalesMenuItem" Header="Consulta Puntos Adicionales"
-                              Click="ConsultaAdicionalesMenuItem_Click"/>
-                    <MenuItem x:Name="ConsultaTareasMenuItem" Header="Consulta Tareas"
-                              Click="ConsultaTareasMenuItem_Click"/>
+                    
                 </MenuItem>
 
                 <MenuItem Header="Reportes">
@@ -39,8 +34,8 @@
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Margin="0,25,0,0">
-            <Image Source="/icons8-tarjeta-de-empleado-100.png" Height="100" Width="120"></Image>
-            <StackPanel Orientation="Horizontal" Margin="0,25,0,0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical" Margin="175,175,0,0" VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
                 <Label Content="Bienvenido" FontSize="36" FontFamily="Calibri"
                        VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="300"/>
                 <Label x:Name="NombreEmpleadoLabel" FontSize="36" VerticalContentAlignment="Center"

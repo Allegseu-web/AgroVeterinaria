@@ -20,11 +20,11 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <Image Source="/UI/Login/yerva.png"  VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+        <Image Source="/UI/Login/yerva.png" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0"/>
         <StackPanel Orientation="Vertical">
 
             <StackPanel Margin="0,10,0,0" Width="164">
-                <Image Source="/UI/Login/perritofin.png"  Width="100"/>
+                <Image Source="/UI/Login/perritofin.png" Width="100"/>
                 <TextBlock Text=" Agropecuaria Emil"
                                FontWeight="Light"
                                FontFamily="Georgia" Width="105"
@@ -76,7 +76,7 @@
                     </PasswordBox.BorderBrush>
                 </PasswordBox>
 
-                <Button x:Name="Ocultar_Mostrar"  BorderThickness="0"  Width="36" Margin="10,0,0,0" Height="34" Click="Ocultar_Mostrar_Click">
+                <Button x:Name="Ocultar_Mostrar" BorderThickness="0" Width="36" Margin="10,0,0,0" Height="34" Click="Ocultar_Mostrar_Click">
                     <Button.Background>
                         <ImageBrush Stretch="None" ImageSource="/UI/Login/3844441-eye-see-show-view-watch_110305.ico"/>
                     </Button.Background>

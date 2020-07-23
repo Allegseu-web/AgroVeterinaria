@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="RegistroUsuario" Height="550" Width="360"
         AllowsTransparency="True" Background="Transparent"
-        WindowStyle="None" ResizeMode="NoResize">
+        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -99,6 +99,11 @@
                 VerticalAlignment="Top" Width="64" Height="32"  FontSize="8" RenderTransformOrigin="0.744,0.754" Click="EliminarButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_trash.ico" Stretch="Uniform" Viewport="0,0,1,0.65" AlignmentY="Top"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="AtrasButton" Click="AtrasButton_Click" Margin="10,10,320,494" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/Registros/icons8-izquierda-círculo-100.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
     </Grid>

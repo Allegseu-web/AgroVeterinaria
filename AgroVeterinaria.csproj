@@ -18,6 +18,7 @@
     <None Remove="UI\Login\YERVA.png" />
     <None Remove="UI\Registros\arreglando.png" />
     <None Remove="UI\Registros\flor.png" />
+    <None Remove="UI\Registros\icons8-izquierda-círculo-100.png" />
     <None Remove="UI\Registros\icon_child.ico" />
     <None Remove="UI\Registros\icon_envelope.ico" />
     <None Remove="UI\Registros\icon_key.ico" />
@@ -59,6 +60,7 @@
     <Resource Include="UI\Login\YERVA.png" />
     <Resource Include="UI\Registros\arreglando.png" />
     <Resource Include="UI\Registros\flor.png" />
+    <Resource Include="UI\Registros\icons8-izquierda-círculo-100.png" />
     <Resource Include="UI\Registros\icon_child.ico" />
     <Resource Include="UI\Registros\icon_envelope.ico" />
     <Resource Include="UI\Registros\icon_key.ico" />

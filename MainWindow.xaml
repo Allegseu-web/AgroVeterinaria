@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Centro de control" Height="450" Width="800">
     <Grid>
         <StackPanel>
             <Menu Height="18">
@@ -40,9 +40,9 @@
 
         <StackPanel Orientation="Vertical" Margin="0,25,0,0">
             <Image Source="/icons8-tarjeta-de-empleado-100.png" Height="100" Width="120"></Image>
-            <StackPanel Orientation="Horizontal" Margin="0,25,0,0">
+            <StackPanel Orientation="Horizontal" Margin="0,25,0,0" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Label Content="Bienvenido" FontSize="36" FontFamily="Calibri"
-                       VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="300" Margin="100,0,25,0"/>
+                       VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="300"/>
                 <Label x:Name="NombreEmpleadoLabel" FontSize="36" VerticalContentAlignment="Center"
                        HorizontalContentAlignment="Center" Width="300"/>
             </StackPanel>

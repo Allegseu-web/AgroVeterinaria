@@ -43,7 +43,7 @@ namespace AgroVeterinaria
         {
             RegistroUsuario registroUsuario = new RegistroUsuario();
             registroUsuario.Show();
-            this.Close();
+            this.WindowState = WindowState.Minimized;
         }
 
         private void DireccioesMenuItem_Click(object sender, RoutedEventArgs e)

@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="icons8-tarjeta-de-empleado-100.png" />
+    <None Remove="s.png" />
     <None Remove="UI\Login\3844441-eye-see-show-view-watch_110305.ico" />
     <None Remove="UI\Login\icons8-cancelar-100.png" />
     <None Remove="UI\Login\icons8-comprobado-100.png" />
@@ -17,19 +18,34 @@
     <None Remove="UI\Login\perritofin.png" />
     <None Remove="UI\Login\YERVA.png" />
     <None Remove="UI\Registros\arreglando.png" />
+    <None Remove="UI\Registros\caja-de-entrega2.png" />
+    <None Remove="UI\Registros\coins-with-number-1-1.png" />
+    <None Remove="UI\Registros\diositoplis.png" />
+    <None Remove="UI\Registros\dog.png" />
+    <None Remove="UI\Registros\editar.png" />
     <None Remove="UI\Registros\flor.png" />
     <None Remove="UI\Registros\icons8-izquierda-círculo-100.png" />
     <None Remove="UI\Registros\icon_child.ico" />
     <None Remove="UI\Registros\icon_envelope.ico" />
     <None Remove="UI\Registros\icon_key.ico" />
+    <None Remove="UI\Registros\icon_male.png" />
+    <None Remove="UI\Registros\icon_minus.png" />
     <None Remove="UI\Registros\icon_plus.ico" />
     <None Remove="UI\Registros\icon_save.ico" />
+    <None Remove="UI\Registros\icon_save.png" />
+    <None Remove="UI\Registros\icon_search.png" />
     <None Remove="UI\Registros\icon_star.ico" />
     <None Remove="UI\Registros\icon_trash.ico" />
+    <None Remove="UI\Registros\icon_trash.png" />
     <None Remove="UI\Registros\icon_user-plus.ico" />
     <None Remove="UI\Registros\icon_user-plus.png" />
+    <None Remove="UI\Registros\mas.png" />
+    <None Remove="UI\Registros\modificacion.png" />
+    <None Remove="UI\Registros\money-bills.png" />
     <None Remove="UI\Registros\New Mockup .png" />
+    <None Remove="UI\Registros\price-tag-with-dollar-symbol.png" />
     <None Remove="UI\Registros\registro.png" />
+    <None Remove="UI\Registros\Tabla2.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,6 +66,7 @@
 
   <ItemGroup>
     <Resource Include="icons8-tarjeta-de-empleado-100.png" />
+    <Resource Include="s.png" />
     <Resource Include="UI\Login\3844441-eye-see-show-view-watch_110305.ico" />
     <Resource Include="UI\Login\icons8-cancelar-100.png" />
     <Resource Include="UI\Login\icons8-comprobado-100.png" />
@@ -58,19 +75,34 @@
     <Resource Include="UI\Login\perritofin.png" />
     <Resource Include="UI\Login\YERVA.png" />
     <Resource Include="UI\Registros\arreglando.png" />
+    <Resource Include="UI\Registros\caja-de-entrega2.png" />
+    <Resource Include="UI\Registros\coins-with-number-1-1.png" />
+    <Resource Include="UI\Registros\diositoplis.png" />
+    <Resource Include="UI\Registros\dog.png" />
+    <Resource Include="UI\Registros\editar.png" />
     <Resource Include="UI\Registros\flor.png" />
     <Resource Include="UI\Registros\icons8-izquierda-círculo-100.png" />
     <Resource Include="UI\Registros\icon_child.ico" />
     <Resource Include="UI\Registros\icon_envelope.ico" />
     <Resource Include="UI\Registros\icon_key.ico" />
+    <Resource Include="UI\Registros\icon_male.png" />
+    <Resource Include="UI\Registros\icon_minus.png" />
     <Resource Include="UI\Registros\icon_plus.ico" />
     <Resource Include="UI\Registros\icon_save.ico" />
+    <Resource Include="UI\Registros\icon_save.png" />
+    <Resource Include="UI\Registros\icon_search.png" />
     <Resource Include="UI\Registros\icon_star.ico" />
     <Resource Include="UI\Registros\icon_trash.ico" />
+    <Resource Include="UI\Registros\icon_trash.png" />
     <Resource Include="UI\Registros\icon_user-plus.ico" />
     <Resource Include="UI\Registros\icon_user-plus.png" />
+    <Resource Include="UI\Registros\mas.png" />
+    <Resource Include="UI\Registros\modificacion.png" />
+    <Resource Include="UI\Registros\money-bills.png" />
     <Resource Include="UI\Registros\New Mockup .png" />
+    <Resource Include="UI\Registros\price-tag-with-dollar-symbol.png" />
     <Resource Include="UI\Registros\registro.png" />
+    <Resource Include="UI\Registros\Tabla2.png" />
   </ItemGroup>
 
 </Project>

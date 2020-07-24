@@ -21,5 +21,7 @@ namespace AgroVeterinaria.UI.Registros
         {
             InitializeComponent();
         }
+
+        
     }
 }

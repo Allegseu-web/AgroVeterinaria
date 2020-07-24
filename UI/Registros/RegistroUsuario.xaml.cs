@@ -29,7 +29,7 @@ namespace AgroVeterinaria.UI.Registros
         {
             InitializeComponent();
             this.DataContext = Usuario;
-            Niveles = new string[] { "Administrador", "Inventario", "Encargado de compras" };
+            Niveles = new string[] { "Administrador", "Almacenero", "Vendedor", "Tesorero", "Gerente" };
             NivelUsuarioComboBox.ItemsSource = Niveles;
         }
 

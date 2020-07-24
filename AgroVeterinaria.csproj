@@ -36,7 +36,6 @@
     <Folder Include="BLL\" />
     <Folder Include="DATA\" />
     <Folder Include="UI\Consulta\" />
-    <Folder Include="UI\Compras\" />
     <Folder Include="UI\Reportes\" />
   </ItemGroup>
 

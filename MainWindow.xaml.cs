@@ -23,6 +23,7 @@ namespace AgroVeterinaria
     /// </summary>
     public partial class MainWindow : Window
     {
+        Usuarios user = new Usuarios();
         public MainWindow()
         {
             /*Constructor*/
@@ -37,46 +38,209 @@ namespace AgroVeterinaria
         {
             InitializeComponent();
             NombreEmpleadoLabel.Content = Empleado.Nombres;
+            this.user = Empleado;
+        }
+
+        private bool Intro(Usuarios Usuario, int valid)
+        {
+            bool esValido = false;
+            if (Usuario.NivelUsuario == "Administrador")
+            {
+                esValido = true;
+            }
+            else if (Usuario.NivelUsuario == "Almacenero")
+            {
+                switch (valid)
+                {
+                    case 1:
+                        esValido = false;
+                        break;
+                    case 2:
+                        esValido = false;
+                        break;
+                    case 3:
+                        esValido = true;
+                        break;
+                    case 4:
+                        esValido = false;
+                        break;
+                    case 5:
+                        esValido = false;
+                        break;
+                    case 6:
+                        esValido = false;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else if (Usuario.NivelUsuario == "Vendedor")
+            {
+                switch (valid)
+                {
+                    case 1:
+                        esValido = false;
+                        break;
+                    case 2:
+                        esValido = false;
+                        break;
+                    case 3:
+                        esValido = true;
+                        break;
+                    case 4:
+                        esValido = false;
+                        break;
+                    case 5:
+                        esValido = false;
+                        break;
+                    case 6:
+                        esValido = false;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else if (Usuario.NivelUsuario == "Tesorero")
+            {
+                switch (valid)
+                {
+                    case 1:
+                        esValido = false;
+                        break;
+                    case 2:
+                        esValido = false;
+                        break;
+                    case 3:
+                        esValido = false;
+                        break;
+                    case 4:
+                        esValido = true;
+                        break;
+                    case 5:
+                        esValido = false;
+                        break;
+                    case 6:
+                        esValido = false;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else if (Usuario.NivelUsuario == "Gerente")
+            {
+                switch (valid)
+                {
+                    case 1:
+                        esValido = true;
+                        break;
+                    case 2:
+                        esValido = true;
+                        break;
+                    case 3:
+                        esValido = false;
+                        break;
+                    case 4:
+                        esValido = true;
+                        break;
+                    case 5:
+                        esValido = false;
+                        break;
+                    case 6:
+                        esValido = true;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return esValido;
         }
 
         private void UsuarioMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            RegistroUsuario registroUsuario = new RegistroUsuario();
-            registroUsuario.Show();
-            this.WindowState = WindowState.Minimized;
+            if(Intro(user, 1))
+            {
+                RegistroUsuario registroUsuario = new RegistroUsuario();
+                registroUsuario.Show();
+                this.WindowState = WindowState.Minimized;
+            }
+            else
+            {
+                MessageBox.Show("No tiene autorizacion para acceder a esa funcion.",
+                    "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void DireccionesMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            RegistroDirecciones registroDirecciones = new RegistroDirecciones();
-            registroDirecciones.Show();
-            this.WindowState = WindowState.Minimized;
+            if(Intro(user, 2))
+            {
+                RegistroDirecciones registroDirecciones = new RegistroDirecciones();
+                registroDirecciones.Show();
+                this.WindowState = WindowState.Minimized;
+            }
+            else
+            {
+                MessageBox.Show("No tiene autorizacion para acceder a esa funcion.",
+                    "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void ProductosMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            RegistroProdutos registroProdutos = new RegistroProdutos();
-            registroProdutos.Show();
-            this.WindowState = WindowState.Minimized;
+            if(Intro(user, 3))
+            {
+                RegistroProdutos registroProdutos = new RegistroProdutos();
+                registroProdutos.Show();
+                this.WindowState = WindowState.Minimized;
+            }
+            else
+            {
+                MessageBox.Show("No tiene autorizacion para acceder a esa funcion.",
+                    "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void SuplidoresMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            RegistroSuplidores registroSuplidores = new RegistroSuplidores();
-            registroSuplidores.Show();
-            this.WindowState = WindowState.Minimized;
+            if(Intro(user, 4))
+            {
+                RegistroSuplidores registroSuplidores = new RegistroSuplidores();
+                registroSuplidores.Show();
+                this.WindowState = WindowState.Minimized;
+            }
+            else
+            {
+                MessageBox.Show("No tiene autorizacion para acceder a esa funcion.",
+                    "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void NotasCreditosMenuItem_Click(object sender, RoutedEventArgs e)
         {
+            if(Intro(user, 5))
+            {
 
+            }
+            else
+            {
+                MessageBox.Show("No tiene autorizacion para acceder a esa funcion.",
+                    "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void ComprasMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            RegistroCompras registroCompras = new RegistroCompras();
-            registroCompras.Show();
-            this.WindowState = WindowState.Minimized;
+            if(Intro(user, 6))
+            {
+                RegistroCompras registroCompras = new RegistroCompras();
+                registroCompras.Show();
+                this.WindowState = WindowState.Minimized;
+            }
+            else
+            {
+                MessageBox.Show("No tiene autorizacion para acceder a esa funcion.",
+                    "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
     }
 }

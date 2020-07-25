@@ -5,43 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria"
         mc:Ignorable="d"
-        Title="Centro de control" Height="450" Width="800" WindowStyle="None" WindowStartupLocation="CenterScreen">
+        Title="Centro de control" Height="440" Width="450">
     <Grid>
-        <StackPanel>
-            <Menu Height="18">
-                <MenuItem Header="Registros">
-                    <MenuItem x:Name="UsuarioMenuItem" Header="Registro Usuario"
+
+        <Menu Margin="0,0,0,400">
+            <MenuItem Header="    Registros" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Width="73">
+                <MenuItem.Background>
+                    <ImageBrush ImageSource="/3256995851547464092-32.png" Stretch="Uniform" AlignmentX="Left"  />
+                </MenuItem.Background>
+
+                <MenuItem x:Name="UsuarioMenuItem" Header="Registro Usuario"
                               Click="UsuarioMenuItem_Click"></MenuItem>
-                    <MenuItem x:Name="DireccioesMenuItem" Header="Registro Direcciones"
+                <MenuItem x:Name="DireccioesMenuItem" Header="Registro Direcciones"
                               Click="DireccionesMenuItem_Click"></MenuItem>
-                    <MenuItem x:Name="ProductosMenuItem" Header="Registro Productos"
+                <MenuItem x:Name="ProductosMenuItem" Header="Registro Productos"
                               Click="ProductosMenuItem_Click"/>
-                    <MenuItem x:Name="SuplidoresMenuItem" Header="Registro Suplidores"
+                <MenuItem x:Name="SuplidoresMenuItem" Header="Registro Suplidores"
                               Click="SuplidoresMenuItem_Click"/>
-                    <MenuItem x:Name="NotasCreditosMenuItem" Header="Registro NotasCreditos"
+                <MenuItem x:Name="NotasCreditosMenuItem" Header="Registro NotasCreditos"
                               Click="NotasCreditosMenuItem_Click"/>
-                    <MenuItem x:Name="ComprasMenuItem" Header="Registro Compras"
+                <MenuItem x:Name="ComprasMenuItem" Header="Registro Compras"
                               Click="ComprasMenuItem_Click"/>
-                </MenuItem>
+            </MenuItem>
 
-                <MenuItem Header="Consultas">
+            <MenuItem Header="    Consultas" HorizontalContentAlignment="Right">
+                <MenuItem.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/consultante.png" AlignmentX="Left" Viewport="0.02,0.02,0.2,0.8" />
+                </MenuItem.Background>
 
-                </MenuItem>
+            </MenuItem>
 
-                <MenuItem Header="Reportes">
-                </MenuItem>
-            </Menu>
-        </StackPanel>
+            <MenuItem Header="    Reportes" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Width="79">
+                <MenuItem.Background>
+                    <ImageBrush ImageSource="/reporte-annual.png" AlignmentX="Left" Stretch="Uniform" Viewport="0,0,1,0.9"/>
+                </MenuItem.Background>
 
-        <StackPanel Orientation="Vertical" Margin="0,25,0,0">
-            <Image x:Name="image" Height="100" Width="100"/>
-            <StackPanel Orientation="Vertical" Margin="175,175,0,0" VerticalAlignment="Center"
-                        HorizontalAlignment="Center">
-                <Label Content="Bienvenido" FontSize="36" FontFamily="Calibri"
-                       VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="300"/>
-                <Label x:Name="NombreEmpleadoLabel" FontSize="36" VerticalContentAlignment="Center"
-                       HorizontalContentAlignment="Center" Width="300"/>
-            </StackPanel>
-        </StackPanel>
+            </MenuItem>
+
+
+
+
+        </Menu>
+        <Image x:Name="image" Source="/MENU.png" Margin="0,-7,19,22" Stretch="UniformToFill">
+
+        </Image>
+        <Label x:Name="label" Content="Bienvenido/a" HorizontalAlignment="Left" Margin="158,246,0,0" VerticalAlignment="Top" Width="187" FontSize="30"/>
+        <Button x:Name="button" Content="Cerrar" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="55,180,0,0" VerticalAlignment="Top" Height="15" Width="38" RenderTransformOrigin="0.229,0.125" FontSize="8" Click="button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/cerrar.png" AlignmentX="Left" Stretch="Uniform" Viewport="0,0.2,1,0.7"/>
+            </Button.Background>
+        </Button>
+
     </Grid>
 </Window>

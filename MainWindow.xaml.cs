@@ -242,5 +242,10 @@ namespace AgroVeterinaria
                     "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

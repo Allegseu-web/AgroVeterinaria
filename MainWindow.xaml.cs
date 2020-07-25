@@ -24,13 +24,13 @@ namespace AgroVeterinaria
     public partial class MainWindow : Window
     {
         Usuarios user = new Usuarios();
+        Login ventana = new Login();
         public MainWindow()
         {
             /*Constructor*/
             /*Este comentario es para ver si anna no esta bugueada xd*/
             InitializeComponent();
-            Login ventana = new Login();
-            ventana.Show();
+            this.ventana.Show();
             this.Close();
         }
 
@@ -243,9 +243,10 @@ namespace AgroVeterinaria
             }
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void CerrarSesionButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.ventana.Show();
+            this.Close();
         }
     }
 }

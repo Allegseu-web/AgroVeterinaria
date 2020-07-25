@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Registros"
         mc:Ignorable="d"
-        Title="RegistroProdutos" Height="650" Width="400" AllowsTransparency="True"
+        Title="RegistroProdutos" Height="550" Width="400" AllowsTransparency="True"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -13,6 +13,7 @@
             <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
+
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -21,62 +22,101 @@
             </LinearGradientBrush>
         </Grid.Background>
 
+        <Image HorizontalAlignment="Left" Height="126" Width="126"
+               Source="/UI/Registros/Tabla2.png" Margin="0,0,0,410"/>
 
-        <Image x:Name="image" HorizontalAlignment="Left" Height="126" Width="126" Source="/UI/Registros/Tabla2.png" Margin="0,0,0,524"/>
-        <Image Source="/UI/Registros/dog.png" Height="22" HorizontalAlignment="Left" Margin="42,147,337,481" Width="21"/>
-        <Label Content="ProductoId"  Margin="68,146,0,0" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top"/>
-        <TextBox x:Name="ProductoIdTextBox" Text="{Binding ProductoId}" Margin="144,148,117,482" />
-        <Button x:Name="BuscarButton" Content="Buscar" Margin="315,148,27,480" HorizontalContentAlignment="Right">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_search.png" AlignmentX="Left"  Viewport="0.01,-0.01,0.35,1.1" />
-            </Button.Background>
-        </Button>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="29" Margin="40,197,0,0" VerticalAlignment="Top" Width="23" Source="/UI/Registros/editar.png"/>
-        <Label x:Name="label" Content="Descripcion" HorizontalAlignment="Left" Margin="68,194,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="144,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="20" />
-        <Image x:Name="image2" HorizontalAlignment="Left" Height="32" Margin="30,246,0,0" VerticalAlignment="Top" Width="50" Source="/UI/Registros/icon_male.png"/>
-        <Label x:Name="label1" Content="Suplidor" HorizontalAlignment="Left" Margin="72,252,0,0" VerticalAlignment="Top"/>
-        <Image x:Name="image3" HorizontalAlignment="Left" Height="30" Margin="25,0,0,0" VerticalAlignment="Center" Width="42" Source="/UI/Registros/caja-de-entrega2.png"/>
-        <Label x:Name="label2" Content="Unidad" HorizontalAlignment="Left" Margin="63,310,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="144,256,0,0" VerticalAlignment="Top" Width="139"/>
-        <Image x:Name="image4" HorizontalAlignment="Left" Height="100" Margin="0,372,0,0" VerticalAlignment="Top" Width="100"/>
-        <Image x:Name="image5" HorizontalAlignment="Left" Height="36" Margin="214,0,0,0" VerticalAlignment="Center" Width="53" Source="/UI/Registros/diositoplis.png" RenderTransformOrigin="0.452,0.288">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.89"/>
-                    <TranslateTransform X="0.135" Y="-0.055"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Label x:Name="label3" Content="Cantidad" HorizontalAlignment="Left" Margin="250,0,0,0" VerticalAlignment="Center"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="312,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="78" Height="20"/>
-        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="113,0,0,0" VerticalAlignment="Center" Width="89" Height="20"/>
-        <Image x:Name="image6" HorizontalAlignment="Left" Height="26" Margin="27,385,0,0" VerticalAlignment="Top" Width="36" Source="/UI/Registros/price-tag-with-dollar-symbol.png"/>
-        <Label x:Name="label4" Content="Precio" HorizontalAlignment="Left" Margin="65,382,0,0" VerticalAlignment="Top" Width="43"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="113,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" Height="20"/>
-        <Image x:Name="image7" HorizontalAlignment="Left" Height="30" Margin="214,380,0,0" VerticalAlignment="Top" Width="64" Source="/UI/Registros/icon_minus.png"/>
-        <Label x:Name="label5" Content="Minimo" HorizontalAlignment="Left" Margin="256,383,0,0" VerticalAlignment="Top" Width="52"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="313,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Height="20"/>
-        <Image x:Name="image8" HorizontalAlignment="Left" Height="28" Margin="23,463,0,0" VerticalAlignment="Top" Width="33" Source="/UI/Registros/coins-with-number-1-1.png" RenderTransformOrigin="0.55,0.769"/>
-        <Label x:Name="label6" Content="Costo" HorizontalAlignment="Left" Margin="63,463,0,0" VerticalAlignment="Top" Width="40"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="109,467,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Height="20"/>
-        <Image x:Name="image9" HorizontalAlignment="Left" Height="32" Margin="213,461,0,0" VerticalAlignment="Top" Width="52" Source="/UI/Registros/money-bills.png"/>
-        <Label x:Name="label7" Content="Ganancia" HorizontalAlignment="Left" Margin="256,463,0,0" VerticalAlignment="Top" Width="62"/>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Margin="315,467,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Height="20"/>
-        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,593,0,0" VerticalContentAlignment="Bottom" Height="47" Width="58">
+        <StackPanel Orientation="Vertical" Margin="25,150,25,100">
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
+                <Image Source="/UI/Registros/dog.png" HorizontalAlignment="Left" Width="21" Height="25" Margin="0,0,9,0"/>
+                <Label Content="ProductoId" HorizontalAlignment="Left"
+                       Width="71" VerticalAlignment="Top" Height="25" Margin="0,0,5,0"/>
+                <TextBox x:Name="ProductoIdTextBox" Text="{Binding ProductoId}" Width="170" Height="25" Margin="0,0,5,0"/>
+                <Button x:Name="BuscarButton" HorizontalContentAlignment="Right" Height="25" Click="BuscarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/UI/Registros/icon_search.png" Width="30" Height="20"></Image>
+                        <Label Content="Buscar" Height="20" FontSize="8"></Label>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
+                <Image x:Name="image1" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25"
+                       Source="/UI/Registros/editar.png" Margin="0,0,5,0"/>
+                <Label x:Name="label" Content="Descripcion" Height="25"
+                       Width="71" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Margin="0,0,5,0"/>
+                <TextBox x:Name="DescripcionTextBox" HorizontalAlignment="Left" TextWrapping="Wrap"
+                         Text="{Binding Descripcion}" VerticalAlignment="Top" Width="242" Height="25"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
+                <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25"
+                       Margin="0,0,5,0" Source="/UI/Registros/icon_male.png"/>
+                <Label Content="Suplidor" HorizontalAlignment="Left"
+                       Width="71" Height="25" VerticalAlignment="Top" Margin="0,0,5,0"/>
+                <ComboBox x:Name="SuplidorComboBox" HorizontalAlignment="Left" VerticalAlignment="Top"
+                          Height="25" Width="242"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
+                <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25"
+                       Source="/UI/Registros/price-tag-with-dollar-symbol.png" Margin="0,0,5,0"/>
+                <Label Content="Precio" HorizontalAlignment="Left" VerticalAlignment="Top" Width="71" Margin="0,0,5,0"/>
+                <TextBox x:Name="PrecioTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"
+                         Margin="0,0,5,0" Width="75" Height="25" Text="{Binding Precio}"/>
+                <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top"
+                       Width="25" Source="/UI/Registros/icon_minus.png" Margin="0,0,5,0"/>
+                <Label Content="Minimo" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Margin="0,0,15,0" Width="50" Height="25"/>
+                <TextBox x:Name="MinimoTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"
+                         Width="66" Height="25" Text="{Binding Minimo}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
+                <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top"
+                       Width="25" Source="/UI/Registros/coins-with-number-1-1.png"
+                       Margin="0,0,5,0" RenderTransformOrigin="0.55,0.769"/>
+                <Label Content="Costo" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Margin="0,0,5,0" Width="71" Height="25"/>
+                <TextBox x:Name="CostoTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Costo}"
+                         Margin="0,0,5,0" VerticalAlignment="Top" Width="75" Height="25"/>
+                <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top"
+                       Margin="0,0,5,0" Width="25" Source="/UI/Registros/money-bills.png"/>
+                <Label Content="Ganancia" HorizontalAlignment="Left"
+                       Margin="0,0,5,0" VerticalAlignment="Top" Width="60"/>
+                <TextBox x:Name="GananciaTextBox" HorizontalAlignment="Left" TextWrapping="Wrap"
+                         Text="{Binding Ganancias}" VerticalAlignment="Top" Width="66" Height="25"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Center" Width="25"
+                       Source="/UI/Registros/caja-de-entrega2.png" Margin="0,0,5,0"/>
+                <Label Content="Unidad" HorizontalAlignment="Left" Width="71" Height="25" VerticalAlignment="Top" Margin="0,0,5,0"/>
+                <ComboBox x:Name="UnidadComboBox" HorizontalAlignment="Left" VerticalAlignment="Center"
+                          Width="75" Height="25" Margin="0,0,5,0"/>
+                <Image Source="/UI/Registros/diositoplis.png" Width="25" Height="25" Margin="0,0,5,0"></Image>
+                <Label Content="Cantidad" HorizontalAlignment="Left" VerticalAlignment="Center" Width="60" Margin="0,0,5,0"/>
+                <TextBox x:Name="CantidadTextBox" HorizontalAlignment="Left" TextWrapping="Wrap"
+                         Text="{Binding Cantidad}" VerticalAlignment="Center" Width="66" Height="25"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left"
+                VerticalAlignment="Top" Margin="34,476,0,0" VerticalContentAlignment="Bottom"
+                Height="47" Width="58" Click="NuevoButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/mas.png" AlignmentY="Top" Viewport="0.3,0,0.4,0.5"/>
             </Button.Background>
 
         </Button>
-        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Center" Margin="0,593,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Height="47" Width="58">
+        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Center"
+                Click="GuardarButton_Click" Margin="0,476,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Height="47" Width="58">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_save.png" AlignmentY="Top" Viewport="0.3,0,0.4,0.6"/>
             </Button.Background>
         </Button>
-        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="298,593,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Height="47" Width="56">
+        <Button x:Name="EliminarButton" Content="Eliminar"
+                Click="EliminarButton_Click" HorizontalAlignment="Left" Margin="310,476,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Height="47" Width="56">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_trash.png" AlignmentY="Top" Viewport="0.25,0,0.5,0.6" />
             </Button.Background>

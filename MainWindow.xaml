@@ -6,6 +6,12 @@
         xmlns:local="clr-namespace:AgroVeterinaria"
         mc:Ignorable="d"
         Title="Centro de control" Height="440" Width="450">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF7BE9F6"/>
+            <GradientStop Color="#FFF083DA" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
 
         <Menu Margin="0,0,0,400">
@@ -49,7 +55,7 @@
         <Image x:Name="image" Source="/MENU.png" Margin="0,-7,19,22" Stretch="UniformToFill">
 
         </Image>
-        <Label x:Name="label" Content="Bienvenido/a" HorizontalAlignment="Left" Margin="158,246,0,0" VerticalAlignment="Top" Width="187" FontSize="30"/>
+        <Label x:Name="label" Content="Bienvenido/a" HorizontalAlignment="Left" Margin="172,248,0,0" VerticalAlignment="Top" Width="187" FontSize="30"/>
         <Button x:Name="button" Content="Cerrar" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="55,180,0,0" VerticalAlignment="Top" Height="15" Width="38" RenderTransformOrigin="0.229,0.125" FontSize="8" Click="button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/cerrar.png" AlignmentX="Left" Stretch="Uniform" Viewport="0,0.2,1,0.7"/>

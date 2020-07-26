@@ -12,8 +12,8 @@ namespace AgroVeterinaria.Entidades
         public int ProductoId { get; set; }
         public string Descripcion { get; set; }
         public DateTime Fecha { get; set; } = DateTime.Now;
-        public int SuplidorId { get; set; }
-        public int UnidadId { get; set; }
+        public int SuplidorId { get; set; } = 1;
+        public int UnidadId { get; set; } = 1;
         public double Cantidad { get; set; }
         public double Minimo { get; set; }
         public double Costo { get; set; }

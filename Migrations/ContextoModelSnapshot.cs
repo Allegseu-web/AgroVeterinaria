@@ -118,7 +118,7 @@ namespace AgroVeterinaria.Migrations
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("TEXT");
 
-                    b.Property<double>("Ganacia")
+                    b.Property<double>("Ganancias")
                         .HasColumnType("REAL");
 
                     b.Property<double>("Minimo")
@@ -252,7 +252,7 @@ namespace AgroVeterinaria.Migrations
                             UsuarioId = 1,
                             Clave = "123456",
                             Email = "Admin@admin.com",
-                            FechaCreacion = new DateTime(2020, 7, 17, 22, 3, 41, 64, DateTimeKind.Local).AddTicks(275),
+                            FechaCreacion = new DateTime(2020, 7, 25, 23, 7, 26, 762, DateTimeKind.Local).AddTicks(7893),
                             NivelUsuario = "Administrador",
                             NombreUsuario = "Administrador",
                             Nombres = "Admin"

@@ -21,6 +21,7 @@
     <None Remove="UI\Login\name_user_3716.png" />
     <None Remove="UI\Login\perritofin.png" />
     <None Remove="UI\Login\YERVA.png" />
+    <None Remove="UI\Registros\6229529501556258238-32.png" />
     <None Remove="UI\Registros\arreglando.png" />
     <None Remove="UI\Registros\caja-de-entrega2.png" />
     <None Remove="UI\Registros\calle.png" />
@@ -38,6 +39,7 @@
     <None Remove="UI\Registros\icon_key.ico" />
     <None Remove="UI\Registros\icon_male.png" />
     <None Remove="UI\Registros\icon_minus.png" />
+    <None Remove="UI\Registros\icon_money.png" />
     <None Remove="UI\Registros\icon_phone.png" />
     <None Remove="UI\Registros\icon_plus.ico" />
     <None Remove="UI\Registros\icon_save.ico" />
@@ -51,11 +53,14 @@
     <None Remove="UI\Registros\icon_user.png" />
     <None Remove="UI\Registros\kisspng-computer-icons-new-york-city-clip-art-appartment-5b3d9b90d0c7a0.0018395515307641768552.png" />
     <None Remove="UI\Registros\mas.png" />
+    <None Remove="UI\Registros\medida 2.png" />
     <None Remove="UI\Registros\modificacion.png" />
     <None Remove="UI\Registros\money-bills.png" />
     <None Remove="UI\Registros\MUNDO.png" />
     <None Remove="UI\Registros\New Mockup .png" />
     <None Remove="UI\Registros\pngegg.png" />
+    <None Remove="UI\Registros\pngegg2.png" />
+    <None Remove="UI\Registros\pngwing.com %281%29.png" />
     <None Remove="UI\Registros\price-tag-with-dollar-symbol.png" />
     <None Remove="UI\Registros\Registro de Direcciones.png" />
     <None Remove="UI\Registros\registro.png" />
@@ -64,6 +69,7 @@
     <None Remove="UI\Registros\suplidores.png" />
     <None Remove="UI\Registros\supplier.png" />
     <None Remove="UI\Registros\Tabla2.png" />
+    <None Remove="UI\Registros\unidad.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -96,6 +102,7 @@
     <Resource Include="UI\Login\name_user_3716.png" />
     <Resource Include="UI\Login\perritofin.png" />
     <Resource Include="UI\Login\YERVA.png" />
+    <Resource Include="UI\Registros\6229529501556258238-32.png" />
     <Resource Include="UI\Registros\arreglando.png" />
     <Resource Include="UI\Registros\caja-de-entrega2.png" />
     <Resource Include="UI\Registros\calle.png" />
@@ -113,6 +120,7 @@
     <Resource Include="UI\Registros\icon_key.ico" />
     <Resource Include="UI\Registros\icon_male.png" />
     <Resource Include="UI\Registros\icon_minus.png" />
+    <Resource Include="UI\Registros\icon_money.png" />
     <Resource Include="UI\Registros\icon_phone.png" />
     <Resource Include="UI\Registros\icon_plus.ico" />
     <Resource Include="UI\Registros\icon_save.ico" />
@@ -126,11 +134,14 @@
     <Resource Include="UI\Registros\icon_user.png" />
     <Resource Include="UI\Registros\kisspng-computer-icons-new-york-city-clip-art-appartment-5b3d9b90d0c7a0.0018395515307641768552.png" />
     <Resource Include="UI\Registros\mas.png" />
+    <Resource Include="UI\Registros\medida 2.png" />
     <Resource Include="UI\Registros\modificacion.png" />
     <Resource Include="UI\Registros\money-bills.png" />
     <Resource Include="UI\Registros\MUNDO.png" />
     <Resource Include="UI\Registros\New Mockup .png" />
     <Resource Include="UI\Registros\pngegg.png" />
+    <Resource Include="UI\Registros\pngegg2.png" />
+    <Resource Include="UI\Registros\pngwing.com (1).png" />
     <Resource Include="UI\Registros\price-tag-with-dollar-symbol.png" />
     <Resource Include="UI\Registros\Registro de Direcciones.png" />
     <Resource Include="UI\Registros\registro.png" />
@@ -139,6 +150,7 @@
     <Resource Include="UI\Registros\suplidores.png" />
     <Resource Include="UI\Registros\supplier.png" />
     <Resource Include="UI\Registros\Tabla2.png" />
+    <Resource Include="UI\Registros\unidad.png" />
   </ItemGroup>
 
 </Project>

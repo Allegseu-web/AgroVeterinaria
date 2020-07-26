@@ -159,9 +159,9 @@ namespace AgroVeterinaria
         {
             if(Intro(user, 1))
             {
-                RegistroUsuario registroUsuario = new RegistroUsuario();
+                RegistroUsuario registroUsuario = new RegistroUsuario(user);
                 registroUsuario.Show();
-                this.WindowState = WindowState.Minimized;
+                this.Close();
             }
             else
             {
@@ -176,7 +176,7 @@ namespace AgroVeterinaria
             {
                 RegistroDirecciones registroDirecciones = new RegistroDirecciones();
                 registroDirecciones.Show();
-                this.WindowState = WindowState.Minimized;
+                this.Close();
             }
             else
             {
@@ -191,7 +191,7 @@ namespace AgroVeterinaria
             {
                 RegistroProdutos registroProdutos = new RegistroProdutos();
                 registroProdutos.Show();
-                this.WindowState = WindowState.Minimized;
+                this.Close();
             }
             else
             {
@@ -206,7 +206,7 @@ namespace AgroVeterinaria
             {
                 RegistroSuplidores registroSuplidores = new RegistroSuplidores();
                 registroSuplidores.Show();
-                this.WindowState = WindowState.Minimized;
+                this.Close();
             }
             else
             {
@@ -234,7 +234,7 @@ namespace AgroVeterinaria
             {
                 RegistroCompras registroCompras = new RegistroCompras();
                 registroCompras.Show();
-                this.WindowState = WindowState.Minimized;
+                this.Close();
             }
             else
             {

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Registros"
         mc:Ignorable="d"
-        Title="RegistroProdutos" Height="550" Width="400" AllowsTransparency="True"
+        Title="Registro de productos" Height="550" Width="400" AllowsTransparency="True"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -23,7 +23,7 @@
         </Grid.Background>
 
         <Image HorizontalAlignment="Left" Height="126" Width="126"
-               Source="/UI/Registros/Tabla2.png" Margin="0,0,0,410"/>
+               Source="/UI/Registros/Tabla2.png" VerticalAlignment="Top"/>
 
         <StackPanel Orientation="Vertical" Margin="25,150,25,100">
             <StackPanel Orientation="Horizontal" Margin="0,5,0,15">

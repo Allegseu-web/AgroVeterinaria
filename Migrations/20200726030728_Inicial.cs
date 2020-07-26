@@ -74,7 +74,7 @@ namespace AgroVeterinaria.Migrations
                     Minimo = table.Column<double>(nullable: false),
                     Costo = table.Column<double>(nullable: false),
                     Precio = table.Column<double>(nullable: false),
-                    Ganacia = table.Column<double>(nullable: false),
+                    Ganancias = table.Column<double>(nullable: false),
                     UsuarioId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -159,7 +159,7 @@ namespace AgroVeterinaria.Migrations
             migrationBuilder.InsertData(
                 table: "Usuarios",
                 columns: new[] { "UsuarioId", "Clave", "Email", "FechaCreacion", "NivelUsuario", "NombreUsuario", "Nombres" },
-                values: new object[] { 1, "123456", "Admin@admin.com", new DateTime(2020, 7, 17, 22, 3, 41, 64, DateTimeKind.Local).AddTicks(275), "Administrador", "Administrador", "Admin" });
+                values: new object[] { 1, "123456", "Admin@admin.com", new DateTime(2020, 7, 25, 23, 7, 26, 762, DateTimeKind.Local).AddTicks(7893), "Administrador", "Administrador", "Admin" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProductosDetalle_CompraId",

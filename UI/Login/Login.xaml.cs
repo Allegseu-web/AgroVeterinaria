@@ -43,8 +43,8 @@ namespace AgroVeterinaria.UI.Login
                         MessageBoxImage.Information);
                 }
             }
-
         }
+
         bool pssw = false;
         private void Ocultar_Mostrar_Click(object sender, RoutedEventArgs e)
         {

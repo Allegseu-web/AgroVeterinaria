@@ -7,10 +7,19 @@
         mc:Ignorable="d"
         Title="Centro de control" Height="440" Width="450"
         WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/MENU.png" Stretch="Fill"/>
-        </Grid.Background>
+        
+        <Border CornerRadius="10">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF7BE9F6"/>
+                    <GradientStop Color="#FFF083DA" Offset="1"/>
+                </LinearGradientBrush>
+
+            </Border.Background>
+        </Border>
+        
         <Menu Height="20" VerticalAlignment="Top">
             <MenuItem Header="    Registros" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Width="75">
                 <MenuItem.Background>
@@ -40,6 +49,7 @@
                 </MenuItem.Background>
             </MenuItem>
         </Menu>
+        <Image Source="/MENU.png" Stretch="Fill" Margin="0,-10,0,0" />
         <Button x:Name="CerrarSesionButton" Content="Cerrar" VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="50,195,0,0" 
                 VerticalAlignment="Top" Height="15" Width="40" RenderTransformOrigin="0.229,0.125" 
@@ -49,8 +59,7 @@
             </Button.Background>
         </Button>
         <StackPanel Orientation="Vertical" Margin="125,245,25,50">
-            <Label Content="Bienvenido/a" HorizontalAlignment="Center" 
-                   VerticalAlignment="Center" FontSize="30"/>
+            <Label Content="Bienvenido/a" HorizontalAlignment="Center" FontSize="30"/>
             <Label x:Name="NombreEmpleadoLabel" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"></Label>
         </StackPanel>
     </Grid>

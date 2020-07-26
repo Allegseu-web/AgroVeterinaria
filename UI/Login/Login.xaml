@@ -6,8 +6,14 @@
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Login"
         mc:Ignorable="d"
         Title="Login" Height="475" Width="400"
-        AllowsTransparency="True" Background="Transparent"
+        AllowsTransparency="True"
         WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <!--Comentario-->
         <Grid.RowDefinitions>

@@ -5,9 +5,109 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Registros"
         mc:Ignorable="d"
-        Title="RegistroDirecciones" Height="450" Width="800" AllowsTransparency="True" Background="Transparent"
+        Title="RegistroDirecciones" Height="700" Width="500" AllowsTransparency="True"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+
+
+
+
+
+
+
+
+
+
+
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="10" >
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF7BE9F6"/>
+                    <GradientStop Color="#FFF083DA" Offset="1"/>
+                </LinearGradientBrush>
+
+
+            </Border.Background>
+
+        </Border>
+        <Image x:Name="image" VerticalAlignment="Top" HorizontalAlignment="Center" Height="222"   Width="216" Margin="0,10,0,0" Source="/UI/Registros/Registro de Direcciones.png"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="18" Margin="31,296,0,0" VerticalAlignment="Top" Width="18" Source="/UI/Registros/direccion.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.712"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label x:Name="label" Content="DirecciónID" HorizontalAlignment="Left" Margin="55,293,0,0" VerticalAlignment="Top" Height="26" Width="71"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="143,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <Image x:Name="image2" HorizontalAlignment="Left" Height="35" Margin="19,348,0,0" VerticalAlignment="Top" Width="37" Source="/UI/Registros/suplidores.png"/>
+        <Label x:Name="label1" Content="Suplidor" HorizontalAlignment="Left" Margin="65,357,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.57,-0.154" Height="26" Width="54"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="143,361,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" Height="18"/>
+        <Image x:Name="image3" HorizontalAlignment="Left" Height="22" Margin="28,412,0,0" VerticalAlignment="Top" Width="47" Source="/UI/Registros/edificio.png"/>
+        <Label x:Name="label2" Content="Edificio/Piso/Apartamento" HorizontalAlignment="Left" Margin="65,412,0,0" VerticalAlignment="Top" Height="26" Width="149"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="225,419,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Height="18"/>
+        <Image x:Name="image4" HorizontalAlignment="Left" Height="21" Margin="27,470,0,0" VerticalAlignment="Top" Width="19" Source="/UI/Registros/calle.png"/>
+        <Label x:Name="label3" Content="Calle" HorizontalAlignment="Left" Margin="65,470,0,0" VerticalAlignment="Top" Width="38" Height="26"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="108,475,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="382" Height="18"/>
+        <Image x:Name="image5" HorizontalAlignment="Left" Height="20" Margin="24,525,0,0" VerticalAlignment="Top" Width="26" Source="/UI/Registros/MUNDO.png"/>
+        <Label x:Name="label4" Content="Pais" HorizontalAlignment="Left" Margin="65,524,0,0" VerticalAlignment="Top" Height="26" Width="30"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Margin="108,529,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <Image x:Name="image6" HorizontalAlignment="Left" Height="40" Margin="259,518,0,0" VerticalAlignment="Top" Width="55" Source="/UI/Registros/pngegg.png"/>
+        <Label x:Name="label5" Content="Municipio" HorizontalAlignment="Left" Margin="291,529,0,0" VerticalAlignment="Top" Height="26" Width="63"/>
+        <Image x:Name="image7" HorizontalAlignment="Left" Height="26" Margin="16,582,0,0" VerticalAlignment="Top" Width="41" Source="/UI/Registros/direcciones 2.png"/>
+        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Margin="359,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="18"/>
+        <Label x:Name="label6" Content="Numero de Localidad" HorizontalAlignment="Left" Margin="55,582,0,0" VerticalAlignment="Top" Height="26" Width="124"/>
+        <TextBox x:Name="textBox6" HorizontalAlignment="Left" Margin="188,588,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Height="18"/>
+        <Image x:Name="image8" HorizontalAlignment="Left" Height="29" Margin="265,577,0,0" VerticalAlignment="Top" Width="44" Source="/UI/Registros/kisspng-computer-icons-new-york-city-clip-art-appartment-5b3d9b90d0c7a0.0018395515307641768552.png"/>
+        <Label x:Name="label7" Content="Ciudad" HorizontalAlignment="Left" Margin="304,582,0,0" VerticalAlignment="Top" Height="26" Width="47"/>
+        <TextBox x:Name="textBox7" HorizontalAlignment="Left" Margin="359,588,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="18"/>
+        <Label x:Name="label8" Content="N" HorizontalAlignment="Left" Margin="28,662,0,0" VerticalAlignment="Top" Height="10" Width="19"/>
+
+        <Button x:Name="button" Content="Nuevo" HorizontalAlignment="Left" Margin="36,647,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom" Height="31" Width="44">
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/Registros/mas.png" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.5"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button1" Content="Guardar" HorizontalAlignment="Left" Margin="233,646,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom" Height="32" Width="47">
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/Registros/icon_save.png" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.5" />
+            </Button.Background>
+        </Button>
+        <Button x:Name="button2" Content="Eliminar" HorizontalAlignment="Left" Margin="414,644,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom"  Height="34" Width="46">
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/Registros/icon_trash.png" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.5" />
+            </Button.Background>
+        </Button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </Grid>
 </Window>

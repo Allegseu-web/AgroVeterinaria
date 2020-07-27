@@ -22,7 +22,7 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <Image HorizontalAlignment="Left" Height="126" Width="126"
+        <Image HorizontalAlignment="Center" Height="126" Width="126"
                Source="/UI/Registros/Tabla2.png" VerticalAlignment="Top"/>
 
         <StackPanel Orientation="Vertical" Margin="25,150,25,100">

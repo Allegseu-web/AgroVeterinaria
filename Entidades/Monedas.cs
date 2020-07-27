@@ -11,6 +11,6 @@ namespace AgroVeterinaria.Entidades
         public int MonedaId { get; set; }
         public int UsuarioId { get; set; }
         public string Tipo { get; set; }
-        public DateTime Fecha { get; set; }
+        public DateTime Fecha { get; set; } = DateTime.Now;
     }
 }

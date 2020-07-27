@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Registros"
         mc:Ignorable="d"
-        Title="RegistroUnidades" Height="450" Width="400" AllowsTransparency="True" Background="Transparent"
+        Title="RegistroUnidades" Height="400" Width="400" AllowsTransparency="True" Background="Transparent"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" >
     <Grid>
         <Grid.RowDefinitions>
@@ -20,43 +20,50 @@
             </Border.Background>
         </Border>
         <Image x:Name="image" HorizontalAlignment="Left" Height="120" VerticalAlignment="Top" Width="96" Source="/UI/Registros/pngegg2.png" Margin="160,0,0,0"/>
+        <Label x:Name="label2" Content="Registro Unidad" HorizontalAlignment="Left" Margin="160,104,0,0" VerticalAlignment="Top"/>
 
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="40" Margin="30,161,0,0" VerticalAlignment="Top" Width="51" Source="/UI/Registros/unidad.png"/>
-        <Label x:Name="label" Content="UnidadID" HorizontalAlignment="Left" Margin="93,175,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="176,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="20"/>
-        <Image x:Name="image2" HorizontalAlignment="Left" Height="34" Margin="24,275,0,0" VerticalAlignment="Top" Width="43" Source="/UI/Registros/6229529501556258238-32.png" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="181.417"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Label x:Name="label1" Content="Descripcion" HorizontalAlignment="Left" Margin="79,282,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.544,-0.539"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="176,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="23"/>
-        <Button x:Name="button" Content="Nuevo" HorizontalAlignment="Left" VerticalContentAlignment = "Bottom"  Margin="32,402,0,0" VerticalAlignment="Top" Height="34">
+        <StackPanel Orientation="Vertical" Margin="25,150,25,25">
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,20">
+                <Image x:Name="image1" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top"
+                       Width="25" Source="/UI/Registros/unidad.png" Margin="0,0,5,0"/>
+                <Label x:Name="label" Content="UnidadId" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" Height="25" Margin="0,0,18,0"/>
+                <TextBox x:Name="MonedaIdTextBox" HorizontalAlignment="Left" TextWrapping="Wrap"
+                         VerticalAlignment="Top" Text="{Binding MonedaId}" Width="125" Height="25" Margin="0,0,5,0"/>
+                <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Right"
+                VerticalAlignment="Top" Height="25" Width="75" Click="BuscarButton_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/UI/Registros/icon_search.png"
+                            AlignmentX="Left" AlignmentY="Center" Stretch="Uniform" Viewport="0,0.2,0.7,0.6"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,15">
+                <Image Source="/UI/Registros/6229529501556258238-32.png" Height="25" Width="25" Margin="0,0,5,0"/>
+                <Label Content="Descripcion" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Margin="0,0,5,0"/>
+                <TextBox x:Name="TipoTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"
+                         Text="{Binding Tipo}" Width="205" Height="25"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Button x:Name="button" Content="Nuevo" HorizontalAlignment="Left" VerticalContentAlignment = "Bottom"  Margin="25,300,0,0" VerticalAlignment="Top" Height="34">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/mas.png" AlignmentY= "Top" Stretch="Uniform"  Viewport="0,0,1,0.6" />
             </Button.Background>
         </Button>
-        <Button x:Name="button_Copy" Content="Guardar" HorizontalAlignment="Left" VerticalContentAlignment = "Bottom" Margin="168,402,0,0" VerticalAlignment="Top" Height="34">
+        <Button x:Name="button_Copy" Content="Guardar" HorizontalAlignment="Center" VerticalContentAlignment = "Bottom" Margin="0,300,0,0" VerticalAlignment="Top" Height="34">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_save.png" AlignmentY= "Top" Stretch="Uniform"  Viewport="0,0,1,0.6" />
             </Button.Background>
         </Button>
-        <Button x:Name="button_Copy1" Content="Eliminar" HorizontalAlignment="Left" VerticalContentAlignment = "Bottom" Margin="311,402,0,0" VerticalAlignment="Top" Height="34">
+        <Button x:Name="button_Copy1" Content="Eliminar" HorizontalAlignment="Left" VerticalContentAlignment = "Bottom" Margin="329,300,0,0" VerticalAlignment="Top" Height="34">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_trash.png" AlignmentY= "Top" Stretch="Uniform"  Viewport="0,0,1,0.6" />
             </Button.Background>
         </Button>
-        <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment = "Right"  Margin="285,180,0,0" VerticalAlignment="Top" Height="28" Width="59">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_search.png"  AlignmentX= "Left" AlignmentY="Center" Stretch="Uniform"  Viewport="0,0.2,0.7,0.6"  />
-            </Button.Background>
-        </Button>
-        <Label x:Name="label2" Content="Registro Unidad" HorizontalAlignment="Left" Margin="160,104,0,0" VerticalAlignment="Top"/>
+
 
 
     </Grid>

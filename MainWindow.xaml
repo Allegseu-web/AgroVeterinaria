@@ -9,7 +9,7 @@
         WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
     
     <Grid>
-        
+
         <Border CornerRadius="10">
             <Border.Background>
                 <LinearGradientBrush>
@@ -19,7 +19,7 @@
 
             </Border.Background>
         </Border>
-        
+        <Image Source="/MENU.png" Stretch="Fill" Margin="0,-10,0,0"/>
         <Menu Height="20" VerticalAlignment="Top">
             <MenuItem Header="    Registros" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Width="75">
                 <MenuItem.Background>
@@ -49,7 +49,6 @@
                 </MenuItem.Background>
             </MenuItem>
         </Menu>
-        <Image Source="/MENU.png" Stretch="Fill" Margin="0,-10,0,0" />
         <Button x:Name="CerrarSesionButton" Content="Cerrar" VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="50,195,0,0" 
                 VerticalAlignment="Top" Height="15" Width="40" RenderTransformOrigin="0.229,0.125" 

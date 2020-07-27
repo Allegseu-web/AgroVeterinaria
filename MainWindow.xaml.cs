@@ -219,7 +219,9 @@ namespace AgroVeterinaria
         {
             if(Intro(user, 5))
             {
-
+                RegistroMoneda registroMoneda = new RegistroMoneda();
+                registroMoneda.Show();
+                this.Close();
             }
             else
             {

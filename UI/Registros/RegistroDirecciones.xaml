@@ -7,17 +7,6 @@
         mc:Ignorable="d"
         Title="RegistroDirecciones" Height="700" Width="500" AllowsTransparency="True"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
-
-
-
-
-
-
-
-
-
-
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>

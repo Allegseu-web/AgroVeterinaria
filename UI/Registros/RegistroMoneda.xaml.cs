@@ -29,7 +29,6 @@ namespace AgroVeterinaria.UI.Registros
         private void Limpiar()
         {
             this.Moneda = new Monedas();
-            MonedaIdTextBox.Text = string.Empty;
             TipoTextBox.Text = string.Empty;
             this.DataContext = Moneda;
         }

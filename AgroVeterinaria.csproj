@@ -11,7 +11,6 @@
     <None Remove="3256995851547464092-32.png" />
     <None Remove="cerrar.png" />
     <None Remove="consultante.png" />
-    <None Remove="icons8-tarjeta-de-empleado-100.png" />
     <None Remove="MENU.png" />
     <None Remove="reporte-annual.png" />
     <None Remove="UI\Login\3844441-eye-see-show-view-watch_110305.ico" />
@@ -91,7 +90,6 @@
     <Resource Include="3256995851547464092-32.png" />
     <Resource Include="cerrar.png" />
     <Resource Include="consultante.png" />
-    <Resource Include="icons8-tarjeta-de-empleado-100.png" />
     <Resource Include="MENU.png" />
     <Resource Include="reporte-annual.png" />
     <Resource Include="UI\Login\3844441-eye-see-show-view-watch_110305.ico" />

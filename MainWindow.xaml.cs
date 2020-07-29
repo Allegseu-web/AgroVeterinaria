@@ -174,7 +174,7 @@ namespace AgroVeterinaria
         {
             if(Intro(user, 2))
             {
-                RegistroDirecciones registroDirecciones = new RegistroDirecciones();
+                RegistroDirecciones registroDirecciones = new RegistroDirecciones(user);
                 registroDirecciones.Show();
                 this.Close();
             }
@@ -189,7 +189,7 @@ namespace AgroVeterinaria
         {
             if(Intro(user, 3))
             {
-                RegistroProdutos registroProdutos = new RegistroProdutos();
+                RegistroProdutos registroProdutos = new RegistroProdutos(user);
                 registroProdutos.Show();
                 this.Close();
             }
@@ -204,7 +204,7 @@ namespace AgroVeterinaria
         {
             if(Intro(user, 4))
             {
-                RegistroSuplidores registroSuplidores = new RegistroSuplidores();
+                RegistroSuplidores registroSuplidores = new RegistroSuplidores(user);
                 registroSuplidores.Show();
                 this.Close();
             }
@@ -219,7 +219,7 @@ namespace AgroVeterinaria
         {
             if(Intro(user, 5))
             {
-                RegistroMoneda registroMoneda = new RegistroMoneda();
+                RegistroMoneda registroMoneda = new RegistroMoneda(user);
                 registroMoneda.Show();
                 this.Close();
             }
@@ -234,7 +234,7 @@ namespace AgroVeterinaria
         {
             if(Intro(user, 6))
             {
-                RegistroCompras registroCompras = new RegistroCompras();
+                RegistroCompras registroCompras = new RegistroCompras(user);
                 registroCompras.Show();
                 this.Close();
             }

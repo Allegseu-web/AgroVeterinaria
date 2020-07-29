@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgroVeterinaria.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,7 +18,7 @@ namespace AgroVeterinaria.UI.Registros
     /// </summary>
     public partial class RegistroCompras : Window
     {
-        public RegistroCompras()
+        public RegistroCompras(Usuarios user)
         {
             InitializeComponent();
         }

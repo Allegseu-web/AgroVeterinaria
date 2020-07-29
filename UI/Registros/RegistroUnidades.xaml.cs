@@ -85,5 +85,22 @@ namespace AgroVeterinaria.UI.Registros
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void AtrasButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            window.Show();
+            this.Close();
+        }
+
+        private void MinimizarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void CerrarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -19,11 +19,13 @@ namespace AgroVeterinaria.UI.Registros
     /// </summary>
     public partial class RegistroMoneda : Window
     {
+        Usuarios Usuario = new Usuarios();
         Monedas Moneda = new Monedas();
-        public RegistroMoneda()
+        public RegistroMoneda(Usuarios user)
         {
             InitializeComponent();
             this.DataContext = Moneda;
+            this.Usuario = user;
         }
 
         private void Limpiar()
@@ -89,6 +91,22 @@ namespace AgroVeterinaria.UI.Registros
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
         {
             Limpiar();
+        }
+        private void AtrasButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            window.Show();
+            this.Close();
+        }
+
+        private void MinimizarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void CerrarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

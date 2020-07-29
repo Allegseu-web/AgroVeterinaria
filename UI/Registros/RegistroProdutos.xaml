@@ -121,8 +121,23 @@
                 <ImageBrush ImageSource="/UI/Registros/icon_trash.png" AlignmentY="Top" Viewport="0.25,0,0.5,0.6" />
             </Button.Background>
         </Button>
-
-
-
+        <!--Control de ventana-->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AtrasButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-atrás-100.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="MinimizarButton" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="MinimizarButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-minimizar-la-ventana-100.png" Stretch="Fill"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="CerrarButton" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="CerrarButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-cerrar-ventana-100.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

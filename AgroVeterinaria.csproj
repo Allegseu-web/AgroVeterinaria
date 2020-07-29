@@ -32,7 +32,10 @@
     <None Remove="UI\Registros\edificio.png" />
     <None Remove="UI\Registros\editar.png" />
     <None Remove="UI\Registros\flor.png" />
+    <None Remove="UI\Registros\icons8-atrás-100.png" />
+    <None Remove="UI\Registros\icons8-cerrar-ventana-100.png" />
     <None Remove="UI\Registros\icons8-izquierda-círculo-100.png" />
+    <None Remove="UI\Registros\icons8-minimizar-la-ventana-100.png" />
     <None Remove="UI\Registros\icon_child.ico" />
     <None Remove="UI\Registros\icon_envelope.ico" />
     <None Remove="UI\Registros\icon_key.ico" />
@@ -111,7 +114,10 @@
     <Resource Include="UI\Registros\edificio.png" />
     <Resource Include="UI\Registros\editar.png" />
     <Resource Include="UI\Registros\flor.png" />
+    <Resource Include="UI\Registros\icons8-atrás-100.png" />
+    <Resource Include="UI\Registros\icons8-cerrar-ventana-100.png" />
     <Resource Include="UI\Registros\icons8-izquierda-círculo-100.png" />
+    <Resource Include="UI\Registros\icons8-minimizar-la-ventana-100.png" />
     <Resource Include="UI\Registros\icon_child.ico" />
     <Resource Include="UI\Registros\icon_envelope.ico" />
     <Resource Include="UI\Registros\icon_key.ico" />

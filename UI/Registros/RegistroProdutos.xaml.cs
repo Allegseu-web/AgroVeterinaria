@@ -21,11 +21,13 @@ namespace AgroVeterinaria.UI.Registros
     /// </summary>
     public partial class RegistroProdutos : Window
     {
+        Usuarios Usuario = new Usuarios();
         Productos Producto = new Productos();
-        public RegistroProdutos()
+        public RegistroProdutos(Usuarios user)
         {
             InitializeComponent();
             this.DataContext = Producto;
+            this.Usuario = user;
         }
 
         private void Limpiar()
@@ -147,6 +149,22 @@ namespace AgroVeterinaria.UI.Registros
             if (Producto != null) { this.Producto = cuenta; }
             else { Limpiar(); }
             this.DataContext = this.Producto;
+        }
+        private void AtrasButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow(Usuario);
+            window.Show();
+            this.Close();
+        }
+
+        private void MinimizarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void CerrarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

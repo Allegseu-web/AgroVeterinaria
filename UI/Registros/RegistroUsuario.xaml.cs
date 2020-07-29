@@ -22,7 +22,6 @@ namespace AgroVeterinaria.UI.Registros
     /// </summary>
     public partial class RegistroUsuario : Window
     {
-        Usuarios User = new Usuarios();
         public string[] Niveles { get; set; }
 
         private Usuarios Usuario = new Usuarios();
@@ -32,7 +31,7 @@ namespace AgroVeterinaria.UI.Registros
             this.DataContext = Usuario;
             Niveles = new string[] { "Administrador", "Almacenero", "Vendedor", "Tesorero", "Gerente" };
             NivelUsuarioComboBox.ItemsSource = Niveles;
-            this.User = user;
+            this.Usuario = user;
         }
 
         private void Limpiar()
@@ -173,8 +172,18 @@ namespace AgroVeterinaria.UI.Registros
 
         private void AtrasButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow window = new MainWindow(User);
+            MainWindow window = new MainWindow(Usuario);
             window.Show();
+            this.Close();
+        }
+
+        private void MinimizarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void CerrarButton_Click(object sender, RoutedEventArgs e)
+        {
             this.Close();
         }
     }

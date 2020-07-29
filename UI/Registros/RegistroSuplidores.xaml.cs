@@ -19,11 +19,13 @@ namespace AgroVeterinaria.UI.Registros
     /// </summary>
     public partial class RegistroSuplidores : Window
     {
+        Usuarios Usuario = new Usuarios();
         Suplidores Suplidor = new Suplidores();
-        public RegistroSuplidores()
+        public RegistroSuplidores(Usuarios user)
         {
             InitializeComponent();
             this.DataContext = Suplidor;
+            this.Usuario = user;
         }
 
         private void Limpiar()
@@ -111,6 +113,23 @@ namespace AgroVeterinaria.UI.Registros
 
             if (suplidor != null) { this.DataContext = suplidor; }
             else { Limpiar(); }
+        }
+
+        private void AtrasButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow(Usuario);
+            window.Show();
+            this.Close();
+        }
+
+        private void MinimizarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void CerrarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

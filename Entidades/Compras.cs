@@ -14,6 +14,7 @@ namespace AgroVeterinaria.Entidades
         public int SuplidorId { get; set; }
         public double SubTotal { get; set; }
         public int UsuarioId { get; set; }
+        public double ITBIS_Total { get; set; }
 
         [ForeignKey("CompraId")]
         public virtual List<ProductosDetalle> ProductosDetalles { get; set; } = new List<ProductosDetalle>();

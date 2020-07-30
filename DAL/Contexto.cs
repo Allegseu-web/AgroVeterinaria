@@ -1,4 +1,5 @@
-﻿using AgroVeterinaria.Entidades;
+﻿using AgroVeterinaria.BLL;
+using AgroVeterinaria.Entidades;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -22,15 +23,15 @@ namespace AgroVeterinaria.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Usuarios>().HasData(new Entidades.Usuarios
+            modelBuilder.Entity<Usuarios>().HasData(new Usuarios
             {
                 UsuarioId = 1,
-                Clave = "123456",
+                Clave = UsuariosBLL.GetSHA256("123456"),
                 FechaCreacion = DateTime.Now,
-                Nombres = "Admin",
+                Nombres = "Manager",
                 NivelUsuario = "Administrador",
                 Email = "Admin@admin.com",
-                NombreUsuario = "Administrador"
+                NombreUsuario = "Admin"
             });
         }
     }

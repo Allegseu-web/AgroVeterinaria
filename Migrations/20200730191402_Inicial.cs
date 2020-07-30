@@ -16,7 +16,8 @@ namespace AgroVeterinaria.Migrations
                     Fecha = table.Column<DateTime>(nullable: false),
                     SuplidorId = table.Column<int>(nullable: false),
                     SubTotal = table.Column<double>(nullable: false),
-                    UsuarioId = table.Column<int>(nullable: false)
+                    UsuarioId = table.Column<int>(nullable: false),
+                    ITBIS_Total = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -143,6 +144,7 @@ namespace AgroVeterinaria.Migrations
                     CompraId = table.Column<int>(nullable: false),
                     Cantidad = table.Column<double>(nullable: false),
                     Precio = table.Column<double>(nullable: false),
+                    ITBIS = table.Column<double>(nullable: false),
                     Importe = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
@@ -159,7 +161,7 @@ namespace AgroVeterinaria.Migrations
             migrationBuilder.InsertData(
                 table: "Usuarios",
                 columns: new[] { "UsuarioId", "Clave", "Email", "FechaCreacion", "NivelUsuario", "NombreUsuario", "Nombres" },
-                values: new object[] { 1, "123456", "Admin@admin.com", new DateTime(2020, 7, 25, 23, 7, 26, 762, DateTimeKind.Local).AddTicks(7893), "Administrador", "Administrador", "Admin" });
+                values: new object[] { 1, "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92", "Admin@admin.com", new DateTime(2020, 7, 30, 15, 14, 2, 76, DateTimeKind.Local).AddTicks(438), "Administrador", "Admin", "Manager" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProductosDetalle_CompraId",

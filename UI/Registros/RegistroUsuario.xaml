@@ -15,6 +15,7 @@
                 <GradientStop Color="#FFF083DA" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+
         <Image x:Name="image" HorizontalAlignment="Left" Height="114" Margin="103,23,0,0" VerticalAlignment="Top" Width="172"
                Source="/UI/Registros/flor.png"/>
         <Image x:Name="CloseHidden" HorizontalAlignment="Left" Height="74" Margin="151,44,0,0" VerticalAlignment="Top" Width="117"
@@ -101,10 +102,23 @@
                 <ImageBrush ImageSource="/UI/Registros/icon_trash.ico" Stretch="Uniform" Viewport="0,0,1,0.65" AlignmentY="Top"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AtrasButton" Click="AtrasButton_Click" Margin="10,10,320,494" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icons8-izquierda-círculo-100.png" Stretch="Uniform"/>
-            </Button.Background>
-        </Button>
+        <!--Control de ventana-->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AtrasButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-atrás-100.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="MinimizarButton" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="MinimizarButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-minimizar-la-ventana-100.png" Stretch="Fill"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="CerrarButton" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="CerrarButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-cerrar-ventana-100.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

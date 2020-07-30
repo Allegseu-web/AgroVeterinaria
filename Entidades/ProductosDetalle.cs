@@ -13,6 +13,7 @@ namespace AgroVeterinaria.Entidades
         public int CompraId { get; set; }
         public double Cantidad { get; set; }
         public double Precio { get; set; }
+        public double ITBIS { get; set; }
         public double Importe { get; set; }
 
         /*public ProductosDetalle(int compraid, double cantidad, double precio, double importe)

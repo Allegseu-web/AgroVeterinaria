@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgroVeterinaria.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200726030728_Inicial")]
+    [Migration("20200730191402_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,9 @@ namespace AgroVeterinaria.Migrations
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("TEXT");
+
+                    b.Property<double>("ITBIS_Total")
+                        .HasColumnType("REAL");
 
                     b.Property<double>("SubTotal")
                         .HasColumnType("REAL");
@@ -155,6 +158,9 @@ namespace AgroVeterinaria.Migrations
                     b.Property<int>("CompraId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<double>("ITBIS")
+                        .HasColumnType("REAL");
+
                     b.Property<double>("Importe")
                         .HasColumnType("REAL");
 
@@ -252,12 +258,12 @@ namespace AgroVeterinaria.Migrations
                         new
                         {
                             UsuarioId = 1,
-                            Clave = "123456",
+                            Clave = "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
                             Email = "Admin@admin.com",
-                            FechaCreacion = new DateTime(2020, 7, 25, 23, 7, 26, 762, DateTimeKind.Local).AddTicks(7893),
+                            FechaCreacion = new DateTime(2020, 7, 30, 15, 14, 2, 76, DateTimeKind.Local).AddTicks(438),
                             NivelUsuario = "Administrador",
-                            NombreUsuario = "Administrador",
-                            Nombres = "Admin"
+                            NombreUsuario = "Admin",
+                            Nombres = "Manager"
                         });
                 });
 

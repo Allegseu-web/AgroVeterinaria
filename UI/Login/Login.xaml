@@ -49,7 +49,7 @@
             </StackPanel>
 
             <StackPanel>
-                <TextBox x:Name="UsuarioNameTextBox" Width="160" Height="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <TextBox x:Name="UsuarioNameTextBox" Width="160" Height="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" KeyDown="UsuarioNameTextBox_KeyDown">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="12"/>
@@ -68,7 +68,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,20" >
-                <TextBox x:Name="txtClaveTextBox" Width="160" Height="25" Margin="120,0,0,0" Visibility="Collapsed" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <TextBox x:Name="txtClaveTextBox" Width="160" Height="25" Margin="120,0,0,0" Visibility="Collapsed" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" KeyDown="txtClaveTextBox_KeyDown">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="12"/>
@@ -76,7 +76,7 @@
                     </TextBox.Resources>
                 </TextBox>
 
-                <PasswordBox Template="{StaticResource passwordbox}" x:Name="ClaveTextBox" Width="160" Height="25"
+                <PasswordBox Template="{StaticResource passwordbox}" x:Name="ClaveTextBox" Width="160" Height="25" KeyDown="ClaveTextBox_KeyDown"
                              Visibility="Visible" Margin="120,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" >
                     <PasswordBox.BorderBrush>
                         <ImageBrush Stretch="None"/>

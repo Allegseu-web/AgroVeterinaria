@@ -70,8 +70,22 @@ namespace AgroVeterinaria.UI.Login
             Usuarios usuario;
 
             usuario = db.Usuarios.Where(p => p.NombreUsuario == UsuarioNameTextBox.Text).SingleOrDefault();
-
             return usuario;
+        }
+
+        private void UsuarioNameTextBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if(e.Key == System.Windows.Input.Key.Return) { ClaveTextBox.Focus(); }
+        }
+
+        private void txtClaveTextBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if(e.Key == System.Windows.Input.Key.Return) { IniciarButton_Click(sender, e); }
+        }
+
+        private void ClaveTextBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Return) { IniciarButton_Click(sender, e); }
         }
     }
 }

@@ -256,12 +256,12 @@ namespace AgroVeterinaria.Migrations
                         new
                         {
                             UsuarioId = 1,
-                            Clave = "123456",
+                            Clave = "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
                             Email = "Admin@admin.com",
-                            FechaCreacion = new DateTime(2020, 7, 30, 15, 2, 39, 929, DateTimeKind.Local).AddTicks(2304),
+                            FechaCreacion = new DateTime(2020, 7, 30, 15, 14, 2, 76, DateTimeKind.Local).AddTicks(438),
                             NivelUsuario = "Administrador",
-                            NombreUsuario = "Administrador",
-                            Nombres = "Admin"
+                            NombreUsuario = "Admin",
+                            Nombres = "Manager"
                         });
                 });
 

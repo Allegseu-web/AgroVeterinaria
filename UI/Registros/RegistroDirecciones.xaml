@@ -28,8 +28,14 @@
                VerticalAlignment="Top" Width="25" Source="/UI/Registros/direccion.png"/>
                 <Label x:Name="label" Content="DirecciónID" HorizontalAlignment="Left" Margin="0,0,5,0"
                VerticalAlignment="Top" Height="25" Width="71"/>
-                <TextBox x:Name="textBox" TextWrapping="Wrap" Text="{Binding DireccionId}"
-                 VerticalAlignment="Top" Width="175" Height="25"/>
+                <TextBox x:Name="textBox" TextWrapping="Wrap" Text="{Binding DireccionesId}"
+                 VerticalAlignment="Top" Width="235" Height="25" Margin="0,0,5,0"/>
+                <Button x:Name="BuscarButton" Width="100" Height="25">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/UI/Registros/icon_search.png" Width="30" Height="20"></Image>
+                        <Label Content="Buscar" Height="20" FontSize="8"></Label>
+                    </StackPanel>
+                </Button>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,15">

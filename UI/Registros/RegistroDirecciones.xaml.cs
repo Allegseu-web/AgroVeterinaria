@@ -25,7 +25,7 @@ namespace AgroVeterinaria.UI.Registros
         public RegistroDirecciones(Usuarios user)
         {
             InitializeComponent();
-            this.Content = Direccion;
+            this.DataContext = Direccion;
             this.Usuario = user;
         }
 

@@ -26,7 +26,7 @@
             <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
                 <Image x:Name="image1" HorizontalAlignment="Left" Height="25" Margin="0,0,5,0"
                VerticalAlignment="Top" Width="25" Source="/UI/Registros/direccion.png"/>
-                <Label x:Name="label" Content="DirecciónID" HorizontalAlignment="Left" Margin="0,0,5,0"
+                <Label x:Name="label" Content="DirecciónId" HorizontalAlignment="Left" Margin="0,0,5,0"
                VerticalAlignment="Top" Height="25" Width="71"/>
                 <TextBox x:Name="textBox" TextWrapping="Wrap" Text="{Binding DireccionesId}"
                  VerticalAlignment="Top" Width="235" Height="25" Margin="0,0,5,0"/>
@@ -68,7 +68,7 @@
             <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
                 <Image HorizontalAlignment="Left" Height="25" Margin="0,0,5,0"
                        VerticalAlignment="Top" Width="25" Source="/UI/Registros/MUNDO.png"/>
-                <Label Content="Pais" HorizontalAlignment="Left" Margin="0,0,5,0"
+                <Label Content="País" HorizontalAlignment="Left" Margin="0,0,5,0"
                        VerticalAlignment="Top" Height="25"/>
                 <TextBox x:Name="PaisTextBox" HorizontalAlignment="Left" Margin="0,0,5,0" Text="{Binding Pais}"
                          TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="25"/>

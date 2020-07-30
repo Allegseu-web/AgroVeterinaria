@@ -42,7 +42,7 @@
             <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
                 <Image x:Name="image1" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25"
                        Source="/UI/Registros/editar.png" Margin="0,0,5,0"/>
-                <Label x:Name="label" Content="Descripcion" Height="25"
+                <Label x:Name="label" Content="Descripción" Height="25"
                        Width="71" HorizontalAlignment="Left" VerticalAlignment="Top"
                        Margin="0,0,5,0"/>
                 <TextBox x:Name="DescripcionTextBox" HorizontalAlignment="Left" TextWrapping="Wrap"
@@ -123,22 +123,22 @@
         </Button>
         <!--Control de ventana-->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
-            <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AtrasButton_Click">
+            <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" ToolTip="Atras" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AtrasButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/UI/Registros/icons8-atrás-100.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="Añadir" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Añadir_Click">
+            <Button x:Name="Añadir" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" ToolTip="Añadir" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Añadir_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/UI/Registros/icons8-añadir-100.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="MinimizarButton" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="MinimizarButton_Click">
+            <Button x:Name="MinimizarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Minimizar" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="MinimizarButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/UI/Registros/icons8-minimizar-la-ventana-100.png" Stretch="Fill"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="CerrarButton" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="CerrarButton_Click">
+            <Button x:Name="CerrarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Cerrar" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="CerrarButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/UI/Registros/icons8-cerrar-ventana-100.png"/>
                 </Button.Background>

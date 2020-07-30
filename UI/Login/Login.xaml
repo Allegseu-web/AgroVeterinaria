@@ -83,7 +83,7 @@
                     </PasswordBox.BorderBrush>
                 </PasswordBox>
 
-                <Button x:Name="Ocultar_Mostrar" BorderThickness="0" Width="36" Margin="10,0,0,0" Height="34" Click="Ocultar_Mostrar_Click">
+                <Button x:Name="Ocultar_Mostrar" BorderThickness="0" Width="36" ToolTip="Mostrar Contraseña" Margin="10,0,0,0" Height="34" Click="Ocultar_Mostrar_Click">
                     <Button.Background>
                         <ImageBrush Stretch="None" ImageSource="/UI/Login/3844441-eye-see-show-view-watch_110305.ico"/>
                     </Button.Background>

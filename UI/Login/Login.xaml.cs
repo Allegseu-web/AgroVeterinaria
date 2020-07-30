@@ -24,7 +24,7 @@ namespace AgroVeterinaria.UI.Login
 
         private void IniciarButton_Click(object sender, RoutedEventArgs e)
         {
-            if (UsuarioNameTextBox.Text.Length == 0 || ClaveTextBox.Password.Length == 0)
+            if (UsuarioNameTextBox.Text.Length == 0 || (ClaveTextBox.Password.Length == 0 && txtClaveTextBox.Text.Length ==0) )
             {
                 MessageBox.Show("No puede dejar campos vacios.", "Llenar campos", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
@@ -53,6 +53,7 @@ namespace AgroVeterinaria.UI.Login
                 ClaveTextBox.Visibility = Visibility.Collapsed;
                 txtClaveTextBox.Text = ClaveTextBox.Password;
                 txtClaveTextBox.Visibility = Visibility.Visible;
+                Ocultar_Mostrar.ToolTip = "Ocultar Contraseña";
                 pssw = true;
             }
             else
@@ -60,6 +61,7 @@ namespace AgroVeterinaria.UI.Login
                 txtClaveTextBox.Visibility = Visibility.Collapsed;
                 ClaveTextBox.Password = txtClaveTextBox.Text;
                 ClaveTextBox.Visibility = Visibility.Visible;
+                Ocultar_Mostrar.ToolTip = "Mostrar Contraseña";
                 pssw = false;
             }
         }

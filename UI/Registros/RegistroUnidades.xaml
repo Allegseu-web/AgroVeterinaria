@@ -42,7 +42,7 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,15">
                 <Image Source="/UI/Registros/6229529501556258238-32.png" Height="25" Width="25" Margin="0,0,5,0"/>
-                <Label Content="Descripcion" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Margin="0,0,5,0"/>
+                <Label Content="Descripción" VerticalAlignment="Top" Height="25" Margin="0,0,5,0"/>
                 <TextBox x:Name="DescripcionTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"
                          Text="{Binding Descripcion}" Width="205" Height="25"/>
             </StackPanel>
@@ -67,17 +67,17 @@
         </Button>
         <!--Control de ventana-->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
-            <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AtrasButton_Click">
+            <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Regresar" Height="25" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AtrasButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/UI/Registros/icons8-atrás-100.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="MinimizarButton" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="MinimizarButton_Click">
+            <Button x:Name="MinimizarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Minimizar" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="MinimizarButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/UI/Registros/icons8-minimizar-la-ventana-100.png" Stretch="Fill"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="CerrarButton" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="CerrarButton_Click">
+            <Button x:Name="CerrarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Cerrar" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="CerrarButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/UI/Registros/icons8-cerrar-ventana-100.png"/>
                 </Button.Background>

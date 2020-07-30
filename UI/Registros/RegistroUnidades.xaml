@@ -34,7 +34,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Label x:Name="label1" Content="Descripcion" HorizontalAlignment="Left" Margin="79,282,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.544,-0.539"/>
+        <Label x:Name="label1" Content="Descripción" HorizontalAlignment="Left" Margin="79,282,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.544,-0.539"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="176,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="23"/>
         <Button x:Name="button" Content="Nuevo" HorizontalAlignment="Left" VerticalContentAlignment = "Bottom"  Margin="32,402,0,0" VerticalAlignment="Top" Height="34">
             <Button.Background>

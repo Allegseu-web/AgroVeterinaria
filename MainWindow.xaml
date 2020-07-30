@@ -49,7 +49,7 @@
                 </MenuItem.Background>
             </MenuItem>
         </Menu>
-        <Image Source="/MENU.png" Stretch="Fill" Margin="0,-10,0,0" />
+        <Image Source="/MENU.png" Stretch="Fill" Margin="0,23,0,0" />
         <Button x:Name="CerrarSesionButton" Content="Cerrar" VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="50,195,0,0" 
                 VerticalAlignment="Top" Height="15" Width="40" RenderTransformOrigin="0.229,0.125" 

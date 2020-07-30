@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgroVeterinaria.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200726030728_Inicial")]
+    [Migration("20200730190240_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,9 @@ namespace AgroVeterinaria.Migrations
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("TEXT");
+
+                    b.Property<double>("ITBIS_Total")
+                        .HasColumnType("REAL");
 
                     b.Property<double>("SubTotal")
                         .HasColumnType("REAL");
@@ -155,6 +158,9 @@ namespace AgroVeterinaria.Migrations
                     b.Property<int>("CompraId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<double>("ITBIS")
+                        .HasColumnType("REAL");
+
                     b.Property<double>("Importe")
                         .HasColumnType("REAL");
 
@@ -254,7 +260,7 @@ namespace AgroVeterinaria.Migrations
                             UsuarioId = 1,
                             Clave = "123456",
                             Email = "Admin@admin.com",
-                            FechaCreacion = new DateTime(2020, 7, 25, 23, 7, 26, 762, DateTimeKind.Local).AddTicks(7893),
+                            FechaCreacion = new DateTime(2020, 7, 30, 15, 2, 39, 929, DateTimeKind.Local).AddTicks(2304),
                             NivelUsuario = "Administrador",
                             NombreUsuario = "Administrador",
                             Nombres = "Admin"

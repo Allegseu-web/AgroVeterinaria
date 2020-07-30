@@ -19,11 +19,13 @@ namespace AgroVeterinaria.UI.Registros
     /// </summary>
     public partial class RegistroUnidades : Window
     {
+        Usuarios Usuario = new Usuarios();
         Unidades Unidad = new Unidades();
-        public RegistroUnidades()
+        public RegistroUnidades(Usuarios user)
         {
             InitializeComponent();
             this.DataContext = Unidad;
+            this.Usuario = user;
         }
 
         private void Limpiar()
@@ -88,8 +90,8 @@ namespace AgroVeterinaria.UI.Registros
 
         private void AtrasButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow window = new MainWindow();
-            window.Show();
+            RegistroProdutos registroProdutos = new RegistroProdutos(Usuario);
+            registroProdutos.Show();
             this.Close();
         }
 

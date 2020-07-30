@@ -23,12 +23,13 @@ namespace AgroVeterinaria.UI.Registros
     public partial class RegistroUsuario : Window
     {
         public string[] Niveles { get; set; }
+        private Usuarios new_User = new Usuarios();
 
         private Usuarios Usuario = new Usuarios();
         public RegistroUsuario(Usuarios user)
         {
             InitializeComponent();
-            this.DataContext = Usuario;
+            this.DataContext = new_User;
             Niveles = new string[] { "Administrador", "Almacenero", "Vendedor", "Tesorero", "Gerente" };
             NivelUsuarioComboBox.ItemsSource = Niveles;
             this.Usuario = user;
@@ -36,10 +37,10 @@ namespace AgroVeterinaria.UI.Registros
 
         private void Limpiar()
         {
-            this.Usuario = new Usuarios();
+            this.new_User = new Usuarios();
             ClaveTextBox.Password = string.Empty;
             ConfirmarClaveTextBox.Password = string.Empty;
-            this.DataContext = Usuario;
+            this.DataContext = new_User;
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
@@ -117,9 +118,9 @@ namespace AgroVeterinaria.UI.Registros
         {
             if(UsuarioIdTextBox.Text != "0")
             {
-                this.Usuario.Clave = ClaveTextBox.Password;
-                this.Usuario.NivelUsuario = NivelUsuarioComboBox.Text;
-                var esOk = UsuariosBLL.Modificar(Usuario);
+                this.new_User.Clave = ClaveTextBox.Password;
+                this.new_User.NivelUsuario = NivelUsuarioComboBox.Text;
+                var esOk = UsuariosBLL.Modificar(new_User);
                 if (esOk)
                 {
                     Limpiar();
@@ -131,9 +132,9 @@ namespace AgroVeterinaria.UI.Registros
             else
             {
                 if (!Validar()) { return; }
-                this.Usuario.Clave = ClaveTextBox.Password;
-                this.Usuario.NivelUsuario = NivelUsuarioComboBox.Text;
-                var user = UsuariosBLL.Guardar(Usuario);
+                this.new_User.Clave = ClaveTextBox.Password;
+                this.new_User.NivelUsuario = NivelUsuarioComboBox.Text;
+                var user = UsuariosBLL.Guardar(new_User);
 
                 if (user)
                 {
@@ -164,10 +165,10 @@ namespace AgroVeterinaria.UI.Registros
         {
             var cuenta = UsuariosBLL.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
 
-            if (Usuario != null) { this.Usuario = cuenta; }
+            if (cuenta != null) { this.new_User = cuenta; }
             else { Limpiar(); }
             NivelUsuarioComboBox.Text = this.Usuario.NivelUsuario;
-            this.DataContext = this.Usuario;
+            this.DataContext = this.new_User;
         }
 
         private void AtrasButton_Click(object sender, RoutedEventArgs e)

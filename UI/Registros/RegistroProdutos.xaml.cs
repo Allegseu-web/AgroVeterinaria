@@ -166,5 +166,12 @@ namespace AgroVeterinaria.UI.Registros
         {
             this.Close();
         }
+
+        private void Añadir_Click(object sender, RoutedEventArgs e)
+        {
+            RegistroUnidades registroUnidades = new RegistroUnidades(Usuario);
+            this.Close();
+            registroUnidades.Show();
+        }
     }
 }

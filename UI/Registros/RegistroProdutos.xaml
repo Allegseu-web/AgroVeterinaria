@@ -128,6 +128,11 @@
                     <ImageBrush ImageSource="/UI/Registros/icons8-atrás-100.png"/>
                 </Button.Background>
             </Button>
+            <Button x:Name="Añadir" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Añadir_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-añadir-100.png"/>
+                </Button.Background>
+            </Button>
             <Button x:Name="MinimizarButton" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="MinimizarButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/UI/Registros/icons8-minimizar-la-ventana-100.png" Stretch="Fill"/>

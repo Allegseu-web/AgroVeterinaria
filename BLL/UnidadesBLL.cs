@@ -125,14 +125,14 @@ namespace AgroVeterinaria.BLL
             return Unidad;
         }
 
-        public static List<Unidades> GetList(Expression<Func<Unidades, bool>> Unidad)
+        public static List<Unidades> GetList()
         {
             Contexto contexto = new Contexto();
             List<Unidades> Lista = new List<Unidades>();
 
             try
             {
-                Lista = contexto.Unidades.Where(Unidad).ToList();
+                Lista = contexto.Unidades.ToList();
 
             }
             catch (Exception)

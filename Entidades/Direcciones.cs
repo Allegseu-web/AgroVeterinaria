@@ -8,7 +8,6 @@ namespace AgroVeterinaria.Entidades
     {
         public int DireccionesId { get; set; }
         public string Calle { get; set; }
-        public int SuplidorId { get; set; }
         public string Edificio_Piso_Apartamento { get; set; }
         public int NumLocalidad { get; set; }
         public string Provicia { get; set; }

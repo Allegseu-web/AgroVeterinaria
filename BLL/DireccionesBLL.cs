@@ -125,14 +125,14 @@ namespace AgroVeterinaria.BLL
             return Direccion;
         }
 
-        public static List<Direcciones> GetList(Expression<Func<Direcciones, bool>> Direccion)
+        public static List<Direcciones> GetList()
         {
             Contexto contexto = new Contexto();
             List<Direcciones> Lista = new List<Direcciones>();
 
             try
             {
-                Lista = contexto.Direcciones.Where(Direccion).ToList();
+                Lista = contexto.Direcciones.ToList();
 
             }
             catch (Exception)

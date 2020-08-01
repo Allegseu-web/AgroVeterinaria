@@ -94,7 +94,7 @@ namespace AgroVeterinaria.UI.Registros
         }
         private void AtrasButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow window = new MainWindow();
+            MainWindow window = new MainWindow(Usuario);
             window.Show();
             this.Close();
         }

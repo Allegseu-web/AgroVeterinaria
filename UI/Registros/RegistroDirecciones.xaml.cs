@@ -32,7 +32,6 @@ namespace AgroVeterinaria.UI.Registros
         private void Limpiar()
         {
             this.Direccion = new Direcciones();
-            DireccionIdTextBox.Text = string.Empty;
             CalleTextBox.Text = string.Empty;
             TextBox.Text = string.Empty;
             PaisTextBox.Text = string.Empty;
@@ -158,6 +157,14 @@ namespace AgroVeterinaria.UI.Registros
                 MessageBox.Show("No fue posible eliminar", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void BuscarButton_Click(object sender, RoutedEventArgs e)
+        {
+            var diret = DireccionesBLL.Buscar(Convert.ToInt32(DireccionIdTextBox.Text));
+
+            if (diret != null) { this.DataContext = diret; }
+            else { Limpiar(); }
         }
     }
 }

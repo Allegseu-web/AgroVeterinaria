@@ -27,7 +27,6 @@ namespace AgroVeterinaria.DAL
             {
                 UsuarioId = 1,
                 Clave = UsuariosBLL.GetSHA256("123456"),
-                FechaCreacion = DateTime.Now,
                 Nombres = "Manager",
                 NivelUsuario = "Administrador",
                 Email = "Admin@admin.com",

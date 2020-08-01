@@ -104,5 +104,10 @@ namespace AgroVeterinaria.UI.Registros
         {
             this.Close();
         }
+
+        private void NuevoButton_Click(object sender, RoutedEventArgs e)
+        {
+            Limpiar();
+        }
     }
 }

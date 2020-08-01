@@ -154,14 +154,14 @@ namespace AgroVeterinaria.BLL
             return Usuario;
         }
 
-        public static List<Usuarios> GetList(Expression<Func<Usuarios, bool>> Usuario)
+        public static List<Usuarios> GetList()
         {
             Contexto contexto = new Contexto();
             List<Usuarios> Lista = new List<Usuarios>();
 
             try
             {
-                Lista = contexto.Usuarios.Where(Usuario).ToList();
+                Lista = contexto.Usuarios.ToList();
 
             }
             catch (Exception)

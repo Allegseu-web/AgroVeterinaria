@@ -26,6 +26,9 @@ namespace AgroVeterinaria.UI.Registros
             InitializeComponent();
             this.DataContext = Suplidor;
             this.Usuario = user;
+            DireccionComboBox.ItemsSource = DireccionesBLL.GetList();
+            DireccionComboBox.SelectedValuePath = "DireccionesId";
+            DireccionComboBox.DisplayMemberPath = "Municipio";
         }
 
         private void Limpiar()

@@ -28,6 +28,12 @@ namespace AgroVeterinaria.UI.Registros
             InitializeComponent();
             this.DataContext = Producto;
             this.Usuario = user;
+            UnidadComboBox.ItemsSource = UnidadesBLL.GetList();
+            UnidadComboBox.SelectedValuePath = "UnidadId";
+            UnidadComboBox.DisplayMemberPath = "Descripcion";
+            SuplidorComboBox.ItemsSource = SuplidoresBLL.GetList();
+            SuplidorComboBox.SelectedValuePath = "SuplidoresId";
+            SuplidorComboBox.DisplayMemberPath = "Nombre";
         }
 
         private void Limpiar()

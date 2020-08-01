@@ -40,7 +40,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,20" Width="250">
-                <Image Source="/UI/Login/name_user_3716.png" Height="25" Width="60"></Image>
+                <Image Source="/UI/Login/name_user_3716.png" Height="25" Width="60" Margin="0,0,20,0"></Image>
                 <Label FontFamily=" helvetica"
                              FontWeight="Light"
                              Content="Usuario"
@@ -59,7 +59,8 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="250">
-                <Image Source="/UI/Login/icons8-contraseña-1-50.png" Height="33" Width="60" Opacity="0.75"></Image>
+                <Image Source="/UI/Login/icons8-contraseña-1-50.png" Height="33" Width="60" Margin="0,0,10,0"
+                       Opacity="0.75"></Image>
                 <Label FontFamily=" helvetica"
                              FontWeight="Light"
                              Content="Contraseña"

@@ -125,14 +125,14 @@ namespace AgroVeterinaria.BLL
             return Producto;
         }
 
-        public static List<Productos> GetList(Expression<Func<Productos, bool>> Producto)
+        public static List<Productos> GetList()
         {
             Contexto contexto = new Contexto();
             List<Productos> Lista = new List<Productos>();
 
             try
             {
-                Lista = contexto.Productos.Where(Producto).ToList();
+                Lista = contexto.Productos.ToList();
 
             }
             catch (Exception)

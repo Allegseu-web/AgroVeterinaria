@@ -125,14 +125,14 @@ namespace AgroVeterinaria.BLL
             return Moneda;
         }
 
-        public static List<Monedas> GetList(Expression<Func<Monedas, bool>> Moneda)
+        public static List<Monedas> GetList()
         {
             Contexto contexto = new Contexto();
             List<Monedas> Lista = new List<Monedas>();
 
             try
             {
-                Lista = contexto.Monedas.Where(Moneda).ToList();
+                Lista = contexto.Monedas.ToList();
 
             }
             catch (Exception)

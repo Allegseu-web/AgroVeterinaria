@@ -21,7 +21,7 @@
         </Border>
         
         <Menu Height="20" VerticalAlignment="Top">
-            <MenuItem Header="    Registros" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Width="75">
+            <MenuItem Header="    Registros" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="20" Width="75">
                 <MenuItem.Background>
                     <ImageBrush ImageSource="/3256995851547464092-32.png" Stretch="Uniform" AlignmentX="Left"/>
                 </MenuItem.Background>
@@ -38,12 +38,13 @@
                 <MenuItem x:Name="ComprasMenuItem" Header="Registro Compras"
                               Click="ComprasMenuItem_Click"/>
             </MenuItem>
-            <MenuItem Header="    Consultas" HorizontalContentAlignment="Right">
+            <MenuItem Header="    Consultas" HorizontalContentAlignment="Right" Height="20">
                 <MenuItem.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/consultante.png" AlignmentX="Left" Viewport="0.02,0.02,0.2,0.8"/>
                 </MenuItem.Background>
             </MenuItem>
-            <MenuItem Header="    Reportes" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Width="80">
+            <MenuItem Header="    Reportes" HorizontalAlignment="Left" HorizontalContentAlignment="Right"
+                      Height="20" Width="80">
                 <MenuItem.Background>
                     <ImageBrush ImageSource="/reporte-annual.png" AlignmentX="Left" Stretch="Uniform" Viewport="0,0,1,0.9"/>
                 </MenuItem.Background>
@@ -51,7 +52,7 @@
         </Menu>
         <Image Source="/MENU.png" Stretch="Fill" Margin="0,23,0,0" />
         <Button x:Name="CerrarSesionButton" Content="Cerrar" VerticalContentAlignment="Center"
-                HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="50,195,0,0" 
+                HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="50,210,0,0" 
                 VerticalAlignment="Top" Height="15" Width="40" RenderTransformOrigin="0.229,0.125" 
                 FontSize="8" Click="CerrarSesionButton_Click">
             <Button.Background>
@@ -59,8 +60,9 @@
             </Button.Background>
         </Button>
         <StackPanel Orientation="Vertical" Margin="125,245,25,50">
-            <Label Content="Bienvenido/a" HorizontalAlignment="Center" FontSize="30"/>
-            <Label x:Name="NombreEmpleadoLabel" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"></Label>
+            <Label Content="Bienvenido/a" HorizontalAlignment="Center" FontSize="30" Margin="0,5,0,5"/>
+            <Label x:Name="NombreEmpleadoLabel" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Margin="0,5,0,5" FontSize="30"></Label>
         </StackPanel>
     </Grid>
 </Window>

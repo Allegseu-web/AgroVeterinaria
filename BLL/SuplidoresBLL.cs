@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Windows;
 
 namespace AgroVeterinaria.BLL
 {
@@ -33,8 +34,7 @@ namespace AgroVeterinaria.BLL
 
         public static bool Guardar(Suplidores Suplidor)
         {
-            if (!Existe(Suplidor.UsuarioId)) { return Insertar(Suplidor); }
-            else { return Modificar(Suplidor); }
+            return Insertar(Suplidor);
         }
 
         private static bool Insertar(Suplidores Suplidor)
@@ -57,7 +57,7 @@ namespace AgroVeterinaria.BLL
             return esOk;
         }
 
-        private static bool Modificar(Suplidores Suplidor)
+        public static bool Modificar(Suplidores Suplidor)
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
@@ -112,7 +112,10 @@ namespace AgroVeterinaria.BLL
             try
             {
                 Suplidor = contexto.Suplidores.Find(id);
-
+                if (Suplidor == null)
+                {
+                    MessageBox.Show("SuplidorId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
             }
             catch (Exception)
             {

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Windows;
 
 namespace AgroVeterinaria.BLL
 {
@@ -33,8 +34,7 @@ namespace AgroVeterinaria.BLL
 
         public static bool Guardar(Productos Producto)
         {
-            if (!Existe(Producto.UsuarioId)) { return Insertar(Producto); }
-            else { return Modificar(Producto); }
+            return Insertar(Producto);
         }
 
         private static bool Insertar(Productos Producto)
@@ -57,7 +57,7 @@ namespace AgroVeterinaria.BLL
             return esOk;
         }
 
-        private static bool Modificar(Productos Producto)
+        public static bool Modificar(Productos Producto)
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
@@ -112,7 +112,10 @@ namespace AgroVeterinaria.BLL
             try
             {
                 Producto = contexto.Productos.Find(id);
-
+                if (Producto == null)
+                {
+                    MessageBox.Show("UsuarioId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
             }
             catch (Exception)
             {

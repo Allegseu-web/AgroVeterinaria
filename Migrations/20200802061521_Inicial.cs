@@ -86,7 +86,7 @@ namespace AgroVeterinaria.Migrations
                 name: "Suplidores",
                 columns: table => new
                 {
-                    SuplidoresId = table.Column<int>(nullable: false)
+                    SuplidorId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Nombre = table.Column<string>(nullable: true),
                     DireccionId = table.Column<int>(nullable: false),
@@ -97,7 +97,7 @@ namespace AgroVeterinaria.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Suplidores", x => x.SuplidoresId);
+                    table.PrimaryKey("PK_Suplidores", x => x.SuplidorId);
                 });
 
             migrationBuilder.CreateTable(
@@ -160,7 +160,7 @@ namespace AgroVeterinaria.Migrations
             migrationBuilder.InsertData(
                 table: "Usuarios",
                 columns: new[] { "UsuarioId", "Clave", "Email", "FechaCreacion", "NivelUsuario", "NombreUsuario", "Nombres" },
-                values: new object[] { 1, "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92", "Admin@admin.com", new DateTime(2020, 7, 31, 20, 31, 33, 906, DateTimeKind.Local).AddTicks(1800), "Administrador", "Admin", "Manager" });
+                values: new object[] { 1, "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92", "Admin@admin.com", new DateTime(2020, 8, 2, 2, 15, 20, 855, DateTimeKind.Local).AddTicks(2198), "Administrador", "Admin", "Manager" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProductosDetalle_CompraId",

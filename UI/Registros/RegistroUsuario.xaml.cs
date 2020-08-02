@@ -101,22 +101,13 @@ namespace AgroVeterinaria.UI.Registros
                 ConfirmarClaveTextBox.Focus();
                 GuardarButton.IsEnabled = true;
             }
-
-            Contexto context = new Contexto();
-            if (context.Usuarios.Any(p => p.NombreUsuario == NombreUsuarioTextBox.Text))
-            {
-                MessageBox.Show("Este nombre de usuario ->" + NombreUsuarioTextBox.Text + "<- ya existe, por favor usar otro.",
-                    "Usuario ya existente", MessageBoxButton.OK, MessageBoxImage.Error);
-                NombreUsuarioTextBox.Clear();
-                NombreUsuarioTextBox.Focus();
-                esValido = false;
-            }
             return esValido;
         }
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-            if(UsuarioIdTextBox.Text != "0")
+            if (!Validar()) { return; }
+            if (UsuarioIdTextBox.Text != "0")
             {
                 this.new_User.Clave = ClaveTextBox.Password;
                 this.new_User.NivelUsuario = NivelUsuarioComboBox.Text;
@@ -131,18 +122,28 @@ namespace AgroVeterinaria.UI.Registros
             }
             else
             {
-                if (!Validar()) { return; }
-                this.new_User.Clave = ClaveTextBox.Password;
-                this.new_User.NivelUsuario = NivelUsuarioComboBox.Text;
-                var user = UsuariosBLL.Guardar(new_User);
-
-                if (user)
+                Contexto context = new Contexto();
+                if (context.Usuarios.Any(p => p.NombreUsuario == NombreUsuarioTextBox.Text))
                 {
-                    Limpiar();
-                    MessageBox.Show("Transaccion exitosa!", "Exito",
-                        MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Este nombre de usuario ->" + NombreUsuarioTextBox.Text + "<- ya existe, por favor usar otro.",
+                        "Usuario ya existente", MessageBoxButton.OK, MessageBoxImage.Error);
+                    NombreUsuarioTextBox.Clear();
+                    NombreUsuarioTextBox.Focus();
                 }
-                else { MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error); }
+                else
+                {
+                    this.new_User.Clave = ClaveTextBox.Password;
+                    this.new_User.NivelUsuario = NivelUsuarioComboBox.Text;
+                    var user = UsuariosBLL.Guardar(new_User);
+
+                    if (user)
+                    {
+                        Limpiar();
+                        MessageBox.Show("Transaccion exitosa!", "Exito",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else { MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error); }
+                }
             }
         }
 
@@ -165,9 +166,12 @@ namespace AgroVeterinaria.UI.Registros
         {
             var cuenta = UsuariosBLL.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
 
-            if (cuenta != null) { this.new_User = cuenta; }
+            if (cuenta != null)
+            {
+                this.new_User = cuenta;
+                NivelUsuarioComboBox.Text = cuenta.NivelUsuario;
+            }
             else { Limpiar(); }
-            NivelUsuarioComboBox.Text = this.Usuario.NivelUsuario;
             this.DataContext = this.new_User;
         }
 

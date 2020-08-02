@@ -120,6 +120,20 @@ namespace AgroVeterinaria.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
+            if(ProductoIdTextBox.Text != "0")
+            {
+                var product = ProductosBLL.Modificar(Producto);
+
+                if (product)
+                {
+                    Limpiar();
+                    MessageBox.Show("Transaccion exitosa!", "Exito",
+                        MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else { MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error); }
+            }
+            else
+            {
                 if (!Validar()) { return; }
 
                 var product = ProductosBLL.Guardar(Producto);
@@ -131,6 +145,7 @@ namespace AgroVeterinaria.UI.Registros
                         MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else { MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error); }
+            }
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
@@ -150,9 +165,13 @@ namespace AgroVeterinaria.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var cuenta = ProductosBLL.Buscar(Convert.ToInt32(ProductoIdTextBox.Text));
-
-            if (Producto != null) { this.Producto = cuenta; }
+            var product = ProductosBLL.Buscar(Convert.ToInt32(ProductoIdTextBox.Text));
+            if (Producto != null)
+            {
+                this.Producto = product;
+                SuplidorComboBox.SelectedIndex = product.SuplidorId;
+                UnidadComboBox.SelectedIndex = product.UnidadId;
+            }
             else { Limpiar(); }
             this.DataContext = this.Producto;
         }

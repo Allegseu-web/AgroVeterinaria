@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Windows;
 
 namespace AgroVeterinaria.BLL
 {
@@ -112,7 +113,10 @@ namespace AgroVeterinaria.BLL
             try
             {
                 Moneda = contexto.Monedas.Find(id);
-
+                if (Moneda == null)
+                {
+                    MessageBox.Show("UsuarioId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
             }
             catch (Exception)
             {

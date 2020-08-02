@@ -7,6 +7,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Security.Cryptography;
 using System.Text;
+using System.Windows;
 
 namespace AgroVeterinaria.BLL
 {
@@ -141,7 +142,10 @@ namespace AgroVeterinaria.BLL
             try
             {
                 Usuario = contexto.Usuarios.Find(id);
-
+                if(Usuario == null)
+                {
+                    MessageBox.Show("UsuarioId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
             }
             catch (Exception)
             {

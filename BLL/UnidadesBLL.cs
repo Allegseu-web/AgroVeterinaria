@@ -16,10 +16,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
-                esOk = contexto.Unidades.Any(e => e.UsuarioId == id);
+                esOk = contexto.Unidades.Any(e => e.UnidadId == id);
             }
             catch (Exception)
             {
@@ -34,18 +33,16 @@ namespace AgroVeterinaria.BLL
 
         public static bool Guardar(Unidades Unidad)
         {
-            if (!Existe(Unidad.UsuarioId)) { return Insertar(Unidad); }
-            else { return Modificar(Unidad); }
+            return Insertar(Unidad);
         }
 
         private static bool Insertar(Unidades Unidad)
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
-                if (contexto.Unidades.Add(Unidad) != null) { esOk = contexto.SaveChanges() > 0; }
+                if (contexto.Unidades.Add(Unidad) != null) { esOk = (contexto.SaveChanges() > 0); }
             }
             catch (Exception)
             {
@@ -58,14 +55,14 @@ namespace AgroVeterinaria.BLL
             return esOk;
         }
 
-        private static bool Modificar(Unidades Unidad)
+        public static bool Modificar(Unidades Unidad)
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
             try
             {
                 contexto.Entry(Unidad).State = EntityState.Modified;
-                esOk = contexto.SaveChanges() > 0;
+                esOk = (contexto.SaveChanges() > 0);
             }
             catch (Exception)
             {
@@ -81,18 +78,15 @@ namespace AgroVeterinaria.BLL
         public static bool Eliminar(int id)
         {
             Contexto contexto = new Contexto();
-            bool eliminado = false;
-
+            bool esOk = false;
             try
             {
                 var Unidad = contexto.Unidades.Find(id);
-
                 if (Unidad != null)
                 {
                     contexto.Unidades.Remove(Unidad);
-                    eliminado = contexto.SaveChanges() > 0;
+                    esOk = (contexto.SaveChanges() > 0);
                 }
-
             }
             catch (Exception)
             {
@@ -102,20 +96,19 @@ namespace AgroVeterinaria.BLL
             {
                 contexto.Dispose();
             }
-            return eliminado;
+            return esOk;
         }
 
         public static Unidades Buscar(int id)
         {
             Contexto contexto = new Contexto();
             Unidades Unidad = new Unidades();
-
             try
             {
                 Unidad = contexto.Unidades.Find(id);
                 if (Unidad == null)
                 {
-                    MessageBox.Show("UnidadId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Esta unidad no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception)
@@ -133,11 +126,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             List<Unidades> Lista = new List<Unidades>();
-
             try
             {
                 Lista = contexto.Unidades.ToList();
-
             }
             catch (Exception)
             {

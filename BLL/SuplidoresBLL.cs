@@ -16,10 +16,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
-                esOk = contexto.Suplidores.Any(e => e.UsuarioId == id);
+                esOk = contexto.Suplidores.Any(e => e.SuplidorId == id);
             }
             catch (Exception)
             {
@@ -41,10 +40,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
-                if (contexto.Suplidores.Add(Suplidor) != null) { esOk = contexto.SaveChanges() > 0; }
+                if (contexto.Suplidores.Add(Suplidor) != null) { esOk = (contexto.SaveChanges() > 0); }
             }
             catch (Exception)
             {
@@ -64,7 +62,7 @@ namespace AgroVeterinaria.BLL
             try
             {
                 contexto.Entry(Suplidor).State = EntityState.Modified;
-                esOk = contexto.SaveChanges() > 0;
+                esOk = (contexto.SaveChanges() > 0);
             }
             catch (Exception)
             {
@@ -80,18 +78,15 @@ namespace AgroVeterinaria.BLL
         public static bool Eliminar(int id)
         {
             Contexto contexto = new Contexto();
-            bool eliminado = false;
-
+            bool esOk = false;
             try
             {
                 var Suplidor = contexto.Suplidores.Find(id);
-
                 if (Suplidor != null)
                 {
                     contexto.Suplidores.Remove(Suplidor);
-                    eliminado = contexto.SaveChanges() > 0;
+                    esOk = (contexto.SaveChanges() > 0);
                 }
-
             }
             catch (Exception)
             {
@@ -101,20 +96,19 @@ namespace AgroVeterinaria.BLL
             {
                 contexto.Dispose();
             }
-            return eliminado;
+            return esOk;
         }
 
         public static Suplidores Buscar(int id)
         {
             Contexto contexto = new Contexto();
             Suplidores Suplidor = new Suplidores();
-
             try
             {
                 Suplidor = contexto.Suplidores.Find(id);
                 if (Suplidor == null)
                 {
-                    MessageBox.Show("SuplidorId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Esta suplidor no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception)
@@ -132,11 +126,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             List<Suplidores> Lista = new List<Suplidores>();
-
             try
             {
                 Lista = contexto.Suplidores.ToList();
-
             }
             catch (Exception)
             {

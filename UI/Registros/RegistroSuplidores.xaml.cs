@@ -19,13 +19,13 @@ namespace AgroVeterinaria.UI.Registros
     /// </summary>
     public partial class RegistroSuplidores : Window
     {
-        Usuarios Usuario = new Usuarios();
-        Suplidores Suplidor = new Suplidores();
+        private readonly Usuarios Usuario = new Usuarios();
+        private Suplidores Suplidor = new Suplidores();
         public RegistroSuplidores(Usuarios user)
         {
             InitializeComponent();
-            this.DataContext = Suplidor;
-            this.Usuario = user;
+            DataContext = Suplidor;
+            Usuario = user;
             DireccionComboBox.ItemsSource = DireccionesBLL.GetList();
             DireccionComboBox.SelectedValuePath = "DireccionesId";
             DireccionComboBox.DisplayMemberPath = "Municipio";
@@ -33,11 +33,11 @@ namespace AgroVeterinaria.UI.Registros
 
         private void Limpiar()
         {
-            this.Suplidor = new Suplidores();
+            Suplidor = new Suplidores();
             NombresTextBox.Text = string.Empty;
             TelefonoTextBox.Text = string.Empty;
             RNCTextBox.Text = string.Empty;
-            this.DataContext = Suplidor;
+            DataContext = Suplidor;
         }
 
         private bool Validar()
@@ -85,7 +85,7 @@ namespace AgroVeterinaria.UI.Registros
         {
             if (SuplidorIdTextBox.Text != "0")
             {
-                var user = SuplidoresBLL.Modificar(Suplidor);
+                bool user = SuplidoresBLL.Modificar(Suplidor);
 
                 if (user)
                 {
@@ -98,7 +98,7 @@ namespace AgroVeterinaria.UI.Registros
             else
             {
                 if (!Validar()) { return; }
-                var user = SuplidoresBLL.Guardar(Suplidor);
+                bool user = SuplidoresBLL.Guardar(Suplidor);
 
                 if (user)
                 {
@@ -128,10 +128,10 @@ namespace AgroVeterinaria.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var suplidor = SuplidoresBLL.Buscar(Convert.ToInt32(SuplidorIdTextBox.Text));
+            Suplidores suplidor = SuplidoresBLL.Buscar(Convert.ToInt32(SuplidorIdTextBox.Text));
             if (suplidor != null)
             {
-                this.DataContext = suplidor;
+                DataContext = suplidor;
                 DireccionComboBox.SelectedIndex = suplidor.DireccionId;
             }
             else { Limpiar(); }
@@ -141,17 +141,17 @@ namespace AgroVeterinaria.UI.Registros
         {
             MainWindow window = new MainWindow(Usuario);
             window.Show();
-            this.Close();
+            Close();
         }
 
         private void MinimizarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Minimized;
+            WindowState = WindowState.Minimized;
         }
 
         private void CerrarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

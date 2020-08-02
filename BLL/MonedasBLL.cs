@@ -16,10 +16,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
-                esOk = contexto.Monedas.Any(e => e.UsuarioId == id);
+                esOk = contexto.Monedas.Any(e => e.MonedaId == id);
             }
             catch (Exception)
             {
@@ -34,18 +33,16 @@ namespace AgroVeterinaria.BLL
 
         public static bool Guardar(Monedas Moneda)
         {
-            if (!Existe(Moneda.UsuarioId)) { return Insertar(Moneda); }
-            else { return Modificar(Moneda); }
+            return Insertar(Moneda);
         }
 
         private static bool Insertar(Monedas Moneda)
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
-                if (contexto.Monedas.Add(Moneda) != null) { esOk = contexto.SaveChanges() > 0; }
+                if (contexto.Monedas.Add(Moneda) != null) { esOk = (contexto.SaveChanges() > 0); }
             }
             catch (Exception)
             {
@@ -58,14 +55,14 @@ namespace AgroVeterinaria.BLL
             return esOk;
         }
 
-        private static bool Modificar(Monedas Moneda)
+        public static bool Modificar(Monedas Moneda)
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
             try
             {
                 contexto.Entry(Moneda).State = EntityState.Modified;
-                esOk = contexto.SaveChanges() > 0;
+                esOk = (contexto.SaveChanges() > 0);
             }
             catch (Exception)
             {
@@ -81,18 +78,15 @@ namespace AgroVeterinaria.BLL
         public static bool Eliminar(int id)
         {
             Contexto contexto = new Contexto();
-            bool eliminado = false;
-
+            bool esOk = false;
             try
             {
                 var Moneda = contexto.Monedas.Find(id);
-
                 if (Moneda != null)
                 {
                     contexto.Monedas.Remove(Moneda);
-                    eliminado = contexto.SaveChanges() > 0;
+                    esOk = (contexto.SaveChanges() > 0);
                 }
-
             }
             catch (Exception)
             {
@@ -102,20 +96,19 @@ namespace AgroVeterinaria.BLL
             {
                 contexto.Dispose();
             }
-            return eliminado;
+            return esOk;
         }
 
         public static Monedas Buscar(int id)
         {
             Contexto contexto = new Contexto();
             Monedas Moneda = new Monedas();
-
             try
             {
                 Moneda = contexto.Monedas.Find(id);
                 if (Moneda == null)
                 {
-                    MessageBox.Show("UsuarioId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Esta moneda no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception)
@@ -133,11 +126,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             List<Monedas> Lista = new List<Monedas>();
-
             try
             {
                 Lista = contexto.Monedas.ToList();
-
             }
             catch (Exception)
             {

@@ -16,10 +16,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
-                esOk = contexto.Compras.Any(e => e.UsuarioId == id);
+                esOk = contexto.Compras.Any(e => e.CompraId == id);
             }
             catch (Exception)
             {
@@ -34,18 +33,16 @@ namespace AgroVeterinaria.BLL
 
         public static bool Guardar(Compras Compra)
         {
-            if (!Existe(Compra.UsuarioId)) { return Insertar(Compra); }
-            else { return Modificar(Compra); }
+            return Insertar(Compra);
         }
 
         private static bool Insertar(Compras Compra)
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
-                if (contexto.Compras.Add(Compra) != null) { esOk = contexto.SaveChanges() > 0; }
+                if (contexto.Compras.Add(Compra) != null) { esOk = (contexto.SaveChanges() > 0); }
             }
             catch (Exception)
             {
@@ -58,14 +55,14 @@ namespace AgroVeterinaria.BLL
             return esOk;
         }
 
-        private static bool Modificar(Compras Compra)
+        public static bool Modificar(Compras Compra)
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
             try
             {
                 contexto.Entry(Compra).State = EntityState.Modified;
-                esOk = contexto.SaveChanges() > 0;
+                esOk = (contexto.SaveChanges() > 0);
             }
             catch (Exception)
             {
@@ -82,17 +79,14 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
                 var Compra = contexto.Compras.Find(id);
-
                 if (Compra != null)
                 {
                     contexto.Compras.Remove(Compra);
-                    esOk = contexto.SaveChanges() > 0;
+                    esOk = (contexto.SaveChanges() > 0);
                 }
-
             }
             catch (Exception)
             {
@@ -109,13 +103,12 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             Compras Compra = new Compras();
-
             try
             {
                 Compra = contexto.Compras.Find(id);
                 if (Compra == null)
                 {
-                    MessageBox.Show("UsuarioId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Esta compra no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception)
@@ -133,11 +126,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             List<Compras> Lista = new List<Compras>();
-
             try
             {
                 Lista = contexto.Compras.ToList();
-
             }
             catch (Exception)
             {

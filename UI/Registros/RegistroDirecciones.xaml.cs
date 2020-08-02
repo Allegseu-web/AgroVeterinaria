@@ -20,25 +20,25 @@ namespace AgroVeterinaria.UI.Registros
     /// </summary>
     public partial class RegistroDirecciones : Window
     {
-        Direcciones Direccion = new Direcciones();
-        Usuarios Usuario = new Usuarios();
+        private Direcciones Direccion = new Direcciones();
+        private readonly Usuarios Usuario = new Usuarios();
         public RegistroDirecciones(Usuarios user)
         {
             InitializeComponent();
-            this.DataContext = Direccion;
-            this.Usuario = user;
+            DataContext = Direccion;
+            Usuario = user;
         }
 
         private void Limpiar()
         {
-            this.Direccion = new Direcciones();
+            Direccion = new Direcciones();
             CalleTextBox.Text = string.Empty;
             TextBox.Text = string.Empty;
             PaisTextBox.Text = string.Empty;
             MunicipioTextBox.Text = string.Empty;
             NdeLocaldad.Text = string.Empty;
             CiudadTextBox.Text = string.Empty;
-            this.DataContext = Direccion;
+            DataContext = Direccion;
         }
 
         private bool Validar()
@@ -111,17 +111,17 @@ namespace AgroVeterinaria.UI.Registros
         {
             MainWindow window = new MainWindow(Usuario);
             window.Show();
-            this.Close();
+            Close();
         }
 
         private void MinimizarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Minimized;
+            WindowState = WindowState.Minimized;
         }
 
         private void CerrarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
@@ -133,7 +133,7 @@ namespace AgroVeterinaria.UI.Registros
         {
             if (!Validar()) { return; }
 
-            var Direct = DireccionesBLL.Guardar(Direccion);
+            bool Direct = DireccionesBLL.Guardar(Direccion);
 
             if (Direct)
             {
@@ -161,9 +161,9 @@ namespace AgroVeterinaria.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var diret = DireccionesBLL.Buscar(Convert.ToInt32(DireccionIdTextBox.Text));
+            Direcciones diret = DireccionesBLL.Buscar(Convert.ToInt32(DireccionIdTextBox.Text));
 
-            if (diret != null) { this.DataContext = diret; }
+            if (diret != null) { DataContext = diret; }
             else { Limpiar(); }
         }
     }

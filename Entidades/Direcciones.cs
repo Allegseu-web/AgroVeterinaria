@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace AgroVeterinaria.Entidades
 {
     public class Direcciones
     {
-        public int DireccionesId { get; set; }
+        [Key]
+        public int DireccionId { get; set; }
         public string Calle { get; set; }
         public string Edificio_Piso_Apartamento { get; set; }
         public int NumLocalidad { get; set; }

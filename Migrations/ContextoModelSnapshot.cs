@@ -44,7 +44,7 @@ namespace AgroVeterinaria.Migrations
 
             modelBuilder.Entity("AgroVeterinaria.Entidades.Direcciones", b =>
                 {
-                    b.Property<int>("DireccionesId")
+                    b.Property<int>("DireccionId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -75,7 +75,7 @@ namespace AgroVeterinaria.Migrations
                     b.Property<int>("UsuarioId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("DireccionesId");
+                    b.HasKey("DireccionId");
 
                     b.ToTable("Direcciones");
                 });
@@ -255,7 +255,7 @@ namespace AgroVeterinaria.Migrations
                             UsuarioId = 1,
                             Clave = "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
                             Email = "Admin@admin.com",
-                            FechaCreacion = new DateTime(2020, 8, 2, 2, 15, 20, 855, DateTimeKind.Local).AddTicks(2198),
+                            FechaCreacion = new DateTime(2020, 8, 2, 15, 21, 6, 805, DateTimeKind.Local).AddTicks(7404),
                             NivelUsuario = "Administrador",
                             NombreUsuario = "Admin",
                             Nombres = "Manager"

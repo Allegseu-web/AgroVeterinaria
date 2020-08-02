@@ -16,10 +16,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
-                esOk = contexto.Productos.Any(e => e.UsuarioId == id);
+                esOk = contexto.Productos.Any(e => e.ProductoId == id);
             }
             catch (Exception)
             {
@@ -41,10 +40,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
-                if (contexto.Productos.Add(Producto) != null) { esOk = contexto.SaveChanges() > 0; }
+                if (contexto.Productos.Add(Producto) != null) { esOk = (contexto.SaveChanges() > 0); }
             }
             catch (Exception)
             {
@@ -64,7 +62,7 @@ namespace AgroVeterinaria.BLL
             try
             {
                 contexto.Entry(Producto).State = EntityState.Modified;
-                esOk = contexto.SaveChanges() > 0;
+                esOk = (contexto.SaveChanges() > 0);
             }
             catch (Exception)
             {
@@ -81,17 +79,14 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
                 var Producto = contexto.Productos.Find(id);
-
                 if (Producto != null)
                 {
                     contexto.Productos.Remove(Producto);
-                    esOk = contexto.SaveChanges() > 0;
+                    esOk = (contexto.SaveChanges() > 0);
                 }
-
             }
             catch (Exception)
             {
@@ -108,13 +103,12 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             Productos Producto = new Productos();
-
             try
             {
                 Producto = contexto.Productos.Find(id);
                 if (Producto == null)
                 {
-                    MessageBox.Show("UsuarioId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Esta producto no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception)
@@ -132,11 +126,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             List<Productos> Lista = new List<Productos>();
-
             try
             {
                 Lista = contexto.Productos.ToList();
-
             }
             catch (Exception)
             {

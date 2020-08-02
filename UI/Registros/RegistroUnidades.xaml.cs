@@ -19,20 +19,20 @@ namespace AgroVeterinaria.UI.Registros
     /// </summary>
     public partial class RegistroUnidades : Window
     {
-        Usuarios Usuario = new Usuarios();
-        Unidades Unidad = new Unidades();
+        private readonly Usuarios Usuario = new Usuarios();
+        private Unidades Unidad = new Unidades();
         public RegistroUnidades(Usuarios user)
         {
             InitializeComponent();
-            this.DataContext = Unidad;
-            this.Usuario = user;
+            DataContext = Unidad;
+            Usuario = user;
         }
 
         private void Limpiar()
         {
-            this.Unidad = new Unidades();
+            Unidad = new Unidades();
             DescripcionTextBox.Text = string.Empty;
-            this.DataContext = Unidad;
+            DataContext = Unidad;
         }
 
         private bool Validar()
@@ -43,7 +43,7 @@ namespace AgroVeterinaria.UI.Registros
             {
                 esValido = false;
                 GuardarButton.IsEnabled = false;
-                MessageBox.Show("Tipo de moneda está vacio", "Fallo",
+                MessageBox.Show("Descripcion está vacio", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 DescripcionTextBox.Focus();
                 GuardarButton.IsEnabled = true;
@@ -53,16 +53,16 @@ namespace AgroVeterinaria.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var Unit = UnidadesBLL.Buscar(Convert.ToInt32(UnidadIdTextBox.Text));
+            Unidades Unit = UnidadesBLL.Buscar(Convert.ToInt32(UnidadIdTextBox.Text));
 
-            if (Unit != null) { this.DataContext = Unit; }
+            if (Unit != null) { DataContext = Unit; }
             else { Limpiar(); }
         }
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
             if (!Validar()) { return; }
-            var user = UnidadesBLL.Guardar(Unidad);
+            bool user = UnidadesBLL.Guardar(Unidad);
 
             if (user)
             {
@@ -92,17 +92,17 @@ namespace AgroVeterinaria.UI.Registros
         {
             RegistroProdutos registroProdutos = new RegistroProdutos(Usuario);
             registroProdutos.Show();
-            this.Close();
+            Close();
         }
 
         private void MinimizarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Minimized;
+            WindowState = WindowState.Minimized;
         }
 
         private void CerrarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)

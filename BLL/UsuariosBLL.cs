@@ -17,7 +17,6 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
                 esOk = contexto.Usuarios.Any(e => e.UsuarioId == id);
@@ -33,33 +32,6 @@ namespace AgroVeterinaria.BLL
             return esOk;
         }
 
-        public static bool Validar(string nombreusuario, string clave)
-        {
-            bool paso = false;
-            Contexto contexto = new Contexto();
-
-            try
-            {
-                var validar = from usuario in contexto.Usuarios
-                              where usuario.NombreUsuario == nombreusuario
-                              && usuario.Clave == GetSHA256(clave)
-                              select usuario;
-                if (validar.Count() > 0) { paso = true; }
-                else { paso = false; }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-
-            return paso;
-        }
-
         public static bool Guardar(Usuarios Usuario)
         {
             return Insertar(Usuario);
@@ -69,7 +41,6 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
                 Usuario.Clave = GetSHA256(Usuario.Clave);
@@ -111,17 +82,14 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
                 var Usuario = contexto.Usuarios.Find(id);
-
                 if (Usuario != null)
                 {
                     contexto.Usuarios.Remove(Usuario);
                     esOk = (contexto.SaveChanges() > 0);
                 }
-
             }
             catch (Exception)
             {
@@ -138,13 +106,12 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             Usuarios Usuario = new Usuarios();
-
             try
             {
                 Usuario = contexto.Usuarios.Find(id);
-                if(Usuario == null)
+                if (Usuario == null)
                 {
-                    MessageBox.Show("UsuarioId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Este usuario no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception)
@@ -162,11 +129,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             List<Usuarios> Lista = new List<Usuarios>();
-
             try
             {
                 Lista = contexto.Usuarios.ToList();
-
             }
             catch (Exception)
             {
@@ -177,6 +142,30 @@ namespace AgroVeterinaria.BLL
                 contexto.Dispose();
             }
             return Lista;
+        }
+
+        public static bool Validar(string nombreusuario, string clave)
+        {
+            bool esOk = false;
+            Contexto contexto = new Contexto();
+            try
+            {
+                var esValido = from usuario in contexto.Usuarios
+                               where usuario.NombreUsuario == nombreusuario
+                               && usuario.Clave == GetSHA256(clave)
+                               select usuario;
+                if (esValido.Count() > 0) { esOk = true; }
+                else { esOk = false; }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return esOk;
         }
 
         public static string GetSHA256(string str)

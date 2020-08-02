@@ -28,7 +28,7 @@
                VerticalAlignment="Top" Width="25" Source="/UI/Registros/direccion.png"/>
                 <Label x:Name="label" Content="DirecciónId" HorizontalAlignment="Left" Margin="0,0,5,0"
                VerticalAlignment="Top" Height="25" Width="71"/>
-                <TextBox x:Name="DireccionIdTextBox" TextWrapping="Wrap" Text="{Binding DireccionesId}"
+                <TextBox x:Name="DireccionIdTextBox" TextWrapping="Wrap" Text="{Binding DireccionId}"
                  VerticalAlignment="Top" Width="235" Height="25" Margin="0,0,5,0"/>
                 <Button x:Name="BuscarButton" Width="100" Height="25" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal">
@@ -40,8 +40,8 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,15" >
                 <Image Source="/UI/Registros/f2ec734711be580dfa90769a1831a790 (8).png" Margin="0,0,5,0" Height="22" Width="29"/>
-                <Label x:Name="FechaLabel" Content="Fecha"   Margin="0,0,30,0" FontSize="13"/>
-                <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}"  Width="181" Margin="0,0,0,0" Height="25"/>
+                <Label x:Name="FechaLabel" Content="Fecha"   Margin="0,0,29,0" FontSize="13"/>
+                <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}"  Width="340" Margin="0,0,0,0" Height="25"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,15">

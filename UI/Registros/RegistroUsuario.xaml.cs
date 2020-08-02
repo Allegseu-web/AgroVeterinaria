@@ -5,7 +5,9 @@ using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -48,9 +50,38 @@ namespace AgroVeterinaria.UI.Registros
             Limpiar();
         }
 
+        private bool validarId()
+        {
+            bool esValido = false;
+
+            if (!Regex.IsMatch(UsuarioIdTextBox.Text, @" ^[0-9] +$"))
+            {
+                esValido = false;
+                GuardarButton.IsEnabled = false;
+                MessageBox.Show("Dato dentro del id es inalido", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                UsuarioIdTextBox.Focus();
+                GuardarButton.IsEnabled = true;
+            }
+                  
+
+            return esValido;
+        }
+
         private bool Validar()
         {
             bool esValido = true;
+
+            if (!Regex.IsMatch(NombreTextBox.Text, @"^[A-Za-z ]+$"))
+            {
+                esValido = false;
+                GuardarButton.IsEnabled = false;
+                MessageBox.Show("Solo se permiten Laetras en este campo", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                NombreTextBox.Focus();
+                GuardarButton.IsEnabled = true;
+            }
+
 
             if (NombreTextBox.Text.Length == 0)
             {
@@ -72,13 +103,34 @@ namespace AgroVeterinaria.UI.Registros
                 GuardarButton.IsEnabled = true;
             }
 
-            if (ClaveTextBox.Password.Length == 0)
+            if(!IsValid(EmailTextBox.Text))
             {
                 esValido = false;
                 GuardarButton.IsEnabled = false;
-                MessageBox.Show("Contraseña está vacia", "Fallo",
+                MessageBox.Show("Email invalido", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                EmailTextBox.Focus();
+                GuardarButton.IsEnabled = true;
+            }
+
+
+            if (ConfirmarClaveTextBox.Password.Length < 6 || ClaveTextBox.Password.Length<6)
+            {
+                esValido = false;
+                GuardarButton.IsEnabled = false;
+                MessageBox.Show("Clave debe tener al menos 6 caracter", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 ClaveTextBox.Focus();
+                GuardarButton.IsEnabled = true;
+            }
+
+            if (ConfirmarClaveTextBox.Password != ClaveTextBox.Password)
+            {
+                esValido = false;
+                GuardarButton.IsEnabled = false;
+                MessageBox.Show("La contraseña no coiciden", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                ConfirmarClaveTextBox.Focus();
                 GuardarButton.IsEnabled = true;
             }
 
@@ -101,7 +153,28 @@ namespace AgroVeterinaria.UI.Registros
                 ConfirmarClaveTextBox.Focus();
                 GuardarButton.IsEnabled = true;
             }
+
+
+
             return esValido;
+
+
+
+
+        }
+
+        public bool IsValid(string emailaddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailaddress);
+
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
         }
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)

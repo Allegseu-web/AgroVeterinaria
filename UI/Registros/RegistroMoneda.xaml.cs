@@ -19,20 +19,20 @@ namespace AgroVeterinaria.UI.Registros
     /// </summary>
     public partial class RegistroMoneda : Window
     {
-        Usuarios Usuario = new Usuarios();
-        Monedas Moneda = new Monedas();
+        private readonly Usuarios Usuario = new Usuarios();
+        private Monedas Moneda = new Monedas();
         public RegistroMoneda(Usuarios user)
         {
             InitializeComponent();
-            this.DataContext = Moneda;
-            this.Usuario = user;
+            DataContext = Moneda;
+            Usuario = user;
         }
 
         private void Limpiar()
         {
-            this.Moneda = new Monedas();
+            Moneda = new Monedas();
             TipoTextBox.Text = string.Empty;
-            this.DataContext = Moneda;
+            DataContext = Moneda;
         }
 
         private bool Validar()
@@ -54,7 +54,7 @@ namespace AgroVeterinaria.UI.Registros
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
             if (!Validar()) { return; }
-            var user = MonedasBLL.Guardar(Moneda);
+            bool user = MonedasBLL.Guardar(Moneda);
 
             if (user)
             {
@@ -82,9 +82,9 @@ namespace AgroVeterinaria.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var moneda = MonedasBLL.Buscar(Convert.ToInt32(MonedaIdTextBox.Text));
+            Monedas moneda = MonedasBLL.Buscar(Convert.ToInt32(MonedaIdTextBox.Text));
 
-            if (Moneda != null) { this.DataContext = moneda; }
+            if (Moneda != null) { DataContext = moneda; }
             else { Limpiar(); }
         }
 
@@ -96,17 +96,17 @@ namespace AgroVeterinaria.UI.Registros
         {
             MainWindow window = new MainWindow(Usuario);
             window.Show();
-            this.Close();
+            Close();
         }
 
         private void MinimizarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Minimized;
+            WindowState = WindowState.Minimized;
         }
 
         private void CerrarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

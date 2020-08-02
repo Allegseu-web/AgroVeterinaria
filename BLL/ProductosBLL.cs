@@ -108,7 +108,7 @@ namespace AgroVeterinaria.BLL
                 Producto = contexto.Productos.Find(id);
                 if (Producto == null)
                 {
-                    MessageBox.Show("ProductoId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Esta producto no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception)

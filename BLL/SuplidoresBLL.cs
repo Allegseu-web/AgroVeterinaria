@@ -108,7 +108,7 @@ namespace AgroVeterinaria.BLL
                 Suplidor = contexto.Suplidores.Find(id);
                 if (Suplidor == null)
                 {
-                    MessageBox.Show("SuplidorId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Esta suplidor no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception)

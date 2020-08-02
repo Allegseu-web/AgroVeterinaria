@@ -108,7 +108,7 @@ namespace AgroVeterinaria.BLL
                 Unidad = contexto.Unidades.Find(id);
                 if (Unidad == null)
                 {
-                    MessageBox.Show("UnidadId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Esta unidad no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception)

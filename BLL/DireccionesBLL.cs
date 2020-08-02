@@ -108,7 +108,7 @@ namespace AgroVeterinaria.BLL
                 Direccion = contexto.Direcciones.Find(id);
                 if (Direccion == null)
                 {
-                    MessageBox.Show("DireccionId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Esta direccion no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception)

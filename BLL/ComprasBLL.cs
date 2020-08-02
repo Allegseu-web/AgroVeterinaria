@@ -108,7 +108,7 @@ namespace AgroVeterinaria.BLL
                 Compra = contexto.Compras.Find(id);
                 if (Compra == null)
                 {
-                    MessageBox.Show("CompraId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Esta compra no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception)

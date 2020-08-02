@@ -23,7 +23,7 @@
         <Label x:Name="label2" Content="Registro Unidad" HorizontalAlignment="Left" Margin="160,104,0,0" VerticalAlignment="Top"/>
 
         <StackPanel Orientation="Vertical" Margin="25,150,25,25">
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,20">
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,15">
                 <Image x:Name="image1" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top"
                        Width="25" Source="/UI/Registros/unidad.png" Margin="0,0,5,0"/>
                 <Label x:Name="label" Content="UnidadId" HorizontalAlignment="Left"
@@ -40,7 +40,7 @@
                 </Button>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,10" HorizontalAlignment="Left" Width="334" >
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,15">
                 <Image Source="/UI/Registros/f2ec734711be580dfa90769a1831a790 (8).png" Margin="0,0,5,0" Height="23" Width="24"/>
                 <Label x:Name="FechaLabel" Content="Fecha"   Margin="0,0,32,0" FontSize="13"/>
                 <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}"  Width="212" Margin="0,0,0,0" Height="27"/>

@@ -108,7 +108,7 @@ namespace AgroVeterinaria.BLL
                 Moneda = contexto.Monedas.Find(id);
                 if (Moneda == null)
                 {
-                    MessageBox.Show("MonedaId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Esta moneda no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception)

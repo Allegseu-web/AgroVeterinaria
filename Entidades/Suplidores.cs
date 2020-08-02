@@ -8,7 +8,7 @@ namespace AgroVeterinaria.Entidades
     public class Suplidores
     {
         [Key]
-        public int SuplidoresId { get; set; }
+        public int SuplidorId { get; set; }
         public string Nombre { get; set; }
         public int DireccionId { get; set; }
         public string Telefono { get; set; }

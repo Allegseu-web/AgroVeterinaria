@@ -83,16 +83,32 @@ namespace AgroVeterinaria.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!Validar()) { return; }
-            var user = SuplidoresBLL.Guardar(Suplidor);
-
-            if (user)
+            if (SuplidorIdTextBox.Text != "0")
             {
-                Limpiar();
-                MessageBox.Show("Transaccion exitosa!", "Exito",
-                    MessageBoxButton.OK, MessageBoxImage.Information);
+                var user = SuplidoresBLL.Modificar(Suplidor);
+
+                if (user)
+                {
+                    Limpiar();
+                    MessageBox.Show("Transaccion exitosa!", "Exito",
+                        MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else { MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error); }
             }
-            else { MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error); }
+            else
+            {
+                if (!Validar()) { return; }
+                var user = SuplidoresBLL.Guardar(Suplidor);
+
+                if (user)
+                {
+                    Limpiar();
+                    MessageBox.Show("Transaccion exitosa!", "Exito",
+                        MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else { MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error); }
+            }
+            
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
@@ -113,8 +129,11 @@ namespace AgroVeterinaria.UI.Registros
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
             var suplidor = SuplidoresBLL.Buscar(Convert.ToInt32(SuplidorIdTextBox.Text));
-
-            if (suplidor != null) { this.DataContext = suplidor; }
+            if (suplidor != null)
+            {
+                this.DataContext = suplidor;
+                DireccionComboBox.SelectedIndex = suplidor.DireccionId;
+            }
             else { Limpiar(); }
         }
 

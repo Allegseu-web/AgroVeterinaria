@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Windows;
 
 namespace AgroVeterinaria.BLL
 {
@@ -112,7 +113,10 @@ namespace AgroVeterinaria.BLL
             try
             {
                 Unidad = contexto.Unidades.Find(id);
-
+                if (Unidad == null)
+                {
+                    MessageBox.Show("UnidadId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
             }
             catch (Exception)
             {

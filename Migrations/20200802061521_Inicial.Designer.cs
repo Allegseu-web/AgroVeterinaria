@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgroVeterinaria.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200801003134_Inicial")]
+    [Migration("20200802061521_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -176,7 +176,7 @@ namespace AgroVeterinaria.Migrations
 
             modelBuilder.Entity("AgroVeterinaria.Entidades.Suplidores", b =>
                 {
-                    b.Property<int>("SuplidoresId")
+                    b.Property<int>("SuplidorId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -198,7 +198,7 @@ namespace AgroVeterinaria.Migrations
                     b.Property<int>("UsuarioId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("SuplidoresId");
+                    b.HasKey("SuplidorId");
 
                     b.ToTable("Suplidores");
                 });
@@ -257,7 +257,7 @@ namespace AgroVeterinaria.Migrations
                             UsuarioId = 1,
                             Clave = "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
                             Email = "Admin@admin.com",
-                            FechaCreacion = new DateTime(2020, 7, 31, 20, 31, 33, 906, DateTimeKind.Local).AddTicks(1800),
+                            FechaCreacion = new DateTime(2020, 8, 2, 2, 15, 20, 855, DateTimeKind.Local).AddTicks(2198),
                             NivelUsuario = "Administrador",
                             NombreUsuario = "Admin",
                             Nombres = "Manager"

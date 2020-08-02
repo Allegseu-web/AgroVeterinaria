@@ -17,7 +17,6 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
                 esOk = contexto.Usuarios.Any(e => e.UsuarioId == id);
@@ -37,7 +36,6 @@ namespace AgroVeterinaria.BLL
         {
             bool paso = false;
             Contexto contexto = new Contexto();
-
             try
             {
                 var validar = from usuario in contexto.Usuarios
@@ -49,14 +47,12 @@ namespace AgroVeterinaria.BLL
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally
             {
                 contexto.Dispose();
             }
-
             return paso;
         }
 
@@ -69,7 +65,6 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
                 Usuario.Clave = GetSHA256(Usuario.Clave);
@@ -111,17 +106,14 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
                 var Usuario = contexto.Usuarios.Find(id);
-
                 if (Usuario != null)
                 {
                     contexto.Usuarios.Remove(Usuario);
                     esOk = (contexto.SaveChanges() > 0);
                 }
-
             }
             catch (Exception)
             {
@@ -138,7 +130,6 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             Usuarios Usuario = new Usuarios();
-
             try
             {
                 Usuario = contexto.Usuarios.Find(id);
@@ -162,11 +153,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             List<Usuarios> Lista = new List<Usuarios>();
-
             try
             {
                 Lista = contexto.Usuarios.ToList();
-
             }
             catch (Exception)
             {

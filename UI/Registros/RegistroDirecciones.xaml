@@ -28,7 +28,7 @@
                VerticalAlignment="Top" Width="25" Source="/UI/Registros/direccion.png"/>
                 <Label x:Name="label" Content="DirecciónId" HorizontalAlignment="Left" Margin="0,0,5,0"
                VerticalAlignment="Top" Height="25" Width="71"/>
-                <TextBox x:Name="DireccionIdTextBox" TextWrapping="Wrap" Text="{Binding DireccionesId}"
+                <TextBox x:Name="DireccionIdTextBox" TextWrapping="Wrap" Text="{Binding DireccionId}"
                  VerticalAlignment="Top" Width="235" Height="25" Margin="0,0,5,0"/>
                 <Button x:Name="BuscarButton" Width="100" Height="25" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal">

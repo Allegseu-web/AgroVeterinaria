@@ -16,10 +16,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
-                esOk = contexto.Direcciones.Any(e => e.UsuarioId == id);
+                esOk = contexto.Direcciones.Any(e => e.DireccionId == id);
             }
             catch (Exception)
             {
@@ -34,18 +33,16 @@ namespace AgroVeterinaria.BLL
 
         public static bool Guardar(Direcciones Direccion)
         {
-            if (!Existe(Direccion.UsuarioId)) { return Insertar(Direccion); }
-            else { return Modificar(Direccion); }
+            return Insertar(Direccion);
         }
 
         private static bool Insertar(Direcciones Direccion)
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
-                if (contexto.Direcciones.Add(Direccion) != null) { esOk = contexto.SaveChanges() > 0; }
+                if (contexto.Direcciones.Add(Direccion) != null) { esOk = (contexto.SaveChanges() > 0); }
             }
             catch (Exception)
             {
@@ -58,14 +55,14 @@ namespace AgroVeterinaria.BLL
             return esOk;
         }
 
-        private static bool Modificar(Direcciones Direccion)
+        public static bool Modificar(Direcciones Direccion)
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
             try
             {
                 contexto.Entry(Direccion).State = EntityState.Modified;
-                esOk = contexto.SaveChanges() > 0;
+                esOk = (contexto.SaveChanges() > 0);
             }
             catch (Exception)
             {
@@ -82,17 +79,14 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             bool esOk = false;
-
             try
             {
                 var Direccion = contexto.Direcciones.Find(id);
-
                 if (Direccion != null)
                 {
                     contexto.Direcciones.Remove(Direccion);
-                    esOk = contexto.SaveChanges() > 0;
+                    esOk = (contexto.SaveChanges() > 0);
                 }
-
             }
             catch (Exception)
             {
@@ -109,13 +103,12 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             Direcciones Direccion = new Direcciones();
-
             try
             {
                 Direccion = contexto.Direcciones.Find(id);
                 if (Direccion == null)
                 {
-                    MessageBox.Show("UsuarioId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("DireccionId no existe.", "No existe", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception)
@@ -133,11 +126,9 @@ namespace AgroVeterinaria.BLL
         {
             Contexto contexto = new Contexto();
             List<Direcciones> Lista = new List<Direcciones>();
-
             try
             {
                 Lista = contexto.Direcciones.ToList();
-
             }
             catch (Exception)
             {

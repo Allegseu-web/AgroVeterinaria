@@ -22,5 +22,10 @@ namespace AgroVeterinaria.UI.Registros
         {
             InitializeComponent();
         }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

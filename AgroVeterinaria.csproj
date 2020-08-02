@@ -21,6 +21,7 @@
     <None Remove="UI\Login\perritofin.png" />
     <None Remove="UI\Login\YERVA.png" />
     <None Remove="UI\Registros\6229529501556258238-32.png" />
+    <None Remove="UI\Registros\6a748df975a97993f5dedf66dbb14c56.png" />
     <None Remove="UI\Registros\7053475.png" />
     <None Remove="UI\Registros\arreglando.png" />
     <None Remove="UI\Registros\caja-de-entrega2.png" />
@@ -50,12 +51,14 @@
     <None Remove="UI\Registros\icon_save.ico" />
     <None Remove="UI\Registros\icon_save.png" />
     <None Remove="UI\Registros\icon_search.png" />
+    <None Remove="UI\Registros\icon_shopping-cart.png" />
     <None Remove="UI\Registros\icon_star.ico" />
     <None Remove="UI\Registros\icon_trash.ico" />
     <None Remove="UI\Registros\icon_trash.png" />
     <None Remove="UI\Registros\icon_user-plus.ico" />
     <None Remove="UI\Registros\icon_user-plus.png" />
     <None Remove="UI\Registros\icon_user.png" />
+    <None Remove="UI\Registros\itebis1.png" />
     <None Remove="UI\Registros\kisspng-computer-icons-new-york-city-clip-art-appartment-5b3d9b90d0c7a0.0018395515307641768552.png" />
     <None Remove="UI\Registros\mas.png" />
     <None Remove="UI\Registros\medida 2.png" />
@@ -63,6 +66,7 @@
     <None Remove="UI\Registros\money-bills.png" />
     <None Remove="UI\Registros\MUNDO.png" />
     <None Remove="UI\Registros\New Mockup .png" />
+    <None Remove="UI\Registros\pngegg %284%29.png" />
     <None Remove="UI\Registros\pngegg.png" />
     <None Remove="UI\Registros\pngegg2.png" />
     <None Remove="UI\Registros\pngwing.com %281%29.png" />
@@ -70,6 +74,7 @@
     <None Remove="UI\Registros\Registro de Direcciones.png" />
     <None Remove="UI\Registros\registro.png" />
     <None Remove="UI\Registros\rnc.png" />
+    <None Remove="UI\Registros\shopping-cart.png" />
     <None Remove="UI\Registros\Sin título-4.png" />
     <None Remove="UI\Registros\suplidores.png" />
     <None Remove="UI\Registros\supplier.png" />
@@ -105,6 +110,7 @@
     <Resource Include="UI\Login\perritofin.png" />
     <Resource Include="UI\Login\YERVA.png" />
     <Resource Include="UI\Registros\6229529501556258238-32.png" />
+    <Resource Include="UI\Registros\6a748df975a97993f5dedf66dbb14c56.png" />
     <Resource Include="UI\Registros\7053475.png" />
     <Resource Include="UI\Registros\arreglando.png" />
     <Resource Include="UI\Registros\caja-de-entrega2.png" />
@@ -134,12 +140,14 @@
     <Resource Include="UI\Registros\icon_save.ico" />
     <Resource Include="UI\Registros\icon_save.png" />
     <Resource Include="UI\Registros\icon_search.png" />
+    <Resource Include="UI\Registros\icon_shopping-cart.png" />
     <Resource Include="UI\Registros\icon_star.ico" />
     <Resource Include="UI\Registros\icon_trash.ico" />
     <Resource Include="UI\Registros\icon_trash.png" />
     <Resource Include="UI\Registros\icon_user-plus.ico" />
     <Resource Include="UI\Registros\icon_user-plus.png" />
     <Resource Include="UI\Registros\icon_user.png" />
+    <Resource Include="UI\Registros\itebis1.png" />
     <Resource Include="UI\Registros\kisspng-computer-icons-new-york-city-clip-art-appartment-5b3d9b90d0c7a0.0018395515307641768552.png" />
     <Resource Include="UI\Registros\mas.png" />
     <Resource Include="UI\Registros\medida 2.png" />
@@ -147,6 +155,7 @@
     <Resource Include="UI\Registros\money-bills.png" />
     <Resource Include="UI\Registros\MUNDO.png" />
     <Resource Include="UI\Registros\New Mockup .png" />
+    <Resource Include="UI\Registros\pngegg (4).png" />
     <Resource Include="UI\Registros\pngegg.png" />
     <Resource Include="UI\Registros\pngegg2.png" />
     <Resource Include="UI\Registros\pngwing.com (1).png" />
@@ -154,6 +163,7 @@
     <Resource Include="UI\Registros\Registro de Direcciones.png" />
     <Resource Include="UI\Registros\registro.png" />
     <Resource Include="UI\Registros\rnc.png" />
+    <Resource Include="UI\Registros\shopping-cart.png" />
     <Resource Include="UI\Registros\Sin título-4.png" />
     <Resource Include="UI\Registros\suplidores.png" />
     <Resource Include="UI\Registros\supplier.png" />

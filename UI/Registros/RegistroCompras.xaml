@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de compras" Height="450" Width="800" AllowsTransparency="True" Background="Transparent"
+        Title="Registro de compras" Height="600" Width="550" AllowsTransparency="True" Background="Transparent"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
-    <Grid>
+    <Grid Margin="0,0,-16,-330">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF7BE9F6"/>
+                <GradientStop Color="#FFF083DA" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <!--Control de ventana-->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
             <Button HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}">
@@ -26,5 +32,65 @@
                 </Button.Background>
             </Button>
         </StackPanel>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="146" Margin="253,0,0,0" VerticalAlignment="Top" Width="130" Source="/UI/Registros/pngegg (4).png"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="31" Margin="16,203,0,0" VerticalAlignment="Top" Width="28" Source="/UI/Registros/icon_shopping-cart.png"/>
+        <Label x:Name="label" Content="ComprasId" HorizontalAlignment="Left" Margin="58,203,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="143,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" TextChanged="textBox_TextChanged"/>
+        <Button x:Name="button" Content="Buscar" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Margin="244,208,0,0" VerticalAlignment="Top" Height="19" Width="54">
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/Registros/icon_search.png" AlignmentX="Left" Viewport="0,0,0.3,1" Stretch="Uniform"/>
+            </Button.Background>
+
+        </Button>
+        <Image x:Name="image2" HorizontalAlignment="Left" Height="35" Margin="16,264,0,0" VerticalAlignment="Top" Width="44" Source="/UI/Registros/suplidores.png"/>
+        <Label x:Name="label1" Content="Suplidor" HorizontalAlignment="Left" Margin="63,268,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="138,273,0,0" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="image3" HorizontalAlignment="Left" Height="27" Margin="283,273,0,0" VerticalAlignment="Top" Width="27" Source="/UI/Registros/coins-with-number-1-1.png"/>
+        <Label x:Name="label2" Content="Moneda" HorizontalAlignment="Left" Margin="328,273,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox_Copy" HorizontalAlignment="Left" Margin="388,280,0,0" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="image4" HorizontalAlignment="Left" Height="30" Margin="18,333,0,0" VerticalAlignment="Top" Width="24" Source="/UI/Registros/dog.png"/>
+        <Label x:Name="label3" Content="Producto" HorizontalAlignment="Left" Margin="63,337,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="138,339,0,0" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="image5" HorizontalAlignment="Left" Height="40" Margin="284,333,0,0" VerticalAlignment="Top" Width="26" Source="/UI/Registros/caja-de-entrega2.png"/>
+        <Label x:Name="label4" Content="Cantidad" HorizontalAlignment="Left" Margin="325,337,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="388,341,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="image6" HorizontalAlignment="Left" Height="14" Margin="547,342,0,0" VerticalAlignment="Top" Width="14" Source="/UI/Registros/mas.png" RenderTransformOrigin="1.929,0.25"/>
+        <Label x:Name="label5" Content="Registro de Comrpras" HorizontalAlignment="Left" Margin="253,143,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="dataGrid" Margin="5,377,5,201"/>
+        <Image x:Name="image7" HorizontalAlignment="Left" Height="28" Margin="14,742,0,0" VerticalAlignment="Top" Width="39" Source="/UI/Registros/6a748df975a97993f5dedf66dbb14c56.png" RenderTransformOrigin="0.769,0.393"/>
+        <Label x:Name="label6" Content="subTotal" HorizontalAlignment="Left" Margin="49,741,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.132,0.154"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="132,747,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <Image x:Name="image8" HorizontalAlignment="Left" Height="53" Margin="9,775,0,0" VerticalAlignment="Top" Width="54" Source="/UI/Registros/itebis1.png"/>
+        <Label x:Name="label7" Content="Total ITBIs" HorizontalAlignment="Left" Margin="55,786,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="132,792,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.881"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="10,891,0,0" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/Registros/mas.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="72,891,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.58,1.603">
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/Registros/icon_save.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button3" Content="Button" HorizontalAlignment="Left" Margin="143,882,0,0" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/Registros/icon_trash.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button4" Content="" HorizontalAlignment="Left" Margin="536,731,0,0" VerticalAlignment="Top" Width="26" Height="31">
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/Registros/icon_trash.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

@@ -21,6 +21,7 @@
     <None Remove="UI\Login\perritofin.png" />
     <None Remove="UI\Login\YERVA.png" />
     <None Remove="UI\Registros\6229529501556258238-32.png" />
+    <None Remove="UI\Registros\7053475.png" />
     <None Remove="UI\Registros\arreglando.png" />
     <None Remove="UI\Registros\caja-de-entrega2.png" />
     <None Remove="UI\Registros\calle.png" />
@@ -31,6 +32,7 @@
     <None Remove="UI\Registros\dog.png" />
     <None Remove="UI\Registros\edificio.png" />
     <None Remove="UI\Registros\editar.png" />
+    <None Remove="UI\Registros\f2ec734711be580dfa90769a1831a790 %288%29.png" />
     <None Remove="UI\Registros\flor.png" />
     <None Remove="UI\Registros\icons8-atrás-100.png" />
     <None Remove="UI\Registros\icons8-añadir-100.png" />
@@ -104,6 +106,7 @@
     <Resource Include="UI\Login\perritofin.png" />
     <Resource Include="UI\Login\YERVA.png" />
     <Resource Include="UI\Registros\6229529501556258238-32.png" />
+    <Resource Include="UI\Registros\7053475.png" />
     <Resource Include="UI\Registros\arreglando.png" />
     <Resource Include="UI\Registros\caja-de-entrega2.png" />
     <Resource Include="UI\Registros\calle.png" />
@@ -114,6 +117,7 @@
     <Resource Include="UI\Registros\dog.png" />
     <Resource Include="UI\Registros\edificio.png" />
     <Resource Include="UI\Registros\editar.png" />
+    <Resource Include="UI\Registros\f2ec734711be580dfa90769a1831a790 (8).png" />
     <Resource Include="UI\Registros\flor.png" />
     <Resource Include="UI\Registros\icons8-atrás-100.png" />
     <Resource Include="UI\Registros\icons8-añadir-100.png" />

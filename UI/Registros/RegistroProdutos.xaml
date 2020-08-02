@@ -39,6 +39,12 @@
                 </Button>
             </StackPanel>
 
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,15" HorizontalAlignment="Left" Width="355" >
+                <Image Source="/UI/Registros/f2ec734711be580dfa90769a1831a790 (8).png" Margin="0,0,5,0" Height="22" Width="22"/>
+                <Label x:Name="FechaLabel" Content="Fecha"   Margin="0,0,30,0" FontSize="13"/>
+                <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}"  Width="254" Margin="0,0,0,0" Height="27"/>
+            </StackPanel>
+
             <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
                 <Image x:Name="image1" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25"
                        Source="/UI/Registros/editar.png" Margin="0,0,5,0"/>
@@ -57,7 +63,7 @@
                 <ComboBox x:Name="SuplidorComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" SelectedValue="{Binding SuplidorId}"
                           Height="25" Width="242"/>
             </StackPanel>
-            
+
             <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
                 <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25"
                        Source="/UI/Registros/price-tag-with-dollar-symbol.png" Margin="0,0,5,0"/>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Registros"
         mc:Ignorable="d"
-        Title="RegistroDirecciones" Height="600" Width="500" AllowsTransparency="True"
+        Title="RegistroDirecciones" Height="630" Width="500" AllowsTransparency="True"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
@@ -37,7 +37,13 @@
                     </StackPanel>
                 </Button>
             </StackPanel>
-            
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,15" >
+                <Image Source="/UI/Registros/f2ec734711be580dfa90769a1831a790 (8).png" Margin="0,0,5,0" Height="22" Width="29"/>
+                <Label x:Name="FechaLabel" Content="Fecha"   Margin="0,0,30,0" FontSize="13"/>
+                <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}"  Width="181" Margin="0,0,0,0" Height="25"/>
+            </StackPanel>
+
             <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
                 <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25" Margin="0,0,5,0"
                        Source="/UI/Registros/edificio.png"/>
@@ -87,17 +93,17 @@
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="25,525,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom" Height="36" Width="44" Click="NuevoButton_Click">
+        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="25,569,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom" Height="36" Width="44" Click="NuevoButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/mas.png" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.5"/>
             </Button.Background>
         </Button>
-        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Center" Margin="0,525,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom" Height="36" Width="48" Click="GuardarButton_Click">
+        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Center" Margin="0,569,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom" Height="36" Width="48" Click="GuardarButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_save.png" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.5" />
             </Button.Background>
         </Button>
-        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="429,525,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom"  Height="36" Width="46" Click="EliminarButton_Click">
+        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="429,569,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom"  Height="36" Width="46" Click="EliminarButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_trash.png" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.5" />
             </Button.Background>

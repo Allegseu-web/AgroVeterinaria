@@ -7,7 +7,7 @@ using System.Text;
 
 namespace AgroVeterinaria.DAL
 {
-    class Contexto : DbContext
+    public class Contexto : DbContext
     {
         public DbSet <Usuarios> Usuarios { get; set; }
         public DbSet <Direcciones> Direcciones { get; set; }

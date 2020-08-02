@@ -10,7 +10,7 @@ using System.Windows;
 
 namespace AgroVeterinaria.BLL
 {
-    class SuplidoresBLL
+    public class SuplidoresBLL
     {
         public static bool Existe(int id)
         {

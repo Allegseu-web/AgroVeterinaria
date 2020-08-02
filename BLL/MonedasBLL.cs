@@ -10,7 +10,7 @@ using System.Windows;
 
 namespace AgroVeterinaria.BLL
 {
-    class MonedasBLL
+    public class MonedasBLL
     {
         public static bool Existe(int id)
         {

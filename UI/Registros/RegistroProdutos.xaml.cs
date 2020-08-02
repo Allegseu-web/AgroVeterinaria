@@ -150,9 +150,9 @@ namespace AgroVeterinaria.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var cuenta = ProductosBLL.Buscar(Convert.ToInt32(ProductoIdTextBox.Text));
-
-            if (Producto != null) { this.Producto = cuenta; }
+            var product = ProductosBLL.Buscar(Convert.ToInt32(ProductoIdTextBox.Text));
+            UnidadComboBox.SelectedItem = product.UnidadId;
+            if (Producto != null) { this.Producto = product; }
             else { Limpiar(); }
             this.DataContext = this.Producto;
         }

@@ -80,7 +80,7 @@
                          TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Height="25"/>
                 <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Margin="0,0,5,0"
                        Width="25" Source="/UI/Registros/kisspng-computer-icons-new-york-city-clip-art-appartment-5b3d9b90d0c7a0.0018395515307641768552.png"/>
-                <Label Content="Ciudad" HorizontalAlignment="Left" Margin="0,0,5,0"
+                <Label Content="Sector" HorizontalAlignment="Left" Margin="0,0,5,0"
                        VerticalAlignment="Top" Height="25"/>
                 <TextBox x:Name="CiudadTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Sector}"
                          VerticalAlignment="Top" Width="125" Height="25"/>

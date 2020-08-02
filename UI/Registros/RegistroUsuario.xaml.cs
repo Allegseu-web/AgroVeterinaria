@@ -27,22 +27,22 @@ namespace AgroVeterinaria.UI.Registros
         public string[] Niveles { get; set; }
         private Usuarios new_User = new Usuarios();
 
-        private Usuarios Usuario = new Usuarios();
+        private readonly Usuarios Usuario = new Usuarios();
         public RegistroUsuario(Usuarios user)
         {
             InitializeComponent();
-            this.DataContext = new_User;
+            DataContext = new_User;
             Niveles = new string[] { "Administrador", "Almacenero", "Vendedor", "Tesorero", "Gerente" };
             NivelUsuarioComboBox.ItemsSource = Niveles;
-            this.Usuario = user;
+            Usuario = user;
         }
 
         private void Limpiar()
         {
-            this.new_User = new Usuarios();
+            new_User = new Usuarios();
             ClaveTextBox.Password = string.Empty;
             ConfirmarClaveTextBox.Password = string.Empty;
-            this.DataContext = new_User;
+            DataContext = new_User;
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
@@ -50,7 +50,7 @@ namespace AgroVeterinaria.UI.Registros
             Limpiar();
         }
 
-        private bool validarId()
+        private bool ValidarId()
         {
             bool esValido = false;
 
@@ -63,8 +63,6 @@ namespace AgroVeterinaria.UI.Registros
                 UsuarioIdTextBox.Focus();
                 GuardarButton.IsEnabled = true;
             }
-                  
-
             return esValido;
         }
 
@@ -81,7 +79,6 @@ namespace AgroVeterinaria.UI.Registros
                 NombreTextBox.Focus();
                 GuardarButton.IsEnabled = true;
             }
-
 
             if (NombreTextBox.Text.Length == 0)
             {
@@ -112,7 +109,6 @@ namespace AgroVeterinaria.UI.Registros
                 EmailTextBox.Focus();
                 GuardarButton.IsEnabled = true;
             }
-
 
             if (ConfirmarClaveTextBox.Password.Length < 6 || ClaveTextBox.Password.Length<6)
             {
@@ -153,14 +149,7 @@ namespace AgroVeterinaria.UI.Registros
                 ConfirmarClaveTextBox.Focus();
                 GuardarButton.IsEnabled = true;
             }
-
-
-
             return esValido;
-
-
-
-
         }
 
         public bool IsValid(string emailaddress)
@@ -182,9 +171,9 @@ namespace AgroVeterinaria.UI.Registros
             if (!Validar()) { return; }
             if (UsuarioIdTextBox.Text != "0")
             {
-                this.new_User.Clave = ClaveTextBox.Password;
-                this.new_User.NivelUsuario = NivelUsuarioComboBox.Text;
-                var esOk = UsuariosBLL.Modificar(new_User);
+                new_User.Clave = ClaveTextBox.Password;
+                new_User.NivelUsuario = NivelUsuarioComboBox.Text;
+                bool esOk = UsuariosBLL.Modificar(new_User);
                 if (esOk)
                 {
                     Limpiar();
@@ -205,9 +194,9 @@ namespace AgroVeterinaria.UI.Registros
                 }
                 else
                 {
-                    this.new_User.Clave = ClaveTextBox.Password;
-                    this.new_User.NivelUsuario = NivelUsuarioComboBox.Text;
-                    var user = UsuariosBLL.Guardar(new_User);
+                    new_User.Clave = ClaveTextBox.Password;
+                    new_User.NivelUsuario = NivelUsuarioComboBox.Text;
+                    bool user = UsuariosBLL.Guardar(new_User);
 
                     if (user)
                     {
@@ -237,32 +226,32 @@ namespace AgroVeterinaria.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var cuenta = UsuariosBLL.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
+            Usuarios cuenta = UsuariosBLL.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
 
             if (cuenta != null)
             {
-                this.new_User = cuenta;
+                new_User = cuenta;
                 NivelUsuarioComboBox.Text = cuenta.NivelUsuario;
             }
             else { Limpiar(); }
-            this.DataContext = this.new_User;
+            DataContext = new_User;
         }
 
         private void AtrasButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow window = new MainWindow(Usuario);
             window.Show();
-            this.Close();
+            Close();
         }
 
         private void MinimizarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Minimized;
+            WindowState = WindowState.Minimized;
         }
 
         private void CerrarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

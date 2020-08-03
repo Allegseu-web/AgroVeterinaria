@@ -26,17 +26,47 @@
                     <ImageBrush ImageSource="/3256995851547464092-32.png" Stretch="Uniform" AlignmentX="Left"/>
                 </MenuItem.Background>
                 <MenuItem x:Name="UsuarioMenuItem" Header="Registro Usuario"
-                              Click="UsuarioMenuItem_Click"></MenuItem>
+                              Click="UsuarioMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/3256995851547464092-32.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
                 <MenuItem x:Name="DireccioesMenuItem" Header="Registro Direcciones"
-                              Click="DireccionesMenuItem_Click"></MenuItem>
+                              Click="DireccionesMenuItem_Click">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/3256995851547464092-32.png" Stretch="Uniform" AlignmentX="Left"/>
+                    </MenuItem.Background>
+
+                </MenuItem>
                 <MenuItem x:Name="ProductosMenuItem" Header="Registro Productos"
-                              Click="ProductosMenuItem_Click"/>
+                              Click="ProductosMenuItem_Click">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/3256995851547464092-32.png" Stretch="Uniform" AlignmentX="Left"/>
+                    </MenuItem.Background>
+
+                </MenuItem>
                 <MenuItem x:Name="SuplidoresMenuItem" Header="Registro Suplidores"
-                              Click="SuplidoresMenuItem_Click"/>
+                              Click="SuplidoresMenuItem_Click">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/3256995851547464092-32.png" Stretch="Uniform" AlignmentX="Left"/>
+                    </MenuItem.Background>
+
+                </MenuItem>
                 <MenuItem x:Name="NotasCreditosMenuItem" Header="Registro NotasCreditos"
-                              Click="NotasCreditosMenuItem_Click"/>
+                              Click="NotasCreditosMenuItem_Click">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/3256995851547464092-32.png" Stretch="Uniform" AlignmentX="Left"/>
+                    </MenuItem.Background>
+
+                </MenuItem>
                 <MenuItem x:Name="ComprasMenuItem" Header="Registro Compras"
-                              Click="ComprasMenuItem_Click"/>
+                              Click="ComprasMenuItem_Click">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/3256995851547464092-32.png" Stretch="Uniform" AlignmentX="Left"/>
+                    </MenuItem.Background>
+
+                </MenuItem>
             </MenuItem>
             <MenuItem Header="    Consultas" HorizontalContentAlignment="Right" Height="20">
                 <MenuItem.Background>

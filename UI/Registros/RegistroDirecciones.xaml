@@ -19,8 +19,8 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <Image x:Name="image" VerticalAlignment="Top" HorizontalAlignment="Center"
-               Height="222" Width="216" Margin="0,10,0,0" Source="/UI/Registros/Registro de Direcciones.png"/>
+        <Image x:Name="image" VerticalAlignment="Top" HorizontalAlignment="Left"
+               Height="222" Width="216" Margin="155,10,0,0" Source="/UI/Registros/Registro de Direcciones.png"/>
 
         <StackPanel Orientation="Vertical" Margin="25,250,25,25">
             <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
@@ -30,7 +30,7 @@
                VerticalAlignment="Top" Height="25" Width="71"/>
                 <TextBox x:Name="DireccionIdTextBox" TextWrapping="Wrap" Text="{Binding DireccionId}"
                  VerticalAlignment="Top" Width="235" Height="25" Margin="0,0,5,0"/>
-                <Button x:Name="BuscarButton" Width="100" Height="25" Click="BuscarButton_Click">
+                <Button x:Name="BuscarButton" Width="71" Height="25" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/UI/Registros/icon_search.png" Width="30" Height="20"></Image>
                         <Label Content="Buscar" Height="20" FontSize="8"></Label>

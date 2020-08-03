@@ -16,15 +16,15 @@ namespace AgroVeterinaria.Entidades
         public double ITBIS { get; set; }
         public double Importe { get; set; }
 
-        public ProductosDetalle(int compraid, string nombre, int cantidad, double precio)
+        public ProductosDetalle(int compraid, string nombre, int cantidad, double precio, double importe, double itbis)
         {
             ProductoDetalleId = 0;
             CompraId = compraid;
             ProductoDescripcion = nombre;
             Cantidad = cantidad;
             Precio = precio;
-            Importe = precio * cantidad;
-            ITBIS = (precio * cantidad) * 0.18;
+            Importe = importe;
+            ITBIS = itbis;
         }
 
         public ProductosDetalle(int cantidad, double precio)

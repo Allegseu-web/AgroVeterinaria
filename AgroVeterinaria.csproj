@@ -27,6 +27,7 @@
     <None Remove="UI\Registros\caja-de-entrega2.png" />
     <None Remove="UI\Registros\calle.png" />
     <None Remove="UI\Registros\coins-with-number-1-1.png" />
+    <None Remove="UI\Registros\coins-with-number-1.png" />
     <None Remove="UI\Registros\diositoplis.png" />
     <None Remove="UI\Registros\direccion.png" />
     <None Remove="UI\Registros\direcciones 2.png" />
@@ -60,18 +61,21 @@
     <None Remove="UI\Registros\icon_user.png" />
     <None Remove="UI\Registros\itebis1.png" />
     <None Remove="UI\Registros\kisspng-computer-icons-new-york-city-clip-art-appartment-5b3d9b90d0c7a0.0018395515307641768552.png" />
+    <None Remove="UI\Registros\kisspng-payment-computer-icons-money-logo-terms-and-conditions-5b094a17946fe8.470173941527335447608.png" />
     <None Remove="UI\Registros\mas.png" />
     <None Remove="UI\Registros\medida 2.png" />
     <None Remove="UI\Registros\modificacion.png" />
     <None Remove="UI\Registros\money-bills.png" />
     <None Remove="UI\Registros\MUNDO.png" />
     <None Remove="UI\Registros\New Mockup .png" />
+    <None Remove="UI\Registros\nota de credito.jpg" />
     <None Remove="UI\Registros\pngegg %284%29.png" />
     <None Remove="UI\Registros\pngegg.png" />
     <None Remove="UI\Registros\pngegg2.png" />
     <None Remove="UI\Registros\pngwing.com %281%29.png" />
     <None Remove="UI\Registros\price-tag-with-dollar-symbol.png" />
     <None Remove="UI\Registros\Registro de Direcciones.png" />
+    <None Remove="UI\Registros\Registro Nota de credito.png" />
     <None Remove="UI\Registros\registro.png" />
     <None Remove="UI\Registros\rnc.png" />
     <None Remove="UI\Registros\shopping-cart.png" />
@@ -79,6 +83,7 @@
     <None Remove="UI\Registros\suplidores.png" />
     <None Remove="UI\Registros\supplier.png" />
     <None Remove="UI\Registros\Tabla2.png" />
+    <None Remove="UI\Registros\ultimo.png" />
     <None Remove="UI\Registros\unidad.png" />
   </ItemGroup>
 
@@ -116,6 +121,7 @@
     <Resource Include="UI\Registros\caja-de-entrega2.png" />
     <Resource Include="UI\Registros\calle.png" />
     <Resource Include="UI\Registros\coins-with-number-1-1.png" />
+    <Resource Include="UI\Registros\coins-with-number-1.png" />
     <Resource Include="UI\Registros\diositoplis.png" />
     <Resource Include="UI\Registros\direccion.png" />
     <Resource Include="UI\Registros\direcciones 2.png" />
@@ -149,18 +155,21 @@
     <Resource Include="UI\Registros\icon_user.png" />
     <Resource Include="UI\Registros\itebis1.png" />
     <Resource Include="UI\Registros\kisspng-computer-icons-new-york-city-clip-art-appartment-5b3d9b90d0c7a0.0018395515307641768552.png" />
+    <Resource Include="UI\Registros\kisspng-payment-computer-icons-money-logo-terms-and-conditions-5b094a17946fe8.470173941527335447608.png" />
     <Resource Include="UI\Registros\mas.png" />
     <Resource Include="UI\Registros\medida 2.png" />
     <Resource Include="UI\Registros\modificacion.png" />
     <Resource Include="UI\Registros\money-bills.png" />
     <Resource Include="UI\Registros\MUNDO.png" />
     <Resource Include="UI\Registros\New Mockup .png" />
+    <Resource Include="UI\Registros\nota de credito.jpg" />
     <Resource Include="UI\Registros\pngegg (4).png" />
     <Resource Include="UI\Registros\pngegg.png" />
     <Resource Include="UI\Registros\pngegg2.png" />
     <Resource Include="UI\Registros\pngwing.com (1).png" />
     <Resource Include="UI\Registros\price-tag-with-dollar-symbol.png" />
     <Resource Include="UI\Registros\Registro de Direcciones.png" />
+    <Resource Include="UI\Registros\Registro Nota de credito.png" />
     <Resource Include="UI\Registros\registro.png" />
     <Resource Include="UI\Registros\rnc.png" />
     <Resource Include="UI\Registros\shopping-cart.png" />
@@ -168,6 +177,7 @@
     <Resource Include="UI\Registros\suplidores.png" />
     <Resource Include="UI\Registros\supplier.png" />
     <Resource Include="UI\Registros\Tabla2.png" />
+    <Resource Include="UI\Registros\ultimo.png" />
     <Resource Include="UI\Registros\unidad.png" />
   </ItemGroup>
 

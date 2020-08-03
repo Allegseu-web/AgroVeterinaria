@@ -1,7 +1,9 @@
 ﻿using AgroVeterinaria.BLL;
+using AgroVeterinaria.DAL;
 using AgroVeterinaria.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -57,6 +59,25 @@ namespace AgroVeterinaria.UI.Registros
             else { Limpiar(); }
         }
 
+        private void Calcular()
+        {
+            Contexto c = new Contexto();
+            double totalITBIS=0;
+            double subtotal=0;
+            double total=0;
+            if(Compra.ProductosDetalles.Count()>0)
+            {
+                totalITBIS = Compra.ProductosDetalles.Sum(e => e.ITBIS);
+                subtotal = Compra.ProductosDetalles.Sum(e => e.Importe);
+                total = totalITBIS + subtotal;
+                
+            }
+            TotalITBISTextBox.Text = totalITBIS.ToString();
+            SubTotalTextBox.Text = subtotal.ToString();
+            TotalTextBox.Text = total.ToString();
+
+        }
+
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
         {
             Limpiar();
@@ -66,6 +87,8 @@ namespace AgroVeterinaria.UI.Registros
         {
             this.DataContext = null;
             this.DataContext = Compra;
+            Calcular();
+            
         }
 
         private void EliminarFilaButton_Click(object sender, RoutedEventArgs e)
@@ -148,7 +171,11 @@ namespace AgroVeterinaria.UI.Registros
 
         private void AñadirFilaButton_Click(object sender, RoutedEventArgs e)
         {
-            Compra.ProductosDetalles.Add(new ProductosDetalle(Compra.CompraId, ProductoComboBox.Text, int.Parse(CantidadTextBox.Text), 5));
+            Contexto contexto = new Contexto();
+
+            Productos prod = ProductosBLL.Buscar(ProductoComboBox.SelectedIndex);
+            double importe = int.Parse(CantidadTextBox.Text) * prod.Precio;
+            Compra.ProductosDetalles.Add(new ProductosDetalle(Compra.CompraId, ProductoComboBox.Text, int.Parse(CantidadTextBox.Text), prod.Precio,importe, importe*0.18));
             Cargar();
         }
 

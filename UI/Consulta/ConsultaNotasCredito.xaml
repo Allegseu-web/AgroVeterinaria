@@ -43,7 +43,7 @@
                     <Label Content="Critero:"/>
                     <TextBox x:Name="CriterioTextBox" Width="100" Height="25"/>
                 </StackPanel>
-                <Button x:Name="BuscarButton" Height="30" Width="100" Click="ConsultarButton_Click" Margin="0,15,0,0">
+                <Button x:Name="BuscarButton" Height="30" Width="100" Margin="0,15,0,0">
                     <StackPanel Orientation="Horizontal" >
                         <Image Source="/UI/Consulta/icon_search.png" Height="25"/>
                         <Label Content="Buscar" Height="25" />

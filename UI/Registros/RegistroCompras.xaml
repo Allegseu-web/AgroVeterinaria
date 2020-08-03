@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de compras" Height="740" Width="550" AllowsTransparency="True" Background="Transparent"
+        Title="Registro de compras" Height="700" Width="550" AllowsTransparency="True" Background="Transparent"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
         <Grid.Background>
@@ -80,7 +80,7 @@
 
             <StackPanel Orientation="Vertical" Margin="0,0,0,0">
 
-                <DataGrid x:Name="dataGrid" Height="200" Margin="0,20,0,10" ItemsSource="{Binding ProductosDetalles}" AutoGenerateColumns="False">
+                <DataGrid x:Name="FacturaDataGrid" Height="200" Margin="0,20,0,10" ItemsSource="{Binding ProductosDetalles}" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="id" Binding="{Binding CompraId}" Visibility="Hidden"/>
                         <DataGridTextColumn Header="Producto                             " Binding="{Binding ProductoDescripcion}"/>
@@ -109,7 +109,7 @@
                         <Label Content="Total ITBIs" HorizontalAlignment="Left" Margin="0,0,5,0" VerticalAlignment="Center" Width="71" Height="25"/>
                         <TextBox x:Name="TotalITBISTextBox" Width="125" Height="25" IsReadOnly="True" Text="{Binding ITBIS_Total}"></TextBox>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="0,50,0,0" HorizontalAlignment="Right">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0" HorizontalAlignment="Right">
                         <Image Margin="0,0,5,0" Source="/UI/Registros/price-tag-with-dollar-symbol.png" Height="25"></Image>
                         <Label Content="Total" Height="25" Margin="0,0,5,0"></Label>
                         <TextBox x:Name="TotalTextBox" Height="25" Width="150" IsReadOnly="True" Text="{Binding Total}"></TextBox>
@@ -117,7 +117,7 @@
                 </StackPanel>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,25,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="25,0,0,0">
                 <Button x:Name="NuevoButton" Margin="0,0,25,0"
                 VerticalContentAlignment="Bottom"
                 Click="NuevoButton_Click" Height="26" Width="24">

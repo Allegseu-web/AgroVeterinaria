@@ -44,11 +44,13 @@
                 <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25" Source="/UI/Registros/icon_shopping-cart.png" Margin="0,0,5,0"/>
                 <Label Content="ComprasId" HorizontalAlignment="Left" VerticalAlignment="Top" Width="71" Height="25" Margin="0,0,5,0"/>
                 <TextBox x:Name="CompraIdTextBox" HorizontalAlignment="Left" Text="{Binding CompraId}" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" Height="25" Margin="0,0,5,0"/>
-                <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" VerticalAlignment="Top" Height="25" Width="75" Click="BuscarButton_Click">
+                <Button x:Name="BuscarButton" Content="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="24" Width="29" Click="BuscarButton_Click">
+
                     <Button.Background>
-                        <ImageBrush ImageSource="/UI/Registros/icon_search.png" AlignmentX="Left" Viewport="0,0,0.3,1" Stretch="Uniform"/>
+                        <ImageBrush ImageSource="/UI/Registros/icon_search.png"   Stretch="Uniform"/>
                     </Button.Background>
                 </Button>
+                <Label x:Name="label" Content="Buscar"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,10">
@@ -94,7 +96,7 @@
                         <Image HorizontalAlignment="Left" Height="25" Margin="10,0,15,0" VerticalAlignment="Top" Width="25" Source="/UI/Registros/6a748df975a97993f5dedf66dbb14c56.png"/>
                         <Label Content="SubTotal" HorizontalAlignment="Left" Margin="0,0,5,0" VerticalAlignment="Top" Width="71" Height="25"/>
                         <TextBox x:Name="SubTotalTextBox" HorizontalAlignment="Left" Margin="0,0,253,0" Text="{Binding SubTotal}" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="125" Height="25"/>
-                        <Button x:Name="EliminarFilaButton" ToolTip="Eliminar fila" Width="35" HorizontalAlignment="Right" Height="23" Click="EliminarFilaButton_Click">
+                        <Button x:Name="EliminarFilaButton" ToolTip="Eliminar fila" Width="20" Height="23" Click="EliminarFilaButton_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/UI/Registros/icon_trash.png" 
                             Stretch="Uniform"  />
@@ -116,26 +118,26 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,25,0,0">
-                <Button x:Name="NuevoButton" Content="Nuevo" Margin="0,0,25,0"
+                <Button x:Name="NuevoButton" Margin="0,0,25,0"
                 VerticalContentAlignment="Bottom"
-                Click="NuevoButton_Click" Height="42" Width="57">
+                Click="NuevoButton_Click" Height="26" Width="24">
                     <Button.Background>
-                        <ImageBrush ImageSource="/UI/Registros/mas.png" AlignmentY="Top" Stretch="Uniform" Viewport="0,0,1,0.6"/>
+                        <ImageBrush ImageSource="/UI/Registros/mas.png" AlignmentY="Center" Stretch="Uniform"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="GuardarButton" Content="Guardar" Margin="0,0,25,0"
-                VerticalContentAlignment="Bottom" Width="70"
-                Height="40" Click="GuardarButton_Click">
+                <Button x:Name="GuardarButton" Margin="0,0,25,0"
+                VerticalContentAlignment="Bottom" Width="33"
+                Height="30" Click="GuardarButton_Click">
                     <Button.Background>
-                        <ImageBrush ImageSource="/UI/Registros/icon_save.png" AlignmentY="Top"
-                            Stretch="Uniform" Viewport="0,0,1,0.6"/>
+                        <ImageBrush ImageSource="/UI/Registros/icon_save.png" AlignmentY="Center"
+                            Stretch="Uniform"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="EliminarButton" Content="Eliminar" Width="70"
-                VerticalContentAlignment="Bottom" Height="42" Click="EliminarButton_Click">
+                <Button x:Name="EliminarButton" Width="33"
+                VerticalContentAlignment="Center" Height="30" Click="EliminarButton_Click">
                     <Button.Background>
-                        <ImageBrush ImageSource="/UI/Registros/icon_trash.png" AlignmentY="Top" 
-                            Stretch="Uniform" Viewport="0,0,1,0.6" />
+                        <ImageBrush ImageSource="/UI/Registros/icon_trash.png" AlignmentY="Center" 
+                            Stretch="Uniform"  />
                     </Button.Background>
                 </Button>
             </StackPanel>

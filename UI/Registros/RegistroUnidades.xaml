@@ -26,13 +26,15 @@
             <StackPanel Orientation="Horizontal" Margin="0,10,0,15">
                 <Image x:Name="image1" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top"
                        Width="25" Source="/UI/Registros/unidad.png" Margin="0,0,5,0"/>
+
                 <Label x:Name="label" Content="UnidadId" HorizontalAlignment="Left"
                        VerticalAlignment="Top" Height="25" Margin="0,0,18,0"/>
                 <TextBox x:Name="UnidadIdTextBox" HorizontalAlignment="Left" TextWrapping="Wrap"
                          VerticalAlignment="Top" Text="{Binding UnidadId}" Width="125" Height="25" Margin="0,0,5,0"/>
-                <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left"
+
+                <Button x:Name="BuscarButton" Content=""
                 VerticalContentAlignment="Center" HorizontalContentAlignment="Right"
-                VerticalAlignment="Top" Height="25" Width="75" Click="BuscarButton_Click">
+                VerticalAlignment="Top" Height="24" Width="22" Click="BuscarButton_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/UI/Registros/icon_search.png"
                             AlignmentX="Left" AlignmentY="Center" Stretch="Uniform" Viewport="0,0.2,0.7,0.6"/>
@@ -52,21 +54,22 @@
                 <TextBox x:Name="DescripcionTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"
                          Text="{Binding Descripcion}" Width="205" Height="25"/>
             </StackPanel>
+
         </StackPanel>
 
-        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left" VerticalContentAlignment="Bottom"
-                Margin="25,325,0,0" VerticalAlignment="Top" Height="34" Click="NuevoButton_Click">
+        <Button x:Name="NuevoButton" Content="" HorizontalAlignment="Left" VerticalContentAlignment="Bottom"
+                Margin="33,353,0,0" VerticalAlignment="Top" Height="23" Click="NuevoButton_Click" Width="18">
             <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/mas.png" AlignmentY= "Top" Stretch="Uniform"  Viewport="0,0,1,0.6" />
+                <ImageBrush ImageSource="/UI/Registros/icon_plus.png" AlignmentY= "Top" Stretch="Uniform"  Viewport="0,0,1,0.6" />
             </Button.Background>
         </Button>
-        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Center" VerticalContentAlignment="Bottom" Margin="0,325,0,0" VerticalAlignment="Top" Height="34" Click="GuardarButton_Click">
+        <Button x:Name="GuardarButton" Content="" HorizontalAlignment="Center" VerticalContentAlignment="Bottom" Margin="0,344,0,0" VerticalAlignment="Top" Height="31" Click="GuardarButton_Click" Width="27">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_save.png" AlignmentY= "Top" Stretch="Uniform" Viewport="0,0,1,0.6" />
             </Button.Background>
-        </Button>
-        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" VerticalContentAlignment="Bottom"
-                Margin="329,325,0,0" VerticalAlignment="Top" Height="34" Click="EliminarButton_Click">
+        </Button> 
+        <Button x:Name="EliminarButton" Content="" HorizontalAlignment="Left" VerticalContentAlignment="Bottom"
+                Margin="341,343,0,0" VerticalAlignment="Top" Height="30" Click="EliminarButton_Click" Width="33">
             <Button.Background>
                 <ImageBrush ImageSource="/UI/Registros/icon_trash.png" AlignmentY="Top" Stretch="Uniform" Viewport="0,0,1,0.6"/>
             </Button.Background>

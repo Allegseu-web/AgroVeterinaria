@@ -49,6 +49,7 @@
     <None Remove="UI\Registros\icon_money.png" />
     <None Remove="UI\Registros\icon_phone.png" />
     <None Remove="UI\Registros\icon_plus.ico" />
+    <None Remove="UI\Registros\icon_plus.png" />
     <None Remove="UI\Registros\icon_save.ico" />
     <None Remove="UI\Registros\icon_save.png" />
     <None Remove="UI\Registros\icon_search.png" />
@@ -143,6 +144,7 @@
     <Resource Include="UI\Registros\icon_money.png" />
     <Resource Include="UI\Registros\icon_phone.png" />
     <Resource Include="UI\Registros\icon_plus.ico" />
+    <Resource Include="UI\Registros\icon_plus.png" />
     <Resource Include="UI\Registros\icon_save.ico" />
     <Resource Include="UI\Registros\icon_save.png" />
     <Resource Include="UI\Registros\icon_search.png" />

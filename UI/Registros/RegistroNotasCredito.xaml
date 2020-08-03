@@ -21,7 +21,7 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="276" Margin="247,34,0,0" VerticalAlignment="Top" Width="222" Source="/UI/Registros/nota de credito.jpg"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="276" Margin="275,10,0,0" VerticalAlignment="Top" Width="222" Source="/UI/Registros/nota de credito.jpg"/>
         <Image x:Name="image1" HorizontalAlignment="Left" Height="39" Margin="71,323,0,0" VerticalAlignment="Top" Width="33" Source="/UI/Registros/editar.png"/>
 
 

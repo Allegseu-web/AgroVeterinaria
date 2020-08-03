@@ -58,6 +58,9 @@
                 </DataGrid>
             </StackPanel>
         </StackPanel>
-        <Label Content="Consulta Productos" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label Content="Consulta Productos" HorizontalAlignment="Center" Margin="0,14,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="50" Margin="507,10,0,0" VerticalAlignment="Top" Width="65" Source="/UI/Consulta/estampado-de-pata-de-animal.png" RenderTransformOrigin="-6.459,9.601"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="60" Margin="88,10,0,0" VerticalAlignment="Top" Width="52" Source="/UI/Consulta/estampado-de-pata-de-animal.png" RenderTransformOrigin="-0.201,0.561"/>
+
     </Grid>
 </Window>

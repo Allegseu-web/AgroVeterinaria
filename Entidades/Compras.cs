@@ -12,6 +12,8 @@ namespace AgroVeterinaria.Entidades
         public int CompraId { get; set; }
         public DateTime Fecha { get; set; } = DateTime.Now;
         public int SuplidorId { get; set; }
+        public int MonedaId { get; set; }
+        public double Total { get; set; }
         public double SubTotal { get; set; }
         public int UsuarioId { get; set; }
         public double ITBIS_Total { get; set; }

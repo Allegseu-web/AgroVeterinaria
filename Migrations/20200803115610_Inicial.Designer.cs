@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgroVeterinaria.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200802192107_Inicial")]
+    [Migration("20200803115610_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,11 +30,17 @@ namespace AgroVeterinaria.Migrations
                     b.Property<double>("ITBIS_Total")
                         .HasColumnType("REAL");
 
+                    b.Property<int>("MonedaId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<double>("SubTotal")
                         .HasColumnType("REAL");
 
                     b.Property<int>("SuplidorId")
                         .HasColumnType("INTEGER");
+
+                    b.Property<double>("Total")
+                        .HasColumnType("REAL");
 
                     b.Property<int>("UsuarioId")
                         .HasColumnType("INTEGER");
@@ -149,8 +155,8 @@ namespace AgroVeterinaria.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<double>("Cantidad")
-                        .HasColumnType("REAL");
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("CompraId")
                         .HasColumnType("INTEGER");
@@ -164,8 +170,8 @@ namespace AgroVeterinaria.Migrations
                     b.Property<double>("Precio")
                         .HasColumnType("REAL");
 
-                    b.Property<int>("ProductoId")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("ProductoDescripcion")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("ProductoDetalleId");
 
@@ -257,7 +263,7 @@ namespace AgroVeterinaria.Migrations
                             UsuarioId = 1,
                             Clave = "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
                             Email = "Admin@admin.com",
-                            FechaCreacion = new DateTime(2020, 8, 2, 15, 21, 6, 805, DateTimeKind.Local).AddTicks(7404),
+                            FechaCreacion = new DateTime(2020, 8, 3, 7, 56, 9, 263, DateTimeKind.Local).AddTicks(8571),
                             NivelUsuario = "Administrador",
                             NombreUsuario = "Admin",
                             Nombres = "Manager"

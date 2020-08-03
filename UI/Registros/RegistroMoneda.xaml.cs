@@ -94,8 +94,8 @@ namespace AgroVeterinaria.UI.Registros
         }
         private void AtrasButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow window = new MainWindow(Usuario);
-            window.Show();
+            RegistroCompras registroCompras = new RegistroCompras(Usuario);
+            registroCompras.Show();
             Close();
         }
 

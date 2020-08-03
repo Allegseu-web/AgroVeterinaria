@@ -62,9 +62,9 @@ namespace AgroVeterinaria.UI.Registros
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
             if (!Validar()) { return; }
-            bool user = UnidadesBLL.Guardar(Unidad);
+            bool unit = UnidadesBLL.Guardar(Unidad);
 
-            if (user)
+            if (unit)
             {
                 Limpiar();
                 MessageBox.Show("Transaccion exitosa!", "Exito",

@@ -232,9 +232,9 @@ namespace AgroVeterinaria.UI.Registros
             {
                 new_User = cuenta;
                 NivelUsuarioComboBox.Text = cuenta.NivelUsuario;
+                DataContext = new_User;
             }
             else { Limpiar(); }
-            DataContext = new_User;
         }
 
         private void AtrasButton_Click(object sender, RoutedEventArgs e)

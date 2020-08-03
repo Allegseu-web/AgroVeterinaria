@@ -33,7 +33,8 @@ namespace AgroVeterinaria.BLL
 
         public static bool Guardar(Direcciones Direccion)
         {
-            return Insertar(Direccion);
+            if (!Existe(Direccion.DireccionId)) { return Insertar(Direccion); }
+            else { return Modificar(Direccion); }
         }
 
         private static bool Insertar(Direcciones Direccion)

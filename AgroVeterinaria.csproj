@@ -13,6 +13,7 @@
     <None Remove="consultante.png" />
     <None Remove="MENU.png" />
     <None Remove="reporte-annual.png" />
+    <None Remove="UI\Consulta\icon_search.png" />
     <None Remove="UI\Login\3844441-eye-see-show-view-watch_110305.ico" />
     <None Remove="UI\Login\icons8-cancelar-100.png" />
     <None Remove="UI\Login\icons8-comprobado-100.png" />
@@ -108,6 +109,7 @@
     <Resource Include="consultante.png" />
     <Resource Include="MENU.png" />
     <Resource Include="reporte-annual.png" />
+    <Resource Include="UI\Consulta\icon_search.png" />
     <Resource Include="UI\Login\3844441-eye-see-show-view-watch_110305.ico" />
     <Resource Include="UI\Login\icons8-cancelar-100.png" />
     <Resource Include="UI\Login\icons8-comprobado-100.png" />

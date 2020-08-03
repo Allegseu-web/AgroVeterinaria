@@ -163,7 +163,7 @@ namespace AgroVeterinaria.UI.Registros
         {
             Direcciones diret = DireccionesBLL.Buscar(Convert.ToInt32(DireccionIdTextBox.Text));
 
-            if (diret != null) { DataContext = diret; }
+            if (diret != null) { DataContext = diret; FechaDatePicker.DisplayDate = diret.Fecha; }
             else { Limpiar(); }
         }
     }

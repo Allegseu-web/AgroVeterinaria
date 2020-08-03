@@ -55,7 +55,7 @@ namespace AgroVeterinaria.UI.Registros
         {
             Compras Unit = ComprasBLL.Buscar(Convert.ToInt32(CompraIdTextBox.Text));
 
-            if (Unit != null) { DataContext = Unit; }
+            if (Unit != null) { Compra = Unit; Cargar(); }
             else { Limpiar(); }
         }
 
@@ -91,12 +91,26 @@ namespace AgroVeterinaria.UI.Registros
             
         }
 
+        private bool ExisteEnLaBaseDeDatos()
+        {
+            Compras esValido = ComprasBLL.Buscar(Compra.CompraId);
+
+            return esValido != null;
+        }
+
         private void EliminarFilaButton_Click(object sender, RoutedEventArgs e)
         {
-            if (dataGrid.Items.Count >= 1 && dataGrid.SelectedIndex <= dataGrid.Items.Count - 1)
+            if (FacturaDataGrid.Items.Count >= 1 && FacturaDataGrid.SelectedIndex <= FacturaDataGrid.Items.Count - 1)
             {
-                Compra.ProductosDetalles.RemoveAt(dataGrid.SelectedIndex);
-                Cargar();
+                try
+                {
+                    Compra.ProductosDetalles.RemoveAt(FacturaDataGrid.SelectedIndex);
+                    Cargar();
+                }
+                catch (System.ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("Por favor selecione una fila para eliminar.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
             }
         }
 
@@ -104,37 +118,13 @@ namespace AgroVeterinaria.UI.Registros
         {
             bool esValido = true;
 
-            if (CantidadTextBox.Text.Length == 0)
+            if (Compra.ProductosDetalles == null)
             {
                 esValido = false;
                 GuardarButton.IsEnabled = false;
-                MessageBox.Show("Cantidad está vacia", "Fallo",
+                MessageBox.Show("Factura está vacia", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 CantidadTextBox.Focus();
-                GuardarButton.IsEnabled = true;
-            }
-            if (SuplidorComboBox.Text.Length == 0)
-            {
-                esValido = false;
-                GuardarButton.IsEnabled = false;
-                MessageBox.Show("Suplidor está vacio", "Fallo",
-                    MessageBoxButton.OK, MessageBoxImage.Warning);
-                GuardarButton.IsEnabled = true;
-            }
-            if (MonedaComboBox.Text.Length == 0)
-            {
-                esValido = false;
-                GuardarButton.IsEnabled = false;
-                MessageBox.Show("Moneda está vacia", "Fallo",
-                    MessageBoxButton.OK, MessageBoxImage.Warning);
-                GuardarButton.IsEnabled = true;
-            }
-            if (ProductoComboBox.Text.Length == 0)
-            {
-                esValido = false;
-                GuardarButton.IsEnabled = false;
-                MessageBox.Show("Producto está vacia", "Fallo",
-                    MessageBoxButton.OK, MessageBoxImage.Warning);
                 GuardarButton.IsEnabled = true;
             }
             return esValido;
@@ -152,6 +142,8 @@ namespace AgroVeterinaria.UI.Registros
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else { MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error); }
+            Productos productos = ProductosBLL.Buscar(ProductoComboBox.SelectedIndex);
+            if(productos != null) { productos.Cantidad -= int.Parse(CantidadTextBox.Text); ProductosBLL.Modificar(productos); }
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
@@ -171,8 +163,6 @@ namespace AgroVeterinaria.UI.Registros
 
         private void AñadirFilaButton_Click(object sender, RoutedEventArgs e)
         {
-            Contexto contexto = new Contexto();
-
             Productos prod = ProductosBLL.Buscar(ProductoComboBox.SelectedIndex);
             double importe = int.Parse(CantidadTextBox.Text) * prod.Precio;
             Compra.ProductosDetalles.Add(new ProductosDetalle(Compra.CompraId, ProductoComboBox.Text, int.Parse(CantidadTextBox.Text), prod.Precio,importe, importe*0.18));

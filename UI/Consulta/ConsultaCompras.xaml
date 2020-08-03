@@ -5,8 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Consulta"
         mc:Ignorable="d"
-        Title="ConsultaCompras" Height="450" Width="800">
+        Title="Consulta de Compras" Height="450" Width="650" AllowsTransparency="True"
+        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="10" HorizontalAlignment="Center" Width="650">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7be9f6" Offset="0.0"/>
+                    <GradientStop Color="#f083da" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <StackPanel Orientation="Vertical" Margin="10,75,10,0">
+            <StackPanel Orientation="Horizontal" Height="55">
+                <StackPanel>
+                    <Label Content="Desde:"/>
+                    <DatePicker x:Name="DesdeDataPicker"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="5,0">
+                    <Label Content="Hasta:" />
+                    <DatePicker x:Name="HastaDatePicker"/>
+                </StackPanel>
+
+                <StackPanel Margin="5,0">
+                    <Label Content="Filtro:" />
+                    <ComboBox x:Name="FiltroComboBox" Width="100" Height="25">
+                        <ComboBoxItem Content="EstudianteId"/>
+                        <ComboBoxItem Content="Nombres"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Margin="5,0">
+                    <Label Content="Critero:"/>
+                    <TextBox x:Name="CriterioTextBox" Width="100" Height="25"/>
+                </StackPanel>
+                <Button x:Name="BuscarButton" Height="30" Width="100" Click="ConsultarButton_Click" Margin="0,15,0,0">
+                    <StackPanel Orientation="Horizontal" >
+                        <Image Source="/UI/Consulta/icon_search.png" Height="25"/>
+                        <Label Content="Buscar" Height="25" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <StackPanel>
+                <DataGrid x:Name="DatosDataGrid" Height="275">
+                    <ColumnDefinition>
+
+                    </ColumnDefinition>
+                </DataGrid>
+            </StackPanel>
+        </StackPanel>
+        <Label Content="Consulta Compras" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24"/>
     </Grid>
 </Window>

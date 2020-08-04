@@ -128,13 +128,13 @@ namespace AgroVeterinaria.BLL
             return Compra;
         }
 
-        public static List<Compras> GetList()
+        public static List<Compras> GetList(Expression<Func<Compras, bool>> criterio)
         {
             Contexto contexto = new Contexto();
             List<Compras> Lista = new List<Compras>();
             try
             {
-                Lista = contexto.Compras.ToList();
+                Lista = contexto.Compras.Where(criterio).ToList();
             }
             catch (Exception)
             {

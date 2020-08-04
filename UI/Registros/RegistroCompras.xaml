@@ -95,7 +95,7 @@
                     <StackPanel Orientation="Horizontal" Margin="0,2,0,8">
                         <Image HorizontalAlignment="Left" Height="25" Margin="10,0,15,0" VerticalAlignment="Top" Width="25" Source="/UI/Registros/6a748df975a97993f5dedf66dbb14c56.png"/>
                         <Label Content="SubTotal" HorizontalAlignment="Left" Margin="0,0,5,0" VerticalAlignment="Top" Width="71" Height="25"/>
-                        <TextBox x:Name="SubTotalTextBox" HorizontalAlignment="Left" Margin="0,0,253,0" Text="{Binding SubTotal}" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="125" Height="25"/>
+                        <TextBox x:Name="SubTotalTextBox" HorizontalAlignment="Left" Margin="0,0,253,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="125" Height="25"/>
                         <Button x:Name="EliminarFilaButton" ToolTip="Eliminar fila" Width="20" Height="23" Click="EliminarFilaButton_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/UI/Registros/icon_trash.png" 
@@ -107,12 +107,12 @@
                     <StackPanel Orientation="Horizontal" Height="27" Margin="0,5,0,3">
                         <Image Height="57" Margin="0,0,5,0" VerticalAlignment="Center" Width="46" Source="/UI/Registros/itebis1.png" Stretch="Uniform"/>
                         <Label Content="Total ITBIs" HorizontalAlignment="Left" Margin="0,0,5,0" VerticalAlignment="Center" Width="71" Height="25"/>
-                        <TextBox x:Name="TotalITBISTextBox" Width="125" Height="25" IsReadOnly="True" Text="{Binding ITBIS_Total}"></TextBox>
+                        <TextBox x:Name="TotalITBISTextBox" Width="125" Height="25" IsReadOnly="True"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,0" HorizontalAlignment="Right">
                         <Image Margin="0,0,5,0" Source="/UI/Registros/price-tag-with-dollar-symbol.png" Height="25"></Image>
                         <Label Content="Total" Height="25" Margin="0,0,5,0"></Label>
-                        <TextBox x:Name="TotalTextBox" Height="25" Width="150" IsReadOnly="True" Text="{Binding Total}"></TextBox>
+                        <TextBox x:Name="TotalTextBox" Height="25" Width="150" IsReadOnly="True"></TextBox>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>

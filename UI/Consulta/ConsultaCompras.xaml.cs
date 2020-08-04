@@ -26,6 +26,12 @@ namespace AgroVeterinaria.UI.Consulta
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
+            List<Compras> listado = new List<Compras>();
+
+            if (DesdeDataPicker.SelectedDate != null) { listado = ComprasBLL.GetList(c => c.Fecha.Date >= DesdeDataPicker.SelectedDate); }
+            if (HastaDatePicker.SelectedDate != null) { listado = ComprasBLL.GetList(c => c.Fecha.Date <= HastaDatePicker.SelectedDate); }
+            DatosDataGrid.ItemsSource = null;
+            DatosDataGrid.ItemsSource = listado;
         }
     }
 }

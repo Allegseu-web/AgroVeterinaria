@@ -140,5 +140,24 @@ namespace AgroVeterinaria.BLL
             }
             return Lista;
         }
+
+        public static List<Suplidores> GetList(Expression<Func<Suplidores, bool>> criterio)
+        {
+            Contexto contexto = new Contexto();
+            List<Suplidores> Lista = new List<Suplidores>();
+            try
+            {
+                Lista = contexto.Suplidores.Where(criterio).ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return Lista;
+        }
     }
 }

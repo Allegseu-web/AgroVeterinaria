@@ -141,5 +141,24 @@ namespace AgroVeterinaria.BLL
             }
             return Lista;
         }
+
+        public static List<Direcciones> GetList(Expression<Func<Direcciones, bool>> criterio)
+        {
+            Contexto contexto = new Contexto();
+            List<Direcciones> Lista = new List<Direcciones>();
+            try
+            {
+                Lista = contexto.Direcciones.Where(criterio).ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return Lista;
+        }
     }
 }

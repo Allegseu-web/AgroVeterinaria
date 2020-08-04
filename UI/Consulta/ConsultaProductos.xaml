@@ -30,20 +30,7 @@
                     <Label Content="Hasta:" />
                     <DatePicker x:Name="HastaDatePicker"/>
                 </StackPanel>
-
-                <StackPanel Margin="5,0">
-                    <Label Content="Filtro:" />
-                    <ComboBox x:Name="FiltroComboBox" Width="100" Height="25">
-                        <ComboBoxItem Content="EstudianteId"/>
-                        <ComboBoxItem Content="Nombres"/>
-                    </ComboBox>
-                </StackPanel>
-
-                <StackPanel Margin="5,0">
-                    <Label Content="Critero:"/>
-                    <TextBox x:Name="CriterioTextBox" Width="100" Height="25"/>
-                </StackPanel>
-                <Button x:Name="BuscarButton" Height="30" Width="100" Margin="0,15,0,0" Click="BuscarButton_Click">
+                <Button x:Name="BuscarButton" Height="30" Width="100" Margin="225,15,0,0" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal" >
                         <Image Source="/UI/Consulta/icon_search.png" Height="25"/>
                         <Label Content="Buscar" Height="25" />
@@ -51,9 +38,19 @@
                 </Button>
             </StackPanel>
             <StackPanel>
-                <DataGrid x:Name="DatosDataGrid" Height="275">
-                    <ColumnDefinition>
-                    </ColumnDefinition>
+                <DataGrid x:Name="DatosDataGrid" Height="275" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding ProductoId}" Visibility="Visible"/>
+                        <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}"/>
+                        <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}"/>
+                        <DataGridTextColumn Header="SuplidorId" Binding="{Binding SuplidorId}"/>
+                        <DataGridTextColumn Header="UnidadId" Binding="{Binding UnidadId}"/>
+                        <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad}"/>
+                        <DataGridTextColumn Header="Minimo" Binding="{Binding Minimo}"/>
+                        <DataGridTextColumn Header="Costo" Binding="{Binding Costo}"/>
+                        <DataGridTextColumn Header="Precio" Binding="{Binding Precio}"/>
+                        <DataGridTextColumn Header="Ganancias" Binding="{Binding Ganancias}"/>
+                    </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
         </StackPanel>

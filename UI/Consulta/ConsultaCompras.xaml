@@ -40,12 +40,15 @@
             <StackPanel>
                 <DataGrid x:Name="DatosDataGrid" Height="275" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="CompraId" Binding="{Binding CompraId}" Visibility="Visible"/>
+                        <DataGridTextColumn Header="ID" Binding="{Binding CompraId}" Visibility="Visible"/>
                         <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}"/>
-                        <DataGridTextColumn Header="MonedaId" Binding="{Binding MonedaId}"/>
-                        <DataGridTextColumn Header="SubTotal          " Binding="{Binding SubTotal}"/>
-                        <DataGridTextColumn Header="ITBIs Total       " Binding="{Binding ITBIS_Total}"/>
-                        <DataGridTextColumn Header="Total             " Binding="{Binding Total}"/>
+                        <DataGridTextColumn Header="Calle" Binding="{Binding Calle}"/>
+                        <DataGridTextColumn Header="Edificio/Piso/Apartamento" Binding="{Binding Edificio_Piso_Apartamento}"/>
+                        <DataGridTextColumn Header="Numero de localidad" Binding="{Binding NumLocalidad}"/>
+                        <DataGridTextColumn Header="Privicia" Binding="{Binding Provicia}"/>
+                        <DataGridTextColumn Header="Municipio" Binding="{Binding Municipio}"/>
+                        <DataGridTextColumn Header="Sector" Binding="{Binding Sector}"/>
+                        <DataGridTextColumn Header="Pais" Binding="{Binding Pais}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

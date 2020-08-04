@@ -7,9 +7,8 @@
         mc:Ignorable="d"
         Title="Centro de control" Height="440" Width="450"
         WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
-    
+
     <Grid>
-        
         <Border CornerRadius="10">
             <Border.Background>
                 <LinearGradientBrush>
@@ -72,6 +71,47 @@
                 <MenuItem.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/consultante.png" AlignmentX="Left" Viewport="0.02,0.02,0.2,0.8"/>
                 </MenuItem.Background>
+                <MenuItem x:Name="cUsuarioMenuItem" Header="Consulta Usuario"
+                              Click="cUsuarioMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/3256995851547464092-32.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+                <MenuItem x:Name="cDireccioesMenuItem" Header="Consulta Direcciones"
+                              Click="cDireccioesMenuItem_Click">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/3256995851547464092-32.png" Stretch="Uniform" AlignmentX="Left"/>
+                    </MenuItem.Background>
+
+                </MenuItem>
+                <MenuItem x:Name="cProductosMenuItem" Header="Registro Productos"
+                              Click="cProductosMenuItem_Click">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/3256995851547464092-32.png" Stretch="Uniform" AlignmentX="Left"/>
+                    </MenuItem.Background>
+
+                </MenuItem>
+                <MenuItem x:Name="cSuplidoresMenuItem" Header="Consulta Suplidores"
+                              Click="cSuplidoresMenuItem_Click">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/3256995851547464092-32.png" Stretch="Uniform" AlignmentX="Left"/>
+                    </MenuItem.Background>
+
+                </MenuItem>
+                <MenuItem x:Name="cNotasCreditosMenuItem" Header="Consulta NotasCreditos"
+                              Click="cNotasCreditosMenuItem_Click">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/3256995851547464092-32.png" Stretch="Uniform" AlignmentX="Left"/>
+                    </MenuItem.Background>
+
+                </MenuItem>
+                <MenuItem x:Name="cComprasMenuItem" Header="Consulta Compras"
+                              Click="cComprasMenuItem_Click">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/3256995851547464092-32.png" Stretch="Uniform" AlignmentX="Left"/>
+                    </MenuItem.Background>
+                </MenuItem>
             </MenuItem>
             <MenuItem Header="    Reportes" HorizontalAlignment="Left" HorizontalContentAlignment="Right"
                       Height="20" Width="80">

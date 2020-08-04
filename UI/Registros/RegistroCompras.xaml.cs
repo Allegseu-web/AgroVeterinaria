@@ -70,7 +70,6 @@ namespace AgroVeterinaria.UI.Registros
                 totalITBIS = Compra.ProductosDetalles.Sum(e => e.ITBIS);
                 subtotal = Compra.ProductosDetalles.Sum(e => e.Importe);
                 total = totalITBIS + subtotal;
-                
             }
             TotalITBISTextBox.Text = totalITBIS.ToString();
             SubTotalTextBox.Text = subtotal.ToString();
@@ -124,6 +123,9 @@ namespace AgroVeterinaria.UI.Registros
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
             if (!Validar()) { return; }
+            Compra.ITBIS_Total = int.Parse(TotalITBISTextBox.Text);
+            Compra.SubTotal = int.Parse(SubTotalTextBox.Text);
+            Compra.Total = int.Parse(TotalTextBox.Text);
             bool compra = ComprasBLL.Guardar(Compra);
 
             if (compra)

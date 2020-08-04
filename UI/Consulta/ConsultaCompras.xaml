@@ -30,20 +30,7 @@
                     <Label Content="Hasta:" />
                     <DatePicker x:Name="HastaDatePicker"/>
                 </StackPanel>
-
-                <StackPanel Margin="5,0">
-                    <Label Content="Filtro:" />
-                    <ComboBox x:Name="FiltroComboBox" Width="100" Height="25">
-                        <ComboBoxItem Content="EstudianteId"/>
-                        <ComboBoxItem Content="Nombres"/>
-                    </ComboBox>
-                </StackPanel>
-
-                <StackPanel Margin="5,0">
-                    <Label Content="Critero:"/>
-                    <TextBox x:Name="CriterioTextBox" Width="100" Height="25"/>
-                </StackPanel>
-                <Button x:Name="BuscarButton" Height="30" Width="100" Margin="0,15,0,0">
+                <Button x:Name="BuscarButton" Height="30" Width="100" Margin="225,15,0,0" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal" >
                         <Image Source="/UI/Consulta/icon_search.png" Height="25"/>
                         <Label Content="Buscar" Height="25" />
@@ -51,13 +38,20 @@
                 </Button>
             </StackPanel>
             <StackPanel>
-                <DataGrid x:Name="DatosDataGrid" Height="275">
-                    <ColumnDefinition>
-
-                    </ColumnDefinition>
+                <DataGrid x:Name="DatosDataGrid" Height="275" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="CompraId" Binding="{Binding CompraId}" Visibility="Visible"/>
+                        <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}"/>
+                        <DataGridTextColumn Header="MonedaId" Binding="{Binding MonedaId}"/>
+                        <DataGridTextColumn Header="SubTotal          " Binding="{Binding SubTotal}"/>
+                        <DataGridTextColumn Header="ITBIs Total       " Binding="{Binding ITBIS_Total}"/>
+                        <DataGridTextColumn Header="Total             " Binding="{Binding Total}"/>
+                    </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
         </StackPanel>
         <Label Content="Consulta Compras" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="507,10,0,0" VerticalAlignment="Top" Width="65" Source="/UI/Consulta/estampado-de-pata-de-animal.png" RenderTransformOrigin="-6.459,9.601"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="88,10,0,0" VerticalAlignment="Top" Width="52" Source="/UI/Consulta/estampado-de-pata-de-animal.png" RenderTransformOrigin="-0.201,0.561"/>
     </Grid>
 </Window>

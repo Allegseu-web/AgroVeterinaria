@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Consulta"
         mc:Ignorable="d"
-        Title="ConsultaSuplidor" Height="558" Width="650" AllowsTransparency="True"
+        Title="ConsultaSuplidor" Height="450" Width="650" AllowsTransparency="True"
         WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
@@ -19,8 +19,8 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <StackPanel Orientation="Vertical" Margin="10,185,10,0">
-            <StackPanel Orientation="Horizontal" Height="85">
+        <StackPanel Orientation="Vertical" Margin="10,75,10,0">
+            <StackPanel Orientation="Horizontal" Height="55">
                 <StackPanel>
                     <Label Content="Desde:"/>
                     <DatePicker x:Name="DesdeDataPicker"/>
@@ -43,8 +43,12 @@
                     <Label Content="Critero:"/>
                     <TextBox x:Name="CriterioTextBox" Width="100" Height="25"/>
                 </StackPanel>
-                <Button Style="{DynamicResource RoundCorner}" Height="25" VerticalAlignment="Top" Content="Show" Width="100" Margin="5" />
-                
+                <Button x:Name="BuscarButton" Height="30" Width="100" Margin="0,15,0,0">
+                    <StackPanel Orientation="Horizontal" >
+                        <Image Source="/UI/Consulta/icon_search.png" Height="25"/>
+                        <Label Content="Buscar" Height="25" />
+                    </StackPanel>
+                </Button>
             </StackPanel>
             <StackPanel>
                 <DataGrid x:Name="DatosDataGrid" Height="275">
@@ -52,20 +56,10 @@
 
                     </ColumnDefinition>
                 </DataGrid>
-                
             </StackPanel>
         </StackPanel>
-        <Label Content="Consulta Suplidor" HorizontalAlignment="Left" Margin="220,28,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Image  Source="/UI/Consulta/señala suplidores.png" VerticalAlignment="Top"  HorizontalAlignment="Left"  Stretch="Fill" Height="151" Width="268" Margin="206,22,0,0" RenderTransformOrigin="0.5,0.5" >
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="1.984"/>
-                    <RotateTransform Angle="0.766"/>
-                    <TranslateTransform X="3.773" Y="0.119"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-
+        <Label Content="Consulta Suplidor" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="507,10,0,0" VerticalAlignment="Top" Width="65" Source="/UI/Consulta/estampado-de-pata-de-animal.png" RenderTransformOrigin="-6.459,9.601"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="88,10,0,0" VerticalAlignment="Top" Width="52" Source="/UI/Consulta/estampado-de-pata-de-animal.png" RenderTransformOrigin="-0.201,0.561"/>
     </Grid>
 </Window>

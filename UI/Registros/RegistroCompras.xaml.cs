@@ -75,7 +75,6 @@ namespace AgroVeterinaria.UI.Registros
             TotalITBISTextBox.Text = totalITBIS.ToString();
             SubTotalTextBox.Text = subtotal.ToString();
             TotalTextBox.Text = total.ToString();
-
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
@@ -88,14 +87,6 @@ namespace AgroVeterinaria.UI.Registros
             this.DataContext = null;
             this.DataContext = Compra;
             Calcular();
-            
-        }
-
-        private bool ExisteEnLaBaseDeDatos()
-        {
-            Compras esValido = ComprasBLL.Buscar(Compra.CompraId);
-
-            return esValido != null;
         }
 
         private void EliminarFilaButton_Click(object sender, RoutedEventArgs e)
@@ -142,8 +133,6 @@ namespace AgroVeterinaria.UI.Registros
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else { MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error); }
-            Productos productos = ProductosBLL.Buscar(ProductoComboBox.SelectedIndex);
-            if(productos != null) { productos.Cantidad -= int.Parse(CantidadTextBox.Text); ProductosBLL.Modificar(productos); }
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
@@ -164,6 +153,7 @@ namespace AgroVeterinaria.UI.Registros
         private void AñadirFilaButton_Click(object sender, RoutedEventArgs e)
         {
             Productos prod = ProductosBLL.Buscar(ProductoComboBox.SelectedIndex);
+            if (prod != null) { prod.Cantidad -= int.Parse(CantidadTextBox.Text); ProductosBLL.Modificar(prod); }
             double importe = int.Parse(CantidadTextBox.Text) * prod.Precio;
             Compra.ProductosDetalles.Add(new ProductosDetalle(Compra.CompraId, ProductoComboBox.Text, int.Parse(CantidadTextBox.Text), prod.Precio,importe, importe*0.18));
             Cargar();

@@ -80,7 +80,7 @@
 
             <StackPanel Orientation="Vertical" Margin="0,0,0,0">
 
-                <DataGrid x:Name="dataGrid" Height="200" Margin="0,20,0,10" ItemsSource="{Binding ProductosDetalles}" AutoGenerateColumns="False">
+                <DataGrid x:Name="FacturaDataGrid" Height="200" Margin="0,20,0,10" ItemsSource="{Binding ProductosDetalles}" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="id" Binding="{Binding CompraId}" Visibility="Hidden"/>
                         <DataGridTextColumn Header="Producto                             " Binding="{Binding ProductoDescripcion}"/>

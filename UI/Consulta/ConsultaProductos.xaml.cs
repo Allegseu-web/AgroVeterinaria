@@ -1,5 +1,10 @@
-﻿using System;
+﻿using AgroVeterinaria.BLL;
+using AgroVeterinaria.DAL;
+using AgroVeterinaria.Entidades;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +25,11 @@ namespace AgroVeterinaria.UI.Consulta
         public ConsultaProductos()
         {
             InitializeComponent();
+        }
+
+        private void BuscarButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

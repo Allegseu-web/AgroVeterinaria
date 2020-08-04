@@ -61,7 +61,11 @@ namespace AgroVeterinaria.BLL
             bool esOk = false;
             try
             {
-                contexto.Entry(Compra).State = EntityState.Modified;
+                contexto.Database.ExecuteSqlRaw($"Delete FROM ProductosDetalle Where TareaId={Compra.CompraId}");
+                foreach (var item in Compra.ProductosDetalles)
+                {
+                    contexto.Entry(item).State = EntityState.Added;
+                }
                 esOk = (contexto.SaveChanges() > 0);
             }
             catch (Exception)
@@ -105,7 +109,9 @@ namespace AgroVeterinaria.BLL
             Compras Compra = new Compras();
             try
             {
-                Compra = contexto.Compras.Find(id);
+                Compra = contexto.Compras.Include(x => x.ProductosDetalles)
+                    .Where(x => x.CompraId == id)
+                    .SingleOrDefault();
                 if (Compra == null)
                 {
                     MessageBox.Show("Esta compra no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);

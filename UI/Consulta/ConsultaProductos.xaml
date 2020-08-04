@@ -43,7 +43,7 @@
                     <Label Content="Critero:"/>
                     <TextBox x:Name="CriterioTextBox" Width="100" Height="25"/>
                 </StackPanel>
-                <Button x:Name="BuscarButton" Height="30" Width="100" Margin="0,15,0,0">
+                <Button x:Name="BuscarButton" Height="30" Width="100" Margin="0,15,0,0" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal" >
                         <Image Source="/UI/Consulta/icon_search.png" Height="25"/>
                         <Label Content="Buscar" Height="25" />
@@ -53,14 +53,12 @@
             <StackPanel>
                 <DataGrid x:Name="DatosDataGrid" Height="275">
                     <ColumnDefinition>
-
                     </ColumnDefinition>
                 </DataGrid>
             </StackPanel>
         </StackPanel>
         <Label Content="Consulta Productos" HorizontalAlignment="Center" Margin="0,14,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="50" Margin="507,10,0,0" VerticalAlignment="Top" Width="65" Source="/UI/Consulta/estampado-de-pata-de-animal.png" RenderTransformOrigin="-6.459,9.601"/>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="60" Margin="88,10,0,0" VerticalAlignment="Top" Width="52" Source="/UI/Consulta/estampado-de-pata-de-animal.png" RenderTransformOrigin="-0.201,0.561"/>
-
+        <Image HorizontalAlignment="Left" Height="50" Margin="507,10,0,0" VerticalAlignment="Top" Width="65" Source="/UI/Consulta/estampado-de-pata-de-animal.png" RenderTransformOrigin="-6.459,9.601"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="88,10,0,0" VerticalAlignment="Top" Width="52" Source="/UI/Consulta/estampado-de-pata-de-animal.png" RenderTransformOrigin="-0.201,0.561"/>
     </Grid>
 </Window>

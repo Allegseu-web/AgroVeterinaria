@@ -1,4 +1,5 @@
 ﻿using AgroVeterinaria.Entidades;
+using AgroVeterinaria.UI.Consulta;
 using AgroVeterinaria.UI.Login;
 using AgroVeterinaria.UI.Registros;
 using System;
@@ -249,6 +250,96 @@ namespace AgroVeterinaria
         {
             this.ventana.Show();
             this.Close();
+        }
+
+        private void cComprasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (Intro(user, 1))
+            {
+                ConsultaCompras consultaCompras = new ConsultaCompras();
+                consultaCompras.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No tiene autorizacion para acceder a esa funcion.",
+                    "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void cNotasCreditosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (Intro(user, 2))
+            {
+                ConsultaNotasCredito consultaNotasCredito = new ConsultaNotasCredito();
+                consultaNotasCredito.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No tiene autorizacion para acceder a esa funcion.",
+                    "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void cSuplidoresMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (Intro(user, 3))
+            {
+                ConsultaSuplidor consultaSuplidor = new ConsultaSuplidor();
+                consultaSuplidor.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No tiene autorizacion para acceder a esa funcion.",
+                    "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void cProductosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (Intro(user, 4))
+            {
+                ConsultaProductos consultaProductos = new ConsultaProductos();
+                consultaProductos.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No tiene autorizacion para acceder a esa funcion.",
+                    "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void cDireccioesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (Intro(user, 5))
+            {
+                ConsultaDirecciones consultaDirecciones = new ConsultaDirecciones();
+                consultaDirecciones.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No tiene autorizacion para acceder a esa funcion.",
+                    "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void cUsuarioMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (Intro(user, 6))
+            {
+                ConsultaUsuarios consultaUsuarios = new ConsultaUsuarios();
+                consultaUsuarios.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No tiene autorizacion para acceder a esa funcion.",
+                    "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
     }
 }

@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Consulta"
         mc:Ignorable="d"
-        Title="Consulta de Compras" Height="450" Width="650">
+        Title="Consulta de Compras" Height="450" Width="650" AllowsTransparency="True"
+        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="10" HorizontalAlignment="Center" Width="650">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7be9f6" Offset="0.0"/>
+                    <GradientStop Color="#f083da" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
         <StackPanel Orientation="Vertical" Margin="10,75,10,0">
             <StackPanel Orientation="Horizontal" Height="55">
                 <StackPanel>

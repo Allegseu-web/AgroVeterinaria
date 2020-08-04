@@ -82,31 +82,25 @@
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="21,512,0,0" VerticalContentAlignment="Bottom"
-                VerticalAlignment="Top"  RenderTransformOrigin="0.5,0.5" Width="64" Height="32" FontSize="8" Click="GuardarButton_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="0.918"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="-0.317"/>
-                </TransformGroup>
-            </Button.RenderTransform>
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_save.ico" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.65" />
-            </Button.Background>
+        <Button x:Name="GuardarButton"  Style="{DynamicResource BotonesSinHover}" HorizontalAlignment="Left"   Margin="30,512,0,0" 
+                VerticalAlignment="Top"  Width="48" Height="34"  Click="GuardarButton_Click">
+            <StackPanel Orientation="Vertical" Height="56">
+                <Image Source="/UI/Registros/icon_save.ico"  Stretch="Uniform" Width="36" Height="29"/>
+            </StackPanel>
+
         </Button>
-        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="152,512,0,0" VerticalContentAlignment="Bottom"
-                VerticalAlignment="Top" Width="64" Height="32"  FontSize="8" Click="NuevoButton_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_plus.ico" Stretch="Uniform" Viewport="0,0,1,0.65"/>
-            </Button.Background>
+        <Button x:Name="NuevoButton" Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Left" Margin="152,512,0,0" VerticalContentAlignment="Bottom"
+                VerticalAlignment="Top" Width="64" Height="32"  Click="NuevoButton_Click">
+            <StackPanel Orientation="Vertical">
+                <Image Source="/UI/Registros/icon_plus.ico" Stretch="Uniform" Height="30" Width="44" />
+            </StackPanel>
         </Button>
-        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="276,512,0,0" VerticalContentAlignment="Bottom"
-                VerticalAlignment="Top" Width="64" Height="32"  FontSize="8" RenderTransformOrigin="0.744,0.754" Click="EliminarButton_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_trash.ico" Stretch="Uniform" Viewport="0,0,1,0.65" AlignmentY="Top"/>
-            </Button.Background>
+
+        <Button x:Name="EliminarButton" Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Left" Margin="276,512,0,0" VerticalContentAlignment="Bottom"
+                VerticalAlignment="Top" Width="36" Height="32"  FontSize="8" RenderTransformOrigin="0.744,0.754" Click="EliminarButton_Click">
+            <StackPanel>
+                <Image  Source="/UI/Registros/icon_trash.ico" Stretch="Uniform" Height="30" Width="32" />
+            </StackPanel>
         </Button>
         <!--Control de ventana-->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">

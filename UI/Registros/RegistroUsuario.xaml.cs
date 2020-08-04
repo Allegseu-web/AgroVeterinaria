@@ -74,7 +74,7 @@ namespace AgroVeterinaria.UI.Registros
             {
                 esValido = false;
                 GuardarButton.IsEnabled = false;
-                MessageBox.Show("Solo se permiten Laetras en este campo", "Fallo",
+                MessageBox.Show("Solo Se Permiten Letras En Este Campo", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 NombreTextBox.Focus();
                 GuardarButton.IsEnabled = true;
@@ -84,7 +84,7 @@ namespace AgroVeterinaria.UI.Registros
             {
                 esValido = false;
                 GuardarButton.IsEnabled = false;
-                MessageBox.Show("Nombres está vacio", "Fallo",
+                MessageBox.Show("Nombres Está Vacio", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 NombreTextBox.Focus();
                 GuardarButton.IsEnabled = true;
@@ -94,7 +94,7 @@ namespace AgroVeterinaria.UI.Registros
             {
                 esValido = false;
                 GuardarButton.IsEnabled = false;
-                MessageBox.Show("Nombre usuario está vacio", "Fallo",
+                MessageBox.Show("Nombre Usuario Está vacio", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 NombreUsuarioTextBox.Focus();
                 GuardarButton.IsEnabled = true;

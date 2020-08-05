@@ -45,6 +45,14 @@
         <Label x:Name="label4" Content="Compra" HorizontalAlignment="Left" Margin="124,412,0,0" VerticalAlignment="Top" Height="26" Width="52"/>
 
         <ComboBox x:Name="comboBox_Copy1" HorizontalAlignment="Left" Margin="482,425,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.783,0.205" Height="22"/>
+        <Button x:Name="AñadirFilaButton" Style="{DynamicResource BotonesSinHover}" ToolTip="Añadir Fila" Width="27"
+                
+               Margin="630,425,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  >
+            <StackPanel>
+                <Image Source="/UI/Registros/mas.png" Stretch="Uniform"/>
+            </StackPanel>
+        </Button>
+
         <Image x:Name="image5" HorizontalAlignment="Left" Height="59" Margin="352,401,0,0" VerticalAlignment="Top" Width="71" Source="/UI/Registros/kisspng-payment-computer-icons-money-logo-terms-and-conditions-5b094a17946fe8.470173941527335447608.png" RenderTransformOrigin="0.408,-0.008"/>
         <Label x:Name="label5" Content="Valor Pago" HorizontalAlignment="Left" Margin="410,418,0,0" VerticalAlignment="Top" Height="26" Width="67"/>
 
@@ -55,41 +63,29 @@
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="109,17,0,186" TextWrapping="Wrap" Width="78" RenderTransformOrigin="0.471,-0.484" Grid.Row="1"/>
 
 
-        <Button x:Name="button1" Content="" HorizontalAlignment="Left" Margin="648,750,0,0" VerticalAlignment="Top" Width="38" Height="36" Grid.RowSpan="2">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_trash.png"/>
-            </Button.Background>
+        <Button x:Name="button1" Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Left" Margin="648,750,0,0" VerticalAlignment="Top" Width="38" Height="36" Grid.RowSpan="2">
+            <StackPanel>
+                <Image Source="/UI/Registros/icon_trash.png"/>
+            </StackPanel>
         </Button>
-        <Button x:Name="button2" Content="" HorizontalAlignment="Left" Margin="28,153,0,0" VerticalAlignment="Top" Width="31" Height="27" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
-
-
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/mas.png"/>
-            </Button.Background>
+        <Button x:Name="button2" Style="{DynamicResource BotonesSinHover}" ToolTip="Nuevo" HorizontalAlignment="Left" Margin="28,153,0,0" VerticalAlignment="Top" Width="31" Height="27" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <StackPanel>
+                <Image Source="/UI/Registros/mas.png"/>
+            </StackPanel>
         </Button>
         <DataGrid x:Name="dataGrid" Margin="18,465,18,11"/>
-        <Button x:Name="button3" Content="" HorizontalAlignment="Left" Margin="121,148,0,30" Grid.Row="1" Width="37">
+        <Button x:Name="button3" Style="{DynamicResource BotonesSinHover}"  ToolTip="Guardar" HorizontalAlignment="Left" Margin="121,148,0,30" Grid.Row="1" Width="37">
 
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_save.png"/>
-            </Button.Background>
+            <StackPanel>
+                <Image Source="/UI/Registros/icon_save.png"/>
+            </StackPanel>
         </Button>
-        <Button x:Name="button4" Content="" HorizontalAlignment="Left" Margin="227,148,0,0" Grid.Row="1" VerticalAlignment="Top" Width="37" Height="37" RenderTransformOrigin="0.371,0.891">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_trash.png"/>
-            </Button.Background>
+        <Button x:Name="button4" Style="{DynamicResource BotonesSinHover}" ToolTip="Eliminar" HorizontalAlignment="Left" Margin="227,148,0,0" Grid.Row="1" VerticalAlignment="Top" Width="37" Height="37" RenderTransformOrigin="0.371,0.891">
+            <StackPanel>
+                <Image Source="/UI/Registros/icon_trash.png"/>
+            </StackPanel>
         </Button>
-        <Label x:Name="label8" Content="Nuevo" HorizontalAlignment="Left" Margin="20,181,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label x:Name="label9" Content="Guardar" HorizontalAlignment="Left" Margin="114,183,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label x:Name="label10" Content="Eliminar" HorizontalAlignment="Left" Margin="222,181,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        
         <Image x:Name="image7" HorizontalAlignment="Left" Height="34" Margin="73,410,0,0" VerticalAlignment="Top" Width="29" Source="/UI/Registros/dog.png"/>
 
 

@@ -30,13 +30,9 @@
         <Image Source="/UI/Login/yerva.png" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0"/>
         <StackPanel Orientation="Vertical">
 
-            <StackPanel Margin="0,10,0,0" Width="164">
+            <StackPanel Margin="10,10,10,0" >
                 <Image Source="/UI/Login/perritofin.png" Width="100"/>
-                <TextBlock Text=" Agropecuaria Emil"
-                               FontWeight="Light"
-                               FontFamily="Georgia" Width="105"
-                               Foreground="Black"
-                               HorizontalAlignment="Center"/>
+                <Image Source="/UI/Login/texto 3.png" Height="50" Width="303" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,20" Width="250">

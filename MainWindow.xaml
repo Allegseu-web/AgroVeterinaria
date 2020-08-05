@@ -18,7 +18,7 @@
 
             </Border.Background>
         </Border>
-        
+
         <Menu Height="20" VerticalAlignment="Top">
             <MenuItem Header="    Registros" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="20" Width="75">
                 <MenuItem.Background>
@@ -119,18 +119,43 @@
                     <ImageBrush ImageSource="/reporte-annual.png" AlignmentX="Left" Stretch="Uniform" Viewport="0,0,1,0.9"/>
                 </MenuItem.Background>
             </MenuItem>
+            <MenuItem Header="Extra">
+                <MenuItem.Icon>
+                    <Image Source="/quiestion.png" Stretch="Uniform" />
+                </MenuItem.Icon>
+
+                <MenuItem Header="Preguntas">
+
+                </MenuItem>
+
+                <MenuItem Header="Acerca de">
+
+                </MenuItem>
+            </MenuItem>
         </Menu>
         <Image Source="/MENU.png" Stretch="Fill" Margin="0,23,0,0" />
-        <Button x:Name="CerrarSesionButton" Content="Cerrar" VerticalContentAlignment="Center"
-                HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="50,210,0,0" 
-                VerticalAlignment="Top" Height="15" Width="40" RenderTransformOrigin="0.229,0.125" 
-                FontSize="8" Click="CerrarSesionButton_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/cerrar.png" AlignmentX="Left" Stretch="Uniform" Viewport="0,0.2,1,0.7"/>
-            </Button.Background>
-        </Button>
+        <StackPanel Orientation="Horizontal" Margin="25,0,0,0" Width="63"  Height="26" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <Button x:Name="CerrarSesionButton" HorizontalContentAlignment="Left"  Style="{DynamicResource BotonesSinHover}"
+                 Height="16" Width="23"  FontSize="8" Click="CerrarSesionButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/cerrar.png"  Stretch="Uniform" Height="12" Width="16" RenderTransformOrigin="0.5,0.5" >
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="6.515"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+
+                </StackPanel>
+            </Button>
+            <Label Content="Cerrar"/>
+        </StackPanel >
+
         <StackPanel Orientation="Vertical" Margin="125,245,25,50">
-            <Label Content="Bienvenido/a" HorizontalAlignment="Center" FontSize="30" Margin="0,5,0,5"/>
+            <Label Content="Bienvenido/a" HorizontalAlignment="Center" FontSize="30" Margin="0,20,0,0"/>
             <Label x:Name="NombreEmpleadoLabel" HorizontalAlignment="Center" VerticalAlignment="Center"
                    Margin="0,5,0,5" FontSize="30"></Label>
         </StackPanel>

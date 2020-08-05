@@ -5,13 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI"
         mc:Ignorable="d"
-        Title="AcercaDe" Height="450" Width="800" AllowsTransparency="True" Background="Transparent"
+        Title="AcercaDe" Height="650" Width="800" AllowsTransparency="True" Background="Transparent"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="419*"/>
+            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="302*"/>
+        </Grid.ColumnDefinitions>
+
+
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Border CornerRadius="10" >
+        <Border CornerRadius="10" Grid.ColumnSpan="3" Margin="-14,0,14,0">
+
             <Border.Background>
                 <LinearGradientBrush>
                     <GradientStop Color="#7be9f6" Offset="0.0"/>
@@ -19,5 +27,54 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
+
+        <Image x:Name="image" HorizontalAlignment="Left" Height="278" Margin="180,10,0,0" VerticalAlignment="Top" Width="430" Source="/UI/Extra/logo de emil.png" Grid.ColumnSpan="3"/>
+
+
+
+
+        <Label x:Name="HorarioDeAtencionlabel" FontWeight="ExtraBold" Content="Horario de Atención" HorizontalAlignment="Left" Margin="37,118,0,0" VerticalAlignment="Top" Height="26" Width="117"/>
+        <Image x:Name="image7" HorizontalAlignment="Left" Height="58" Margin="22,23,0,0" VerticalAlignment="Top" Width="44" Source="/UI/Extra/sum.png" RenderTransformOrigin="1.227,0.517" Grid.Column="2"/>
+        <Image x:Name="image10" HorizontalAlignment="Left" Height="520" Margin="230,131,0,0" VerticalAlignment="Top" Width="692" Source="/UI/Extra/gallosi.png" Grid.ColumnSpan="3"/>
+        <Image x:Name="image8" HorizontalAlignment="Left" Height="4531" Margin="188,218,0,0" VerticalAlignment="Top" Width="100" Source="/UI/Extra/perro.png" Grid.Column="2"/>
+
+        <Label x:Name="luneslabel" Content="Lunes" FontWeight="Bold"  HorizontalAlignment="Left" Margin="59,156,0,0" VerticalAlignment="Top"/>
+
+        <Label x:Name="martesLabel" Content="Martes"  FontWeight="Bold"  HorizontalAlignment="Left" Margin="59,218,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.108,0.443"/>
+        <Label x:Name="miercolesLabel" Content="Miércoles" FontWeight="Bold"  HorizontalAlignment="Left" Margin="59,276,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.161,0.636"/>
+        <Label x:Name="juevesLabel" Content="Jueves" FontWeight="Bold"  HorizontalAlignment="Left" Margin="59,338,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="viernesLabel" Content="Viernes" FontWeight="Bold"  HorizontalAlignment="Left" Margin="59,398,0,0" VerticalAlignment="Top"/>
+
+        <Label x:Name="sabadoLabel" FontWeight="Bold" Content="Sábado" HorizontalAlignment="Left" Margin="59,469,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.533,1.868"/>
+        <Image x:Name="image6" HorizontalAlignment="Left" Height="26" Margin="22,471,0,0" VerticalAlignment="Top" Width="37" Source="/UI/Extra/sum.png"/>
+
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="26" Margin="22,156,0,0" VerticalAlignment="Top" Width="37" Source="/UI/Extra/sum.png"/>
+        <Image x:Name="image2" HorizontalAlignment="Left" Height="26" Margin="22,216,0,0" VerticalAlignment="Top" Width="37" Source="/UI/Extra/sum.png"/>
+        <Image x:Name="image3" HorizontalAlignment="Left" Height="26" Margin="22,276,0,0" VerticalAlignment="Top" Width="37" Source="/UI/Extra/sum.png"/>
+        <Image x:Name="image4" HorizontalAlignment="Left" Height="26" Margin="22,336,0,0" VerticalAlignment="Top" Width="37" Source="/UI/Extra/sum.png"/>
+        <Image x:Name="image5" HorizontalAlignment="Left" Height="26" Margin="22,396,0,0" VerticalAlignment="Top" Width="37" Source="/UI/Extra/sum.png"/>
+        <Label x:Name="label" Content="09:00 am - 06:00 pm" HorizontalAlignment="Left" Margin="79,245,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="09:00 am - 06:00 pm" HorizontalAlignment="Left" Margin="79,188,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy1" Content="09:00 am - 06:00 pm" HorizontalAlignment="Left" Margin="79,310,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy2" Content="09:00 am - 06:00 pm" HorizontalAlignment="Left" Margin="79,364,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy3" Content="09:00 am - 06:00 pm" HorizontalAlignment="Left" Margin="79,429,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy4" Content="09:00 am - 06:00 pm" HorizontalAlignment="Left" Margin="82,495,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="image9" HorizontalAlignment="Left" Height="144" Margin="-42,508,0,0" VerticalAlignment="Top" Width="326" Source="/UI/Extra/kisspng-dog-cat-nutrient-pet-food-pet-shop-dog-food-5ac2d185b042e8.826448111522717061722.png"/>
+        <Label x:Name="label2" FontWeight="Bold" Content=" Información de contacto:" HorizontalAlignment="Left" Margin="56,529,0,0" VerticalAlignment="Top" Height="109" Width="214" Grid.Column="2"/>
+        <Label x:Name="label3" Content="  AVENIDA LIBERTAD 143, " HorizontalAlignment="Left" Margin="55,548,0,0" VerticalAlignment="Top" Height="293" Width="819" Grid.Column="2"/>
+        <Label x:Name="label4" Content="   PUEBLO NUEVO," HorizontalAlignment="Left" Margin="181,548,0,0" VerticalAlignment="Top" Height="293" Width="820" Grid.Column="2"/>
+        <Label x:Name="label5" Content="   SAN FRANCISCO DE MACORIS, DUARTE." HorizontalAlignment="Left" Margin="52,565,0,0" VerticalAlignment="Top" Height="294" Width="820" Grid.Column="2"/>
+        <Label x:Name="label6" Content="  DUARTE 10129
+DO" HorizontalAlignment="Left" Margin="56,581,0,0" VerticalAlignment="Top" Height="294" Width="820" Grid.Column="2"/>
+        <Label x:Name="label7" FontWeight="Bold" Content="   Teléfono:
+ 809-588-6324 " HorizontalAlignment="Left" Margin="56,615,0,0" VerticalAlignment="Top" Height="25" Width="238" Grid.Column="2"/>
+
+
+
+
+
+
+
+
     </Grid>
 </Window>

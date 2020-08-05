@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Registros"
         mc:Ignorable="d"
-        Title="RegistroDirecciones" Height="630" Width="500" AllowsTransparency="True"
+        Title="RegistroDirecciones" Height="670" Width="500" AllowsTransparency="True"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
@@ -30,10 +30,10 @@
                VerticalAlignment="Top" Height="25" Width="71"/>
                 <TextBox x:Name="DireccionIdTextBox" TextWrapping="Wrap" Text="{Binding DireccionId}"
                  VerticalAlignment="Top" Width="235" Height="25" Margin="0,0,5,0"/>
-                <Button x:Name="BuscarButton" Width="71" Height="25" Click="BuscarButton_Click">
+                <Button x:Name="BuscarButton" Style="{DynamicResource BotonesSinHover}" ToolTip="Buscar" Width="71" Height="25" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/UI/Registros/icon_search.png" Width="30" Height="20"></Image>
-                        <Label Content="Buscar" Height="20" FontSize="8"></Label>
+
                     </StackPanel>
                 </Button>
             </StackPanel>
@@ -69,8 +69,8 @@
                        VerticalAlignment="Top" Height="25"/>
                 <TextBox x:Name="PaisTextBox" HorizontalAlignment="Left" Margin="0,0,5,0" Text="{Binding Pais}"
                          TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="25"/>
-                <Image HorizontalAlignment="Left" Height="25" Margin="0,0,5,0"
-                       VerticalAlignment="Top" Width="25" Source="/UI/Registros/pngegg.png"/>
+                <Image Height="28" Margin="0,0,5,0" Stretch="Uniform"
+                       VerticalAlignment="Top" Width="24" Source="/UI/Registros/pngegg.png"/>
                 <Label Content="Municipio" HorizontalAlignment="Left" Margin="0,0,5,0"
                        VerticalAlignment="Top" Height="25"/>
                 <TextBox x:Name="MunicipioTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Municipio}"
@@ -84,8 +84,8 @@
                        VerticalAlignment="Top" Height="25" Width="125"/>
                 <TextBox x:Name="NdeLocaldad" HorizontalAlignment="Left" Margin="0,0,5,0" Text="{Binding NumLocalidad}"
                          TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Height="25"/>
-                <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Margin="0,0,5,0"
-                       Width="25" Source="/UI/Registros/kisspng-computer-icons-new-york-city-clip-art-appartment-5b3d9b90d0c7a0.0018395515307641768552.png"/>
+                <Image Height="26" VerticalAlignment="Top" Margin="0,0,5,0"
+                       Width="22" Source="/UI/Registros/kisspng-computer-icons-new-york-city-clip-art-appartment-5b3d9b90d0c7a0.0018395515307641768552.png"/>
                 <Label Content="Sector" HorizontalAlignment="Left" Margin="0,0,5,0"
                        VerticalAlignment="Top" Height="25"/>
                 <TextBox x:Name="CiudadTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Sector}"
@@ -93,20 +93,20 @@
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="25,569,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom" Height="36" Width="44" Click="NuevoButton_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/mas.png" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.5"/>
-            </Button.Background>
+        <Button x:Name="NuevoButton" Style="{DynamicResource BotonesSinHover}"  ToolTip="Nuevo" HorizontalAlignment="Left" Margin="25,569,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom" Height="36" Width="44" Click="NuevoButton_Click">
+            <StackPanel>
+                <Image Source="/UI/Registros/mas.png" Stretch="Uniform" Height="29" Width="33" />
+            </StackPanel>
         </Button>
-        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Center" Margin="0,569,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom" Height="36" Width="48" Click="GuardarButton_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_save.png" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.5" />
-            </Button.Background>
+        <Button x:Name="GuardarButton" Style="{DynamicResource BotonesSinHover}"  ToolTip="Guardar" HorizontalAlignment="Center" Margin="0,569,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom" Height="36" Width="48" Click="GuardarButton_Click">
+            <StackPanel>
+                <Image Source="/UI/Registros/icon_save.png" Stretch="Uniform" Height="34" Width="36" />
+            </StackPanel>
         </Button>
-        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="429,569,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom"  Height="36" Width="46" Click="EliminarButton_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_trash.png" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.5" />
-            </Button.Background>
+        <Button x:Name="EliminarButton" Style="{DynamicResource BotonesSinHover}"  ToolTip="Eliminar" HorizontalAlignment="Left" Margin="429,569,0,0" VerticalAlignment="Top" VerticalContentAlignment = "Bottom"  Height="36" Width="46" Click="EliminarButton_Click">
+            <StackPanel>
+                <Image Source="/UI/Registros/icon_trash.png" Stretch="Uniform" Height="36" Width="40" />
+            </StackPanel>
         </Button>
         <!--Control de ventana-->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">

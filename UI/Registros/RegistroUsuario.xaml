@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Registro de usuarios" Height="570" Width="360"
         AllowsTransparency="True" Background="Transparent"
-        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="verdana"   WindowStyle="None">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -37,7 +37,11 @@
                 <Image x:Name="image2" Source="/UI/Registros/icon_user-plus.ico" Margin="25,0,5,0" Width="23" Height="25"/>
                 <Label x:Name="UsuarioIdLabel" Content="UsuarioID" Margin="0,0,5,0" Width="75" FontSize="13"/>
                 <TextBox x:Name="UsuarioIdTextBox" Text="{Binding UsuarioId}" Width="125" Margin="0,0,5,0" Height="23" VerticalContentAlignment="Center" />
-                <Button x:Name="BuscarButton" Width="50" Content="Buscar" Click="BuscarButton_Click"></Button>
+                <Button x:Name="BuscarButton" Style="{DynamicResource BotonesSinHover}" Width="35" Click="BuscarButton_Click" Height="25">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/UI/Registros/icon_search.png" Stretch="Uniform" ToolTip="Buscar" Height="21" Width="46" />
+                    </StackPanel>
+                </Button>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0" Height="25" >
                 <Image Source="/UI/Registros/f2ec734711be580dfa90769a1831a790 (8).png" Margin="25,0,5,0" Height="22" Width="29"/>
@@ -82,22 +86,23 @@
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="GuardarButton"  Style="{DynamicResource BotonesSinHover}" HorizontalAlignment="Left"   Margin="30,512,0,0" 
+        <Button x:Name="GuardarButton"  Style="{DynamicResource BotonesSinHover}" ToolTip="Guardar" HorizontalAlignment="Left"   Margin="30,512,0,0" 
                 VerticalAlignment="Top"  Width="48" Height="34"  Click="GuardarButton_Click">
             <StackPanel Orientation="Vertical" Height="56">
                 <Image Source="/UI/Registros/icon_save.ico"  Stretch="Uniform" Width="36" Height="29"/>
+
             </StackPanel>
 
         </Button>
         <Button x:Name="NuevoButton" Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Left" Margin="152,512,0,0" VerticalContentAlignment="Bottom"
-                VerticalAlignment="Top" Width="64" Height="32"  Click="NuevoButton_Click">
+                VerticalAlignment="Top" Width="64" Height="32" ToolTip="Nuevo"  Click="NuevoButton_Click">
             <StackPanel Orientation="Vertical">
                 <Image Source="/UI/Registros/icon_plus.ico" Stretch="Uniform" Height="30" Width="44" />
             </StackPanel>
         </Button>
 
         <Button x:Name="EliminarButton" Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Left" Margin="276,512,0,0" VerticalContentAlignment="Bottom"
-                VerticalAlignment="Top" Width="36" Height="32"  FontSize="8" RenderTransformOrigin="0.744,0.754" Click="EliminarButton_Click">
+                VerticalAlignment="Top" Width="36" Height="32" ToolTip="Eliminar" FontSize="8" RenderTransformOrigin="0.744,0.754" Click="EliminarButton_Click">
             <StackPanel>
                 <Image  Source="/UI/Registros/icon_trash.ico" Stretch="Uniform" Height="30" Width="32" />
             </StackPanel>

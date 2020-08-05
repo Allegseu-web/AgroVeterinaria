@@ -27,7 +27,7 @@
                        Margin="0,0,5,0" VerticalAlignment="Top" Height="25" Width="71"/>
                 <TextBox x:Name="SuplidorIdTextBox" Text="{Binding SuplidorId}" HorizontalAlignment="Center" Margin="0,0,5,0"
                          Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-                <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left"
+                <Button x:Name="BuscarButton" ToolTip="Buscar" HorizontalAlignment="Left"
                 VerticalContentAlignment="Center" HorizontalContentAlignment="Right" VerticalAlignment="Top"
                 Height="25" Width="75" Click="BuscarButton_Click">
                     <Button.Background>
@@ -78,20 +78,20 @@
         </StackPanel>
 
 
-        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="25,474,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Height="35" Click="NuevoButton_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/mas.png" AlignmentY="Top" Stretch="Uniform" Viewport="0,0,1,0.4"/>
-            </Button.Background>
+        <Button x:Name="NuevoButton" Style="{DynamicResource BotonesSinHover}"  Width="36" ToolTip="Nuevo" HorizontalAlignment="Left" Margin="25,474,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Height="35" Click="NuevoButton_Click">
+            <StackPanel>
+                <Image Source="/UI/Registros/mas.png" Stretch="Uniform"/>
+            </StackPanel>
         </Button>
-        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Center" VerticalContentAlignment="Bottom" Margin="0,474,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.879,0.601" Height="35" Click="GuardarButton_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_save.png" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.5"/>
-            </Button.Background>
+        <Button x:Name="GuardarButton" Style="{DynamicResource BotonesSinHover}" Width="36" ToolTip="Guardar" HorizontalAlignment="Center" VerticalContentAlignment="Bottom" Margin="0,474,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.879,0.601" Height="35" Click="GuardarButton_Click">
+            <StackPanel>
+                <Image Source="/UI/Registros/icon_save.png" Stretch="Uniform" />
+            </StackPanel>
         </Button>
-        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" Margin="329,474,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.876,0.601" Height="35" Click="EliminarButton_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_trash.png" Stretch="Uniform" AlignmentY="Top" Viewport="0,0,1,0.6" />
-            </Button.Background>
+        <Button x:Name="EliminarButton" Style="{DynamicResource BotonesSinHover}" Width="36" ToolTip="Eliminar" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" Margin="329,474,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.876,0.601" Height="35" Click="EliminarButton_Click">
+            <StackPanel>
+                <Image Source="/UI/Registros/icon_trash.png" Stretch="Uniform"/>
+            </StackPanel>
         </Button>
         <!--Control de ventana-->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">

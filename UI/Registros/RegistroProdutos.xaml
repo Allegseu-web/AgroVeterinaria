@@ -22,19 +22,19 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <Image HorizontalAlignment="Center" Height="126" Width="126"
-               Source="/UI/Registros/Tabla2.png" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="126" Width="126"
+               Source="/UI/Registros/Tabla2.png" VerticalAlignment="Top" Margin="141,10,0,0"/>
 
-        <StackPanel Orientation="Vertical" Margin="25,150,25,100">
+        <StackPanel Orientation="Vertical" Margin="25,150,25,84">
             <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
                 <Image Source="/UI/Registros/dog.png" HorizontalAlignment="Left" Width="21" Height="25" Margin="0,0,9,0"/>
                 <Label Content="ProductoId" HorizontalAlignment="Left"
                        Width="71" VerticalAlignment="Top" Height="25" Margin="0,0,5,0"/>
-                <TextBox x:Name="ProductoIdTextBox" Text="{Binding ProductoId}" Width="170" Height="25" Margin="0,0,5,0"/>
-                <Button x:Name="BuscarButton" HorizontalContentAlignment="Right" Height="25" Click="BuscarButton_Click">
+                <TextBox x:Name="ProductoIdTextBox" ToolTip="Buscar" Text="{Binding ProductoId}" Width="170" Height="25" Margin="0,0,5,0"/>
+                <Button x:Name="BuscarButton" Style="{DynamicResource BotonesSinHover}" HorizontalContentAlignment="Right" Height="25" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/UI/Registros/icon_search.png" Width="30" Height="20"></Image>
-                        <Label Content="Buscar" Height="20" FontSize="8"></Label>
+
                     </StackPanel>
                 </Button>
             </StackPanel>
@@ -107,25 +107,25 @@
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left"
+        <Button x:Name="NuevoButton" Style="{DynamicResource BotonesSinHover}"   HorizontalAlignment="Left"
                 VerticalAlignment="Top" Margin="34,476,0,0" VerticalContentAlignment="Bottom"
                 Height="47" Width="58" Click="NuevoButton_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/mas.png" AlignmentY="Top" Viewport="0.3,0,0.4,0.5"/>
-            </Button.Background>
+            <StackPanel>
+                <Image Source="/UI/Registros/mas.png" Height="28" Width="31" />
+            </StackPanel>
 
         </Button>
-        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Center"
+        <Button x:Name="GuardarButton"  Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Center"
                 Click="GuardarButton_Click" Margin="0,476,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Height="47" Width="58">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_save.png" AlignmentY="Top" Viewport="0.3,0,0.4,0.6"/>
-            </Button.Background>
+            <StackPanel>
+                <Image Source="/UI/Registros/icon_save.png" Height="32" Width="33" />
+            </StackPanel>
         </Button>
-        <Button x:Name="EliminarButton" Content="Eliminar"
+        <Button x:Name="EliminarButton"  Style="{DynamicResource BotonesSinHover}" 
                 Click="EliminarButton_Click" HorizontalAlignment="Left" Margin="310,476,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Height="47" Width="56">
-            <Button.Background>
-                <ImageBrush ImageSource="/UI/Registros/icon_trash.png" AlignmentY="Top" Viewport="0.25,0,0.5,0.6" />
-            </Button.Background>
+            <StackPanel>
+                <Image Source="/UI/Registros/icon_trash.png" Height="34" Width="33" />
+            </StackPanel>
         </Button>
         <!--Control de ventana-->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">

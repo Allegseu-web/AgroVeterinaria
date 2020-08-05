@@ -140,5 +140,24 @@ namespace AgroVeterinaria.BLL
             }
             return Lista;
         }
+
+        public static List<Productos> GetList(Expression<Func<Productos, bool>> criterio)
+        {
+            Contexto contexto = new Contexto();
+            List<Productos> Lista = new List<Productos>();
+            try
+            {
+                Lista = contexto.Productos.Where(criterio).ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return Lista;
+        }
     }
 }

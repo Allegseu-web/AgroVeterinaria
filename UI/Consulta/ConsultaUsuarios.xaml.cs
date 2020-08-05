@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AgroVeterinaria.BLL;
+using AgroVeterinaria.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -20,6 +22,16 @@ namespace AgroVeterinaria.UI.Consulta
         public ConsultaUsuarios()
         {
             InitializeComponent();
+        }
+
+        private void BuscarButton_Click(object sender, RoutedEventArgs e)
+        {
+            List<Usuarios> listado = new List<Usuarios>();
+
+            if (DesdeDataPicker.SelectedDate != null) { listado = UsuariosBLL.GetList(c => c.FechaCreacion.Date >= DesdeDataPicker.SelectedDate); }
+            if (HastaDatePicker.SelectedDate != null) { listado = UsuariosBLL.GetList(c => c.FechaCreacion.Date <= HastaDatePicker.SelectedDate); }
+            DatosDataGrid.ItemsSource = null;
+            DatosDataGrid.ItemsSource = listado;
         }
     }
 }

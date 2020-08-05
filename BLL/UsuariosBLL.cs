@@ -144,6 +144,25 @@ namespace AgroVeterinaria.BLL
             return Lista;
         }
 
+        public static List<Usuarios> GetList(Expression<Func<Usuarios, bool>> criterio)
+        {
+            Contexto contexto = new Contexto();
+            List<Usuarios> Lista = new List<Usuarios>();
+            try
+            {
+                Lista = contexto.Usuarios.Where(criterio).ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return Lista;
+        }
+
         public static bool Validar(string nombreusuario, string clave)
         {
             bool esOk = false;

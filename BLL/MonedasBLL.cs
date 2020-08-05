@@ -140,5 +140,24 @@ namespace AgroVeterinaria.BLL
             }
             return Lista;
         }
+
+        public static List<Monedas> GetList(Expression<Func<Monedas, bool>> criterio)
+        {
+            Contexto contexto = new Contexto();
+            List<Monedas> Lista = new List<Monedas>();
+            try
+            {
+                Lista = contexto.Monedas.Where(criterio).ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return Lista;
+        }
     }
 }

@@ -11,6 +11,7 @@
     <None Remove="3256995851547464092-32.png" />
     <None Remove="cerrar.png" />
     <None Remove="consultante.png" />
+    <None Remove="cuestion dos.png" />
     <None Remove="MENU.png" />
     <None Remove="quiestion.png" />
     <None Remove="reporte-annual.png" />
@@ -137,6 +138,7 @@
     <Resource Include="3256995851547464092-32.png" />
     <Resource Include="cerrar.png" />
     <Resource Include="consultante.png" />
+    <Resource Include="cuestion dos.png" />
     <Resource Include="MENU.png" />
     <Resource Include="quiestion.png" />
     <Resource Include="reporte-annual.png" />

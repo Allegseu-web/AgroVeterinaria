@@ -12,8 +12,10 @@
     <None Remove="cerrar.png" />
     <None Remove="consultante.png" />
     <None Remove="cuestion dos.png" />
+    <None Remove="informacion.png" />
     <None Remove="mensaje 2.png" />
     <None Remove="MENU.png" />
+    <None Remove="pagina web.png" />
     <None Remove="quiestion.png" />
     <None Remove="reporte-annual.png" />
     <None Remove="UI\Consulta\cambio.png" />
@@ -151,8 +153,10 @@
     <Resource Include="cerrar.png" />
     <Resource Include="consultante.png" />
     <Resource Include="cuestion dos.png" />
+    <Resource Include="informacion.png" />
     <Resource Include="mensaje 2.png" />
     <Resource Include="MENU.png" />
+    <Resource Include="pagina web.png" />
     <Resource Include="quiestion.png" />
     <Resource Include="reporte-annual.png" />
     <Resource Include="UI\Consulta\cambio.png" />

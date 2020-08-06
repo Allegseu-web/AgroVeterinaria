@@ -119,9 +119,9 @@
                     <ImageBrush ImageSource="/reporte-annual.png" AlignmentX="Left" Stretch="Uniform" Viewport="0,0,1,0.9"/>
                 </MenuItem.Background>
             </MenuItem>
-            <MenuItem Header="Extra">
+            <MenuItem Header="Ayuda">
                 <MenuItem.Icon>
-                    <Image Source="/quiestion.png" Stretch="Uniform" />
+                    <Image Source="/quiestion.png"  />
                 </MenuItem.Icon>
                 <MenuItem.ToolTip>
                     <ToolTip Padding="0" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" Foreground="Transparent" Width="54" Height="54">
@@ -129,12 +129,16 @@
                     </ToolTip>
                 </MenuItem.ToolTip>
 
-                <MenuItem Header="Preguntas">
-
+                <MenuItem Header="Información" Click="Información_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/informacion.png"/>
+                    </MenuItem.Icon>
                 </MenuItem>
 
-                <MenuItem Header="Centro de ayuda" Click="CentroDeAyuda_Click">
-
+                <MenuItem Header="Pagina Web" Click="CentroDeAyuda_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/pagina web.png"/>
+                    </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
         </Menu>

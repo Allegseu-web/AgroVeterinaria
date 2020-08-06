@@ -32,8 +32,8 @@
         <Image x:Name="image2" HorizontalAlignment="Left" Height="100" Margin="714,235,0,0" VerticalAlignment="Top" Width="100"/>
         <Image x:Name="image3" HorizontalAlignment="Left" Height="274" Margin="290,124,0,0" VerticalAlignment="Top" Width="396" Source="/UI/Extra/pensamiento.png"/>
 
-        <Label x:Name="label2" Content=" Alexis Manuel " HorizontalAlignment="Left" Margin="440,209,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label3" Content=" Ana martínez " HorizontalAlignment="Left" Margin="439,237,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label x:Name="label2" Content=" Alexis Manuel " HorizontalAlignment="Left" Margin="440,213,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content=" Ana martínez " HorizontalAlignment="Left" Margin="441,237,0,0" VerticalAlignment="Top" Width="91"/>
 
         <Image x:Name="image4" HorizontalAlignment="Left" Height="23" Margin="392,189,0,0" VerticalAlignment="Top" Width="211" Source="/UI/Extra/generatedtext (1).png"/>
 

@@ -124,8 +124,8 @@
                     <Image Source="/quiestion.png" Stretch="Uniform" />
                 </MenuItem.Icon>
                 <MenuItem.ToolTip>
-                    <ToolTip Background="Transparent" Foreground="Transparent" Width="54" Height="54">
-                        <Image Source="/cuestion dos.png"/>
+                    <ToolTip Padding="0" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" Foreground="Transparent" Width="54" Height="54">
+                        <Image Source="/mensaje 2.png"/>
                     </ToolTip>
                 </MenuItem.ToolTip>
 
@@ -133,7 +133,7 @@
 
                 </MenuItem>
 
-                <MenuItem Header="Acerca de">
+                <MenuItem Header="Centro de ayuda" Click="CentroDeAyuda_Click">
 
                 </MenuItem>
             </MenuItem>

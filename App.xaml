@@ -107,7 +107,7 @@
                             Height="{TemplateBinding Height}"
                             CornerRadius="4">
                             <StackPanel Orientation="Horizontal">
-                                <Image Margin="4,4,0,4" Source="/cuestion dos.png"/>
+                                <Image Margin="4,4,0,4" Source="/mensaje 2.png"/>
                                 <ContentPresenter
                                   Margin="4" 
                                   HorizontalAlignment="Left"

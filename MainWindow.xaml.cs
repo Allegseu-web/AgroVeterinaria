@@ -1,5 +1,6 @@
 ﻿using AgroVeterinaria.Entidades;
 using AgroVeterinaria.UI.Consulta;
+using AgroVeterinaria.UI.Extra;
 using AgroVeterinaria.UI.Login;
 using AgroVeterinaria.UI.Registros;
 using System;
@@ -340,6 +341,12 @@ namespace AgroVeterinaria
                 MessageBox.Show("No tiene autorizacion para acceder a esa funcion.",
                     "Sin acceso", MessageBoxButton.OK, MessageBoxImage.Information);
             }
+        }
+
+        private void CentroDeAyuda_Click(object sender, RoutedEventArgs e)
+        {
+            CentrodeAyuda cda = new CentrodeAyuda();
+            cda.ShowDialog();
         }
     }
 }

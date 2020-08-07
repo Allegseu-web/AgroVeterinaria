@@ -352,7 +352,7 @@ namespace AgroVeterinaria
 
         private void Información_Click(object sender, RoutedEventArgs e)
         {
-            AcercaDe acd = new AcercaDe();
+            AcercaDe acd = new AcercaDe(user);
             acd.ShowDialog();
         }
     }

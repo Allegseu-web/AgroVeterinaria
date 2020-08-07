@@ -42,10 +42,12 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ID" Binding="{Binding DireccionId}" Visibility="Visible"/>
                         <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}"/>
-                        <DataGridTextColumn Header="MonedaId" Binding="{Binding MonedaId}"/>
-                        <DataGridTextColumn Header="SubTotal          " Binding="{Binding SubTotal}"/>
-                        <DataGridTextColumn Header="ITBIs Total       " Binding="{Binding ITBIS_Total}"/>
-                        <DataGridTextColumn Header="Total             " Binding="{Binding Total}"/>
+                        <DataGridTextColumn Header="Calle" Binding="{Binding Calle}"/>
+                        <DataGridTextColumn Header="Edificio/Piso/Apartameto" Binding="{Binding Edificio_Piso_Apartamento}"/>
+                        <DataGridTextColumn Header="Numero de Localidad" Binding="{Binding NumLocalidad}"/>
+                        <DataGridTextColumn Header="Municipio" Binding="{Binding Municipio}"/>
+                        <DataGridTextColumn Header="Sector" Binding="{Binding Sector}"/>
+                        <DataGridTextColumn Header="Pais" Binding="{Binding Pais}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
@@ -53,5 +55,26 @@
         <Label Content="Consulta Direcciones" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24"/>
         <Image HorizontalAlignment="Left" Height="50" Margin="507,10,0,0" VerticalAlignment="Top" Width="65" Source="/UI/Consulta/estampado-de-pata-de-animal.png" RenderTransformOrigin="-6.459,9.601"/>
         <Image HorizontalAlignment="Left" Height="60" Margin="88,10,0,0" VerticalAlignment="Top" Width="52" Source="/UI/Consulta/estampado-de-pata-de-animal.png" RenderTransformOrigin="-0.201,0.561"/>
+        <!--Control de ventana-->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Regresar"
+                    Height="25" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AtrasButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-atrás-100.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="MinimizarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Minimizar"
+                    BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="MinimizarButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-minimizar-la-ventana-100.png" Stretch="Fill"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="CerrarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Cerrar"
+                    BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="CerrarButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-cerrar-ventana-100.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

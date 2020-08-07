@@ -25,11 +25,11 @@
                 VerticalAlignment="Top" Width="25" Source="/UI/Registros/suplidores.png"/>
                 <Label Content="SuplidorId" HorizontalAlignment="Left"
                        Margin="0,0,5,0" VerticalAlignment="Top" Height="25" Width="71"/>
-                <TextBox x:Name="SuplidorIdTextBox" Text="{Binding SuplidorId}" HorizontalAlignment="Center" Margin="0,0,5,0"
-                         Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-                <Button x:Name="BuscarButton" ToolTip="Buscar" HorizontalAlignment="Left"
-                VerticalContentAlignment="Center" HorizontalContentAlignment="Right" VerticalAlignment="Top"
-                Height="25" Width="75" Click="BuscarButton_Click">
+                <TextBox x:Name="SuplidorIdTextBox" Text="{Binding SuplidorId}" Margin="0,0,5,0"
+                         Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+                <Button x:Name="BuscarButton" ToolTip="Buscar"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Top"
+                Height="25" Width="45" Click="BuscarButton_Click" Foreground="{x:Null}" BorderBrush="{x:Null}">
                     <Button.Background>
                         <ImageBrush ImageSource="/UI/Registros/icon_search.png" Stretch="Uniform" AlignmentX="Left"/>
                     </Button.Background>
@@ -78,21 +78,21 @@
         </StackPanel>
 
 
-        <Button x:Name="NuevoButton" Style="{DynamicResource BotonesSinHover}"  Width="36" ToolTip="Nuevo" HorizontalAlignment="Left" Margin="25,474,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Height="35" Click="NuevoButton_Click">
-            <StackPanel>
-                <Image Source="/UI/Registros/mas.png" Stretch="Uniform"/>
-            </StackPanel>
-        </Button>
-        <Button x:Name="GuardarButton" Style="{DynamicResource BotonesSinHover}" Width="36" ToolTip="Guardar" HorizontalAlignment="Center" VerticalContentAlignment="Bottom" Margin="0,474,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.879,0.601" Height="35" Click="GuardarButton_Click">
-            <StackPanel>
-                <Image Source="/UI/Registros/icon_save.png" Stretch="Uniform" />
-            </StackPanel>
-        </Button>
-        <Button x:Name="EliminarButton" Style="{DynamicResource BotonesSinHover}" Width="36" ToolTip="Eliminar" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" Margin="329,474,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.876,0.601" Height="35" Click="EliminarButton_Click">
-            <StackPanel>
-                <Image Source="/UI/Registros/icon_trash.png" Stretch="Uniform"/>
-            </StackPanel>
-        </Button>
+        <!--Botones principales-->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="25,0,25,25">
+            <Button x:Name="GuardarButton" Style="{DynamicResource BotonesSinHover}" ToolTip="Guardar" Margin="25,0,25,0"
+                    Width="50" Height="32" Click="GuardarButton_Click">
+                <Image Source="/UI/Registros/icon_save.ico" Stretch="Uniform" Width="50" Height="30"/>
+            </Button>
+            <Button x:Name="NuevoButton" Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Center"
+                VerticalAlignment="Top" Width="50" Height="32" ToolTip="Nuevo" Margin="25,0,25,0" Click="NuevoButton_Click">
+                <Image Source="/UI/Registros/icon_plus.ico" Stretch="Uniform" Height="30" Width="50"/>
+            </Button>
+            <Button x:Name="EliminarButton" Style="{DynamicResource BotonesSinHover}"
+                Width="50" Height="32" Margin="25,0,25,0" ToolTip="Eliminar" Click="EliminarButton_Click">
+                <Image Source="/UI/Registros/icon_trash.ico" Stretch="Uniform" Height="30" Width="50"/>
+            </Button>
+        </StackPanel>
         <!--Control de ventana-->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
             <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="25" ToolTip="Atras" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AtrasButton_Click">

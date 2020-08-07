@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using AgroVeterinaria.Entidades;
 
 namespace AgroVeterinaria.UI.Extra
 {
@@ -19,19 +20,34 @@ namespace AgroVeterinaria.UI.Extra
     /// </summary>
     public partial class CentrodeAyuda : Window
     {
-        public CentrodeAyuda()
+        Usuarios Usuario = new Usuarios();
+        public CentrodeAyuda(Usuarios user)
         {
             InitializeComponent();
+            Usuario = user;
         }
 
-        
         private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
         {
-
             string url = "https://github.com/Allegseu-web/AgroVeterinaria";
             Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
         }
 
-        
+        private void AtrasButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow(Usuario);
+            window.Show();
+            Close();
+        }
+
+        private void MinimizarButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void CerrarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

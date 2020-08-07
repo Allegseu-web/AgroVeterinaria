@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgroVeterinaria.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,9 +18,28 @@ namespace AgroVeterinaria.UI
     /// </summary>
     public partial class AcercaDe : Window
     {
-        public AcercaDe()
+        private readonly Usuarios Usuario = new Usuarios();
+        public AcercaDe(Usuarios user)
         {
             InitializeComponent();
+            Usuario = user;
+        }
+
+        private void AtrasButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow(Usuario);
+            window.Show();
+            Close();
+        }
+
+        private void MinimizarButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void CerrarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

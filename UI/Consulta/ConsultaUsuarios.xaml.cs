@@ -19,9 +19,11 @@ namespace AgroVeterinaria.UI.Consulta
     /// </summary>
     public partial class ConsultaUsuarios : Window
     {
-        public ConsultaUsuarios()
+        private readonly Usuarios Usuario = new Usuarios();
+        public ConsultaUsuarios(Usuarios user)
         {
             InitializeComponent();
+            Usuario = user;
         }
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
@@ -32,6 +34,22 @@ namespace AgroVeterinaria.UI.Consulta
             if (HastaDatePicker.SelectedDate != null) { listado = UsuariosBLL.GetList(c => c.FechaCreacion.Date <= HastaDatePicker.SelectedDate); }
             DatosDataGrid.ItemsSource = null;
             DatosDataGrid.ItemsSource = listado;
+        }
+        private void AtrasButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow(Usuario);
+            window.Show();
+            Close();
+        }
+
+        private void MinimizarButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void CerrarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

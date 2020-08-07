@@ -14,6 +14,5 @@ namespace AgroVeterinaria.Entidades
         public string Telefono { get; set; }
         public string RNC { get; set; }
         public DateTime Fecha { get; set; } = DateTime.Now;
-        public int UsuarioId { get; set; }
     }
 }

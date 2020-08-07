@@ -27,7 +27,7 @@ namespace AgroVeterinaria.UI.Registros
             DataContext = Suplidor;
             Usuario = user;
             DireccionComboBox.ItemsSource = DireccionesBLL.GetList();
-            DireccionComboBox.SelectedValuePath = "DireccionesId";
+            DireccionComboBox.SelectedValuePath = "DireccionId";
             DireccionComboBox.DisplayMemberPath = "Municipio";
         }
 
@@ -83,10 +83,10 @@ namespace AgroVeterinaria.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
+            Suplidor.DireccionId = DireccionComboBox.SelectedIndex;
             if (SuplidorIdTextBox.Text != "0")
             {
                 bool user = SuplidoresBLL.Modificar(Suplidor);
-
                 if (user)
                 {
                     Limpiar();

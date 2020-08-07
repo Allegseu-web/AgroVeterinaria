@@ -111,11 +111,11 @@ namespace AgroVeterinaria.UI.Registros
             if (Compra.ProductosDetalles == null)
             {
                 esValido = false;
-                GuardarButton.IsEnabled = false;
+                guardarButton.IsEnabled = false;
                 MessageBox.Show("Factura está vacia", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 CantidadTextBox.Focus();
-                GuardarButton.IsEnabled = true;
+                guardarButton.IsEnabled = true;
             }
             return esValido;
         }
@@ -155,10 +155,17 @@ namespace AgroVeterinaria.UI.Registros
         private void AñadirFilaButton_Click(object sender, RoutedEventArgs e)
         {
             Productos prod = ProductosBLL.Buscar(ProductoComboBox.SelectedIndex);
-            if (prod != null) { prod.Cantidad -= int.Parse(CantidadTextBox.Text); ProductosBLL.Modificar(prod); }
-            double importe = int.Parse(CantidadTextBox.Text) * prod.Precio;
-            Compra.ProductosDetalles.Add(new ProductosDetalle(Compra.CompraId, ProductoComboBox.Text, int.Parse(CantidadTextBox.Text), prod.Precio,importe, importe*0.18));
-            Cargar();
+            if (prod != null)
+            {
+                prod.Cantidad -= int.Parse(CantidadTextBox.Text); ProductosBLL.Modificar(prod);
+                double importe = int.Parse(CantidadTextBox.Text) * prod.Precio;
+                Compra.ProductosDetalles.Add(new ProductosDetalle(Compra.CompraId, ProductoComboBox.Text, int.Parse(CantidadTextBox.Text), prod.Precio, importe, importe * 0.18));
+                Cargar();
+            }
+            else
+            {
+                MessageBox.Show("Por favor llenar los campos correctamente y intentelo de nuevo.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void Añadir_Click(object sender, RoutedEventArgs e)

@@ -1,4 +1,5 @@
 ﻿using AgroVeterinaria.Entidades;
+using AgroVeterinaria.UI;
 using AgroVeterinaria.UI.Consulta;
 using AgroVeterinaria.UI.Extra;
 using AgroVeterinaria.UI.Login;
@@ -347,6 +348,12 @@ namespace AgroVeterinaria
         {
             CentrodeAyuda cda = new CentrodeAyuda(user);
             cda.ShowDialog();
+        }
+
+        private void Información_Click(object sender, RoutedEventArgs e)
+        {
+            AcercaDe acd = new AcercaDe();
+            acd.ShowDialog();
         }
     }
 }

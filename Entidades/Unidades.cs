@@ -11,7 +11,6 @@ namespace AgroVeterinaria.Entidades
         [Key]
         public int UnidadId { get; set; }
         public string Descripcion { get; set; }
-        public int UsuarioId { get; set; }
         public DateTime Fecha { get; set; } = DateTime.Now;
     }
 }

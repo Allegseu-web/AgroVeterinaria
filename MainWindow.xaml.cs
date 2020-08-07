@@ -41,7 +41,7 @@ namespace AgroVeterinaria
         {
             InitializeComponent();
             NombreEmpleadoLabel.Content = Empleado.Nombres;
-            this.user = Empleado;
+            user = Empleado;
         }
 
         private bool Intro(Usuarios Usuario, int valid)
@@ -258,7 +258,7 @@ namespace AgroVeterinaria
         {
             if (Intro(user, 1))
             {
-                ConsultaCompras consultaCompras = new ConsultaCompras();
+                ConsultaCompras consultaCompras = new ConsultaCompras(user);
                 consultaCompras.Show();
                 this.Close();
             }
@@ -288,7 +288,7 @@ namespace AgroVeterinaria
         {
             if (Intro(user, 3))
             {
-                ConsultaSuplidor consultaSuplidor = new ConsultaSuplidor();
+                ConsultaSuplidor consultaSuplidor = new ConsultaSuplidor(user);
                 consultaSuplidor.Show();
                 this.Close();
             }
@@ -303,7 +303,7 @@ namespace AgroVeterinaria
         {
             if (Intro(user, 4))
             {
-                ConsultaProductos consultaProductos = new ConsultaProductos();
+                ConsultaProductos consultaProductos = new ConsultaProductos(user);
                 consultaProductos.Show();
                 this.Close();
             }
@@ -318,7 +318,7 @@ namespace AgroVeterinaria
         {
             if (Intro(user, 5))
             {
-                ConsultaDirecciones consultaDirecciones = new ConsultaDirecciones();
+                ConsultaDirecciones consultaDirecciones = new ConsultaDirecciones(user);
                 consultaDirecciones.Show();
                 this.Close();
             }
@@ -333,7 +333,7 @@ namespace AgroVeterinaria
         {
             if (Intro(user, 6))
             {
-                ConsultaUsuarios consultaUsuarios = new ConsultaUsuarios();
+                ConsultaUsuarios consultaUsuarios = new ConsultaUsuarios(user);
                 consultaUsuarios.Show();
                 this.Close();
             }
@@ -346,7 +346,7 @@ namespace AgroVeterinaria
 
         private void CentroDeAyuda_Click(object sender, RoutedEventArgs e)
         {
-            CentrodeAyuda cda = new CentrodeAyuda();
+            CentrodeAyuda cda = new CentrodeAyuda(user);
             cda.ShowDialog();
         }
 

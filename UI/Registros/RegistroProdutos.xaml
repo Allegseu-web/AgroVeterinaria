@@ -107,26 +107,22 @@
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="NuevoButton" Style="{DynamicResource BotonesSinHover}"   HorizontalAlignment="Left"
-                VerticalAlignment="Top" Margin="34,476,0,0" VerticalContentAlignment="Bottom"
-                Height="47" Width="58" Click="NuevoButton_Click">
-            <StackPanel>
-                <Image Source="/UI/Registros/mas.png" Height="28" Width="31" />
-            </StackPanel>
-
-        </Button>
-        <Button x:Name="GuardarButton"  Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Center"
-                Click="GuardarButton_Click" Margin="0,476,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Height="47" Width="58">
-            <StackPanel>
-                <Image Source="/UI/Registros/icon_save.png" Height="32" Width="33" />
-            </StackPanel>
-        </Button>
-        <Button x:Name="EliminarButton"  Style="{DynamicResource BotonesSinHover}" 
-                Click="EliminarButton_Click" HorizontalAlignment="Left" Margin="310,476,0,0" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Height="47" Width="56">
-            <StackPanel>
-                <Image Source="/UI/Registros/icon_trash.png" Height="34" Width="33" />
-            </StackPanel>
-        </Button>
+        <!--Botones principales-->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="25,0,25,25">
+            <Button x:Name="GuardarButton" Style="{DynamicResource BotonesSinHover}" ToolTip="Guardar" Margin="25,0,25,0"
+                    Width="50" Height="32" Click="GuardarButton_Click">
+                <Image Source="/UI/Registros/icon_save.ico" Stretch="Uniform" Width="50" Height="30"/>
+            </Button>
+            <Button x:Name="NuevoButton" Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Center"
+                VerticalAlignment="Top" Width="50" Height="32" ToolTip="Nuevo" Margin="25,0,25,0" Click="NuevoButton_Click">
+                <Image Source="/UI/Registros/icon_plus.ico" Stretch="Uniform" Height="30" Width="50"/>
+            </Button>
+            <Button x:Name="EliminarButton" Style="{DynamicResource BotonesSinHover}"
+                Width="50" Height="32" Margin="25,0,25,0" ToolTip="Eliminar" Click="EliminarButton_Click">
+                <Image Source="/UI/Registros/icon_trash.ico" Stretch="Uniform" Height="30" Width="50"/>
+            </Button>
+        </StackPanel>
+        
         <!--Control de ventana-->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
             <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" ToolTip="Atras" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AtrasButton_Click">

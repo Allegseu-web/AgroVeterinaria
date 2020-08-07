@@ -19,6 +19,5 @@ namespace AgroVeterinaria.Entidades
         public double Costo { get; set; }
         public double Precio { get; set; }
         public double Ganancias { get; set; }
-        public int UsuarioId { get; set; }
     }
 }

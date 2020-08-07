@@ -43,7 +43,7 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
                 <Image Source="/UI/Registros/f2ec734711be580dfa90769a1831a790 (8).png" Height="22" Width="25"/>
-                <Label x:Name="FechaLabel" Content="Fecha"   Margin="0,0,22,0" FontSize="13"/>
+                <Label Content="Fecha"   Margin="0,0,22,0" FontSize="13"/>
                 <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}"  Width="205" Margin="0,0,0,0" Height="27"/>
             </StackPanel>
 
@@ -59,25 +59,25 @@
         <Button x:Name="NuevoButton"  Style="{DynamicResource BotonesSinHover}" HorizontalAlignment="Left"
                 VerticalContentAlignment="Bottom" ToolTip="Nuevo" Margin="32,335,0,0"
                 Click="NuevoButton_Click" VerticalAlignment="Top" Height="35">
-            <StackPanel>
-                <Image Source="/UI/Registros/mas.png" Stretch="Uniform" Height="29" Width="45"/>
-            </StackPanel>
+            <StackPanel/>
         </Button>
-        <Button x:Name="GuardarButton" Style="{DynamicResource BotonesSinHover}" HorizontalAlignment="Left"
-                VerticalContentAlignment="Bottom" ToolTip="Guardar" Margin="168,335,0,0"
-                VerticalAlignment="Top" Height="35" Click="GuardarButton_Click">
-            <StackPanel>
-                <Image Source="/UI/Registros/icon_save.png" Stretch="Uniform" Height="32" Width="50"/>
-            </StackPanel>
-        </Button>
-        <Button x:Name="EliminarButton" Style="{DynamicResource BotonesSinHover}" HorizontalAlignment="Left"
-                VerticalContentAlignment="Bottom" ToolTip="Eliminar" Margin="311,335,0,0" VerticalAlignment="Top" Height="35" Click="EliminarButton_Click">
-            <StackPanel>
-                <Image Source="/UI/Registros/icon_trash.png" Stretch="Uniform" Height="33" Width="47" />
-            </StackPanel>
-        </Button>
+        <!--Botones principales-->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="25,0,25,25">
+            <Button x:Name="GuardarButton" Style="{DynamicResource BotonesSinHover}" ToolTip="Guardar" Margin="25,0,25,0"
+                    Width="50" Height="32" Click="GuardarButton_Click">
+                <Image Source="/UI/Registros/icon_save.ico" Stretch="Uniform" Width="50" Height="30"/>
+            </Button>
+            <Button x:Name="nuevoButton" Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Center"
+                VerticalAlignment="Top" Width="50" Height="32" ToolTip="Nuevo" Margin="25,0,25,0" Click="NuevoButton_Click">
+                <Image Source="/UI/Registros/icon_plus.ico" Stretch="Uniform" Height="30" Width="50"/>
+            </Button>
+            <Button x:Name="EliminarButton" Style="{DynamicResource BotonesSinHover}"
+                Width="50" Height="32" Margin="25,0,25,0" ToolTip="Eliminar" Click="EliminarButton_Click">
+                <Image Source="/UI/Registros/icon_trash.ico" Stretch="Uniform" Height="30" Width="50"/>
+            </Button>
+        </StackPanel>
 
-        <Label x:Name="label2" Content="Registro Moneda" HorizontalAlignment="Left"
+        <Label Content="Registro Moneda" HorizontalAlignment="Left"
                Margin="168,46,0,0" VerticalAlignment="Top" Height="39" Width="123"/>
         <!--Control de ventana-->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">

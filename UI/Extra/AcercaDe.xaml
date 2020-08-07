@@ -14,12 +14,10 @@
             <ColumnDefinition Width="302*"/>
         </Grid.ColumnDefinitions>
 
-
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Border CornerRadius="10" Grid.ColumnSpan="3" Margin="-14,0,14,0">
-
+        <Border CornerRadius="10" Grid.ColumnSpan="3" Margin="0,0,0,0">
             <Border.Background>
                 <LinearGradientBrush>
                     <GradientStop Color="#7be9f6" Offset="0.0"/>
@@ -27,12 +25,7 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-
         <Image x:Name="image" HorizontalAlignment="Left" Height="278" Margin="180,10,0,0" VerticalAlignment="Top" Width="430" Source="/UI/Extra/logo de emil.png" Grid.ColumnSpan="3"/>
-
-
-
-
         <Label x:Name="HorarioDeAtencionlabel" FontWeight="ExtraBold" Content="Horario de Atención" HorizontalAlignment="Left" Margin="37,118,0,0" VerticalAlignment="Top" Height="26" Width="117"/>
         <Image x:Name="image7" HorizontalAlignment="Left" Height="58" Margin="22,23,0,0" VerticalAlignment="Top" Width="44" Source="/UI/Extra/sum.png" RenderTransformOrigin="1.227,0.517" Grid.Column="2"/>
         <Image x:Name="image10" HorizontalAlignment="Left" Height="520" Margin="228,131,0,0" VerticalAlignment="Top" Width="692" Source="/UI/Extra/gallosi.png" Grid.ColumnSpan="3"/>
@@ -62,19 +55,33 @@
         <Image x:Name="image9" HorizontalAlignment="Left" Height="143" Margin="-26,508,0,0" VerticalAlignment="Top" Width="236" Source="/UI/Extra/kisspng-dog-cat-nutrient-pet-food-pet-shop-dog-food-5ac2d185b042e8.826448111522717061722.png" Stretch="Fill"/>
         <Label x:Name="label2" FontWeight="Bold" Content=" Información de contacto:" HorizontalAlignment="Left" Margin="59,543,0,0" VerticalAlignment="Top" Height="109" Width="214" Grid.Column="2"/>
         <Label x:Name="label3" Content="  AVENIDA LIBERTAD 143, " HorizontalAlignment="Left" Margin="56,560,0,0" VerticalAlignment="Top" Height="293" Width="819" Grid.Column="2"/>
-        <Label x:Name="label4" Content="   PUEBLO NUEVO," HorizontalAlignment="Left" Margin="181,561,0,0" VerticalAlignment="Top" Height="293" Width="820" Grid.Column="2"/>
-        <Label x:Name="label5" Content="   SAN FRANCISCO DE MACORIS, DUARTE." HorizontalAlignment="Left" Margin="53,576,0,0" VerticalAlignment="Top" Height="294" Width="820" Grid.Column="2"/>
+        <Label x:Name="label4" Content="   PUEBLO NUEVO," HorizontalAlignment="Left" Margin="181,561,0,0" VerticalAlignment="Top" Height="26" Width="111" Grid.Column="2"/>
+        <Label x:Name="label5" Content="   SAN FRANCISCO DE MACORIS, DUARTE." HorizontalAlignment="Left" Margin="53,576,0,0" VerticalAlignment="Top" Height="28" Width="249" Grid.Column="2"/>
         <Label x:Name="label6" Content="  DUARTE 10129
-DO" HorizontalAlignment="Left" Margin="56,592,0,0" VerticalAlignment="Top" Height="294" Width="820" Grid.Column="2"/>
+DO" HorizontalAlignment="Left" Margin="56,592,0,0" VerticalAlignment="Top" Height="23" Width="236" Grid.Column="2"/>
         <Label x:Name="label7" FontWeight="Bold" Content="   Teléfono:
  809-588-6324 " HorizontalAlignment="Left" Margin="51,615,0,0" VerticalAlignment="Top" Height="25" Width="238" Grid.Column="2"/>
 
-
-
-
-
-
-
-
+        <!--Control de ventana-->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Column="3">
+            <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Regresar"
+                    Height="25" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AtrasButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-atrás-100.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="MinimizarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Minimizar"
+                    BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="MinimizarButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-minimizar-la-ventana-100.png" Stretch="Fill"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="CerrarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Cerrar"
+                    BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="CerrarButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-cerrar-ventana-100.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

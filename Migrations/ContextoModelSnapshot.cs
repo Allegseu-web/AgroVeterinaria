@@ -34,14 +34,8 @@ namespace AgroVeterinaria.Migrations
                     b.Property<double>("SubTotal")
                         .HasColumnType("REAL");
 
-                    b.Property<int>("SuplidorId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<double>("Total")
                         .HasColumnType("REAL");
-
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("INTEGER");
 
                     b.HasKey("CompraId");
 
@@ -72,14 +66,8 @@ namespace AgroVeterinaria.Migrations
                     b.Property<string>("Pais")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Provicia")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Sector")
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("INTEGER");
 
                     b.HasKey("DireccionId");
 
@@ -97,9 +85,6 @@ namespace AgroVeterinaria.Migrations
 
                     b.Property<string>("Tipo")
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("INTEGER");
 
                     b.HasKey("MonedaId");
 
@@ -137,9 +122,6 @@ namespace AgroVeterinaria.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("UnidadId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("UsuarioId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("ProductoId");
@@ -199,9 +181,6 @@ namespace AgroVeterinaria.Migrations
                     b.Property<string>("Telefono")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("SuplidorId");
 
                     b.ToTable("Suplidores");
@@ -218,9 +197,6 @@ namespace AgroVeterinaria.Migrations
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("INTEGER");
 
                     b.HasKey("UnidadId");
 
@@ -261,7 +237,7 @@ namespace AgroVeterinaria.Migrations
                             UsuarioId = 1,
                             Clave = "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
                             Email = "Admin@admin.com",
-                            FechaCreacion = new DateTime(2020, 8, 3, 7, 56, 9, 263, DateTimeKind.Local).AddTicks(8571),
+                            FechaCreacion = new DateTime(2020, 8, 7, 3, 45, 41, 96, DateTimeKind.Local).AddTicks(7533),
                             NivelUsuario = "Administrador",
                             NombreUsuario = "Admin",
                             Nombres = "Manager"

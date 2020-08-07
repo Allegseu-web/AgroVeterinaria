@@ -18,7 +18,8 @@
 
         <Image x:Name="image" HorizontalAlignment="Left" Height="114" Margin="103,23,0,0" VerticalAlignment="Top" Width="172"
                Source="/UI/Registros/flor.png"/>
-        <Image x:Name="CloseHidden" HorizontalAlignment="Left" Height="74" Margin="151,44,0,0" VerticalAlignment="Top" Width="117"
+        <Image x:Name="CloseHidden" HorizontalAlignment="Left" Height="74" Margin="151,44,0,0" VerticalAlignment="Top"
+               Width="117"
                Source="/UI/Registros/arreglando.png"
                Opacity="0.7"
                RenderTransformOrigin="0.5,0.5">
@@ -32,51 +33,54 @@
             </Image.RenderTransform>
         </Image>
 
-        <StackPanel Orientation="Vertical" Margin="0,155,0,-5">
+        <StackPanel Orientation="Vertical" Margin="0,155,0,0">
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0" Height="25">
                 <Image x:Name="image2" Source="/UI/Registros/icon_user-plus.ico" Margin="25,0,5,0" Width="23" Height="25"/>
-                <Label x:Name="UsuarioIdLabel" Content="UsuarioID" Margin="0,0,5,0" Width="75" FontSize="13"/>
-                <TextBox x:Name="UsuarioIdTextBox" Text="{Binding UsuarioId}" Width="125" Margin="0,0,5,0" Height="23" VerticalContentAlignment="Center" />
-                <Button x:Name="BuscarButton" Style="{DynamicResource BotonesSinHover}" Width="35" Click="BuscarButton_Click" Height="25">
+                <Label x:Name="UsuarioIdLabel" Content="UsuarioID" Margin="0,0,5,0" Width="75" FontSize="13" Height="25"/>
+                <TextBox x:Name="UsuarioIdTextBox" Text="{Binding UsuarioId}" Width="140" Margin="0,0,5,0" Height="23"
+                         VerticalContentAlignment="Center" />
+                <Button x:Name="BuscarButton" Style="{DynamicResource BotonesSinHover}" Width="35" Click="BuscarButton_Click"
+                        Height="25">
                     <StackPanel Orientation="Vertical">
-                        <Image Source="/UI/Registros/icon_search.png" Stretch="Uniform" ToolTip="Buscar" Height="21" Width="46" />
+                        <Image Source="/UI/Registros/icon_search.png" Stretch="Uniform" ToolTip="Buscar" Height="20" Width="35"/>
                     </StackPanel>
                 </Button>
             </StackPanel>
+            
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0" Height="25" >
-                <Image Source="/UI/Registros/f2ec734711be580dfa90769a1831a790 (8).png" Margin="25,0,5,0" Height="22" Width="29"/>
-                <Label x:Name="FechaLabel" Content="Fecha"   Margin="0,0,30,0" FontSize="13"/>
+                <Image Source="/UI/Registros/f2ec734711be580dfa90769a1831a790 (8).png" Margin="25,0,5,0" Height="23" Width="25"/>
+                <Label x:Name="FechaLabel" Content="Fecha" Height="25" Margin="0,0,30,0" FontSize="13"/>
                 <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}"  Width="181" Margin="0,0,0,0" Height="23"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0" Height="25">
                 <Image x:Name="image5" Source="/UI/Registros/icon_child.ico" Margin="25,0,5,0" Width="23" Height="25"/>
-                <Label x:Name="NombreLabel" Content="Nombres" Margin="0,0,17,0" FontSize="13"/>
-                <TextBox x:Name="NombreTextBox" Text="{Binding Nombres}" Width="180" Margin="0,0,0,0" Height="23"/>
+                <Label x:Name="NombreLabel" Content="Nombres" Margin="0,0,10,0" FontSize="13" Height="25"/>
+                <TextBox x:Name="NombreTextBox" Text="{Binding Nombres}" Width="183" Margin="0,0,0,0" Height="23"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0" Height="25">
                 <Image x:Name="imagen" Source="/UI/Registros/icon_child.ico" Margin="25,0,5,0" Width="23" Height="25"/>
                 <Label x:Name="NombreUsuarioLabel" Content="Nombre de Usuario" Margin="0,0,5,0" FontSize="13"/>
-                <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" Width="132" Margin="0,0,0,0" Height="23"/>
+                <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" Width="120" Margin="0,0,0,0" Height="23"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0" Height="25">
                 <Image x:Name="image6" Source="/UI/Registros/icon_envelope.ico" Margin="25,0,5,0" Width="23" Height="25"/>
                 <Label x:Name="EmailLabel" Content="Email" Margin="0,0,15,0" FontSize="13"/>
-                <TextBox x:Name="EmailTextBox" Text="{Binding Email}" Width="204" Margin="0,0,0,0" Height="23"/>
+                <TextBox x:Name="EmailTextBox" Text="{Binding Email}" Width="200" Margin="0,0,0,0" Height="23"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0" Height="25">
                 <Image x:Name="image3" Source="/UI/Registros/icon_key.ico" Margin="25,0,5,0" Width="23" Height="25"/>
-                <Label x:Name="ClaveLabel" Content="Clave" Margin="0,0,65,0" FontSize="13"/>
-                <PasswordBox x:Name="ClaveTextBox" Width="153" Margin="0,0,0,0" Height="23"/>
+                <Label x:Name="ClaveLabel" Content="Clave" Margin="0,0,75,0" FontSize="13"/>
+                <PasswordBox x:Name="ClaveTextBox" Width="150" Margin="0,0,0,0" Height="23"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0" Height="25">
                 <Image x:Name="image4" Source="/UI/Registros/icon_key.ico" Margin="25,0,5,0" Width="23" Height="25"/>
                 <Label x:Name="ConfirmarLabel" Content="Confirmar Clave" Margin="0,0,5,0" FontSize="13"/>
-                <PasswordBox x:Name="ConfirmarClaveTextBox" Width="153" Margin="0,0,0,0" Height="23"/>
+                <PasswordBox x:Name="ConfirmarClaveTextBox" Width="150" Margin="0,0,0,0" Height="23"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0" Height="25">
@@ -85,41 +89,38 @@
                 <ComboBox x:Name="NivelUsuarioComboBox" ItemsSource="{Binding NivelUsuario}" Width="151" Margin="0,0,0,0"/>
             </StackPanel>
         </StackPanel>
-
-        <Button x:Name="GuardarButton"  Style="{DynamicResource BotonesSinHover}" ToolTip="Guardar" HorizontalAlignment="Left"   Margin="30,512,0,0" 
-                VerticalAlignment="Top"  Width="48" Height="34"  Click="GuardarButton_Click">
-            <StackPanel Orientation="Vertical" Height="56">
-                <Image Source="/UI/Registros/icon_save.ico"  Stretch="Uniform" Width="36" Height="29"/>
-
-            </StackPanel>
-
-        </Button>
-        <Button x:Name="NuevoButton" Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Left" Margin="152,512,0,0" VerticalContentAlignment="Bottom"
-                VerticalAlignment="Top" Width="64" Height="32" ToolTip="Nuevo"  Click="NuevoButton_Click">
-            <StackPanel Orientation="Vertical">
-                <Image Source="/UI/Registros/icon_plus.ico" Stretch="Uniform" Height="30" Width="44" />
-            </StackPanel>
-        </Button>
-
-        <Button x:Name="EliminarButton" Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Left" Margin="276,512,0,0" VerticalContentAlignment="Bottom"
-                VerticalAlignment="Top" Width="36" Height="32" ToolTip="Eliminar" FontSize="8" RenderTransformOrigin="0.744,0.754" Click="EliminarButton_Click">
-            <StackPanel>
-                <Image  Source="/UI/Registros/icon_trash.ico" Stretch="Uniform" Height="30" Width="32" />
-            </StackPanel>
-        </Button>
+        <!--Botones principales-->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="25,0,25,25">
+            <Button x:Name="GuardarButton" Style="{DynamicResource BotonesSinHover}" ToolTip="Guardar" Margin="25,0,25,0"
+                    Width="50" Height="32" Click="GuardarButton_Click">
+                <Image Source="/UI/Registros/icon_save.ico" Stretch="Uniform" Width="50" Height="30"/>
+            </Button>
+            <Button x:Name="NuevoButton" Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Center"
+                VerticalAlignment="Top" Width="50" Height="32" ToolTip="Nuevo" Margin="25,0,25,0" Click="NuevoButton_Click">
+                <Image Source="/UI/Registros/icon_plus.ico" Stretch="Uniform" Height="30" Width="50"/>
+            </Button>
+            <Button x:Name="EliminarButton" Style="{DynamicResource BotonesSinHover}"
+                Width="50" Height="32" Margin="25,0,25,0" ToolTip="Eliminar" Click="EliminarButton_Click">
+                <Image Source="/UI/Registros/icon_trash.ico" Stretch="Uniform" Height="30" Width="50"/>
+            </Button>
+        </StackPanel>
+        
         <!--Control de ventana-->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
-            <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Regresar" Height="25" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AtrasButton_Click">
+            <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Regresar"
+                    Height="25" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AtrasButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/UI/Registros/icons8-atrás-100.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="MinimizarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Minimizar" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="MinimizarButton_Click">
+            <Button x:Name="MinimizarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Minimizar"
+                    BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="MinimizarButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/UI/Registros/icons8-minimizar-la-ventana-100.png" Stretch="Fill"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="CerrarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Cerrar" BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="CerrarButton_Click">
+            <Button x:Name="CerrarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Cerrar"
+                    BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="CerrarButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/UI/Registros/icons8-cerrar-ventana-100.png"/>
                 </Button.Background>

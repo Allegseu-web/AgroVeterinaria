@@ -8,7 +8,6 @@
         Title="SobreNosotros" Height="470" Width="800" AllowsTransparency="True" Background="Transparent"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
-
         <Border CornerRadius="10" Grid.RowSpan="2"  >
             <Border.Background>
                 <LinearGradientBrush>
@@ -18,34 +17,54 @@
             </Border.Background>
         </Border>
         <Image x:Name="image" HorizontalAlignment="Left" Height="397" VerticalAlignment="Top" Stretch="Fill" Width="794" Source="/UI/Extra/imagen web.png" Margin="-4,63,0,0"/>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="195" Margin="257,279,0,0" VerticalAlignment="Top" Width="258" Source="/UI/Extra/mensaje (2).png" RenderTransformOrigin="0.5,0.5">
-
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="201" Margin="260,255,0,0" VerticalAlignment="Top" Width="272" Source="/UI/Extra/mensaje (2).png"
+               RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-9.374"/>
+                    <RotateTransform Angle="-21.733"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image2" HorizontalAlignment="Left" Height="100" Margin="714,235,0,0" VerticalAlignment="Top" Width="100"/>
-        <Image x:Name="image3" HorizontalAlignment="Left" Height="274" Margin="290,124,0,0" VerticalAlignment="Top" Width="396" Source="/UI/Extra/pensamiento.png"/>
+        <Image x:Name="image2" HorizontalAlignment="Left" Height="100" Margin="714,235,0,0"
+               VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="image3" HorizontalAlignment="Left" Height="274" Margin="290,124,0,0"
+               VerticalAlignment="Top" Width="396" Source="/UI/Extra/pensamiento.png"/>
 
-        <Label x:Name="label2" Content=" Alexis Manuel " HorizontalAlignment="Left" Margin="440,213,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label3" Content=" Ana martínez " HorizontalAlignment="Left" Margin="441,237,0,0" VerticalAlignment="Top" Width="91"/>
-
-        <Image x:Name="image4" HorizontalAlignment="Left" Height="23" Margin="392,189,0,0" VerticalAlignment="Top" Width="211" Source="/UI/Extra/generatedtext (1).png"/>
-
-
-
-        <TextBlock Height="26" Margin="331,213,400,0" VerticalAlignment="Top" Foreground="Transparent" Background="Transparent" FontSize="18">
-   <Hyperlink NavigateUri="https://putridparrot.com/blo" RequestNavigate="Hyperlink_RequestNavigate">
- Info Git
-   </Hyperlink>
+        <Label x:Name="label2" Content=" Alexis Manuel " HorizontalAlignment="Left" Margin="440,209,0,0"
+               VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content=" Ana martínez " HorizontalAlignment="Left" Margin="439,237,0,0"
+               VerticalAlignment="Top" Width="91"/>
+        <Image x:Name="image4" HorizontalAlignment="Left" Height="23" Margin="392,189,0,0" VerticalAlignment="Top"
+               Width="211" Source="/UI/Extra/generatedtext (1).png"/>
+        <TextBlock Height="26" Margin="331,213,400,0" VerticalAlignment="Top" Foreground="Transparent"
+                   Background="Transparent" FontSize="18">
+            <Hyperlink NavigateUri="https://putridparrot.com/blo" RequestNavigate="Hyperlink_RequestNavigate">
+        </Hyperlink>
         </TextBlock>
 
-
+        <!--Control de ventana-->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Regresar"
+                    Height="25" Width="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AtrasButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-atrás-100.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="MinimizarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Minimizar"
+                    BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="MinimizarButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-minimizar-la-ventana-100.png" Stretch="Fill"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="CerrarButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Cerrar"
+                    BorderBrush="{x:Null}" Height="25" Width="25" Foreground="{x:Null}" Click="CerrarButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/Registros/icons8-cerrar-ventana-100.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
     </Grid>
-
 </Window>

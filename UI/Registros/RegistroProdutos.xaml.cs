@@ -166,14 +166,13 @@ namespace AgroVeterinaria.UI.Registros
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
             var product = ProductosBLL.Buscar(Convert.ToInt32(ProductoIdTextBox.Text));
-            if (Producto != null)
+            if (product != null)
             {
-                this.Producto = product;
+                DataContext = product;
                 SuplidorComboBox.SelectedIndex = product.SuplidorId;
                 UnidadComboBox.SelectedIndex = product.UnidadId;
             }
             else { Limpiar(); }
-            this.DataContext = this.Producto;
         }
         private void AtrasButton_Click(object sender, RoutedEventArgs e)
         {

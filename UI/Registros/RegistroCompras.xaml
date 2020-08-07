@@ -44,13 +44,11 @@
                 <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25" Source="/UI/Registros/icon_shopping-cart.png" Margin="0,0,5,0"/>
                 <Label Content="ComprasId" HorizontalAlignment="Left" VerticalAlignment="Top" Width="71" Height="25" Margin="0,0,5,0"/>
                 <TextBox x:Name="CompraIdTextBox" HorizontalAlignment="Left" Text="{Binding CompraId}" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" Height="25" Margin="0,0,5,0"/>
-                <Button x:Name="BuscarButton" Style="{DynamicResource BotonesSinHover}" ToolTip="Buscar" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="24" Width="29" Click="BuscarButton_Click">
-
-                    <StackPanel>
-                        <Image Source="/UI/Registros/icon_search.png"   Stretch="Uniform"/>
-                    </StackPanel>
+                <Button x:Name="BuscarButton" Style="{DynamicResource BotonesSinHover}" ToolTip="Buscar"
+                        VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                        VerticalAlignment="Top" Height="25" Width="50" Click="BuscarButton_Click">
+                    <Image Source="/UI/Registros/icon_search.png"/>
                 </Button>
-                
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,10">
@@ -70,11 +68,8 @@
                 <Label Content="Cantidad" HorizontalAlignment="Left" Margin="0,0,5,0" VerticalAlignment="Top" Width="71" Height="25"/>
                 <TextBox x:Name="CantidadTextBox" Margin="0,0,43,0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding ProductosDetalles.Cantidad}" VerticalAlignment="Top" Width="125" Height="25"/>
                 <Button x:Name="AñadirFilaButton" Style="{DynamicResource BotonesSinHover}" ToolTip="Añadir Fila" Width="27"
-                
                 Click="AñadirFilaButton_Click" VerticalAlignment="Bottom" >
-                    <StackPanel>
-                        <Image Source="/UI/Registros/mas.png" Stretch="Uniform"/>
-                    </StackPanel>
+                    <Image Source="/UI/Registros/mas.png" Stretch="Uniform"/>
                 </Button>
             </StackPanel>
 
@@ -96,12 +91,9 @@
                         <Image HorizontalAlignment="Left" Height="25" Margin="10,0,15,0" VerticalAlignment="Top" Width="25" Source="/UI/Registros/6a748df975a97993f5dedf66dbb14c56.png"/>
                         <Label Content="SubTotal" HorizontalAlignment="Left" Margin="0,0,5,0" VerticalAlignment="Top" Width="71" Height="25"/>
                         <TextBox x:Name="SubTotalTextBox" HorizontalAlignment="Left" Margin="0,0,253,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="125" Height="25"/>
-                        <Button x:Name="EliminarFilaButton" Style="{DynamicResource BotonesSinHover}" ToolTip="Eliminar fila" Width="27" Height="30" Click="EliminarFilaButton_Click">
-                            
-                            <StackPanel>
-                                <Image Source="/UI/Registros/icon_trash.png" 
-                            Stretch="Uniform"  />
-                            </StackPanel>
+                        <Button x:Name="EliminarFilaButton" Style="{DynamicResource BotonesSinHover}"
+                                ToolTip="Eliminar fila" Width="27" Height="30" Click="EliminarFilaButton_Click">
+                            <Image Source="/UI/Registros/icon_trash.png"/>
                         </Button>
                     </StackPanel>
 
@@ -118,28 +110,19 @@
                 </StackPanel>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left" Margin="25,0,0,0">
-                <Button x:Name="NuevoButton" ToolTip="Nuevo" Margin="0,0,25,0"
-                VerticalContentAlignment="Bottom" Style="{DynamicResource BotonesSinHover}"
-                Click="NuevoButton_Click" Height="26" Width="24">
-                    <StackPanel>
-                        <Image Source="/UI/Registros/mas.png"  Stretch="Uniform"/>
-                    </StackPanel>
+            <!--Botones principales-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25,0,25,25">
+                <Button x:Name="guardarButton" Style="{DynamicResource BotonesSinHover}" ToolTip="Guardar" Margin="10,0,10,0"
+                    Width="50" Height="32" Click="GuardarButton_Click">
+                    <Image Source="/UI/Registros/icon_save.ico" Stretch="Uniform" Width="50" Height="30"/>
                 </Button>
-                <Button x:Name="GuardarButton" ToolTip="Guardar" Margin="0,0,25,0"
-                VerticalContentAlignment="Bottom" Width="33" Style="{DynamicResource BotonesSinHover}"
-                Height="40" Click="GuardarButton_Click">
-                    <StackPanel>
-                        <Image Source="/UI/Registros/icon_save.png" 
-                            Stretch="Uniform"/>
-                    </StackPanel>
+                <Button x:Name="NuevoButton" Style="{DynamicResource BotonesSinHover}"  HorizontalAlignment="Center"
+                VerticalAlignment="Top" Width="50" Height="32" ToolTip="Nuevo" Margin="10,0,10,0" Click="NuevoButton_Click">
+                    <Image Source="/UI/Registros/icon_plus.ico" Stretch="Uniform" Height="30" Width="50"/>
                 </Button>
-                <Button x:Name="EliminarButton" ToolTip="Eliminar" Width="33" Height="40" Style="{DynamicResource BotonesSinHover}"
-                VerticalContentAlignment="Center"  Click="EliminarButton_Click">
-                    <StackPanel>
-                        <Image Source="/UI/Registros/icon_trash.png" 
-                            Stretch="Uniform"  />
-                    </StackPanel>
+                <Button x:Name="EliminarButton" Style="{DynamicResource BotonesSinHover}"
+                Width="50" Height="32" Margin="10,0,10,0" ToolTip="Eliminar" Click="EliminarButton_Click">
+                    <Image Source="/UI/Registros/icon_trash.ico" Stretch="Uniform" Height="30" Width="50"/>
                 </Button>
             </StackPanel>
         </StackPanel>

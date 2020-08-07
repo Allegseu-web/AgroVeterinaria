@@ -18,13 +18,13 @@
             </Border.Background>
         </Border>
         <Image x:Name="image" HorizontalAlignment="Left" Height="397" VerticalAlignment="Top" Stretch="Fill" Width="794" Source="/UI/Extra/imagen web.png" Margin="-4,63,0,0"/>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="201" Margin="260,255,0,0" VerticalAlignment="Top" Width="272" Source="/UI/Extra/mensaje (2).png" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="195" Margin="257,279,0,0" VerticalAlignment="Top" Width="258" Source="/UI/Extra/mensaje (2).png" RenderTransformOrigin="0.5,0.5">
 
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-21.733"/>
+                    <RotateTransform Angle="-9.374"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Image.RenderTransform>

@@ -253,5 +253,10 @@ namespace AgroVeterinaria.UI.Registros
         {
             Close();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

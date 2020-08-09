@@ -25,13 +25,13 @@
         <Image x:Name="image3" HorizontalAlignment="Left" Height="274" Margin="290,124,0,0"
                VerticalAlignment="Top" Width="396" Source="/UI/Extra/pensamiento.png"/>
 
-        <Label x:Name="label2" Content=" Alexis Manuel " HorizontalAlignment="Left" Margin="440,209,0,0"
+        <Label x:Name="label2" Content=" Alexis Manuel " HorizontalAlignment="Left" Margin="446,215,0,0"
                VerticalAlignment="Top"/>
-        <Label x:Name="label3" Content=" Ana martínez " HorizontalAlignment="Left" Margin="439,237,0,0"
+        <Label x:Name="label3" Content=" Ana Martínez " HorizontalAlignment="Left" Margin="449,249,0,0"
                VerticalAlignment="Top" Width="91"/>
-        <Image x:Name="image4" HorizontalAlignment="Left" Height="23" Margin="392,189,0,0" VerticalAlignment="Top"
-               Width="211" Source="/UI/Extra/generatedtext (1).png"/>
-        <TextBlock Height="26" Margin="331,213,400,0" VerticalAlignment="Top" 
+        <Image x:Name="image4" HorizontalAlignment="Left" Height="24" Margin="372,186,0,0" VerticalAlignment="Top"
+               Width="237" Source="/UI/Extra/generatedtext (1).png"/>
+        <TextBlock Height="26" Margin="323,246,408,0" VerticalAlignment="Top" 
                    Background="Transparent" FontSize="18" Foreground="Transparent" >
             <Hyperlink NavigateUri="https://putridparrot.com/blo" RequestNavigate="Hyperlink_RequestNavigate">
                 Info Git

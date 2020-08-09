@@ -2,6 +2,7 @@
 using AgroVeterinaria.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Net.Mail;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -39,10 +40,33 @@ namespace AgroVeterinaria.UI.Registros
             RNCTextBox.Text = string.Empty;
             DataContext = Suplidor;
         }
+        public bool IsValid(string emailaddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailaddress);
+
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
 
         private bool Validar()
         {
             bool esValido = true;
+
+            if (!IsValid(EmailTextBox.Text))
+            {
+                esValido = false;
+                GuardarButton.IsEnabled = false;
+                MessageBox.Show("Email invalido", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                EmailTextBox.Focus();
+                GuardarButton.IsEnabled = true;
+            }
 
             if (NombresTextBox.Text.Length == 0)
             {

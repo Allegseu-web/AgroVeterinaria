@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgroVeterinaria.UI.Registros"
         mc:Ignorable="d"
-        Title="RegistroSuplidores" Height="550" Width="400" AllowsTransparency="True" Background="Transparent"
+        Title="RegistroSuplidores" Height="580" Width="400" AllowsTransparency="True" Background="Transparent"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
         <Border CornerRadius="10">
@@ -67,6 +67,15 @@
                          Height="25" VerticalAlignment="Top" Width="230"/>
             </StackPanel>
 
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,15" HorizontalAlignment="Left" Height="28" Width="335">
+                <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Margin="0,0,5,0"
+                       Width="25" Source="/UI/Registros/icon_envelope.ico"/>
+                <Label Content="Email" HorizontalAlignment="Left"
+                       Width="71" VerticalAlignment="Top" Margin="0,0,5,0"/>
+                <TextBox x:Name="EmailTextBox" Text="{Binding Email}" TextWrapping="Wrap"
+                         Height="25" VerticalAlignment="Top" Width="225"/>
+            </StackPanel>
+
             <StackPanel Orientation="Horizontal" Margin="0,10,0,15" HorizontalAlignment="Center">
                 <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Margin="0,0,5,0"
                        Width="25" Source="/UI/Registros/rnc.png"/>
@@ -75,6 +84,7 @@
                 <TextBox x:Name="RNCTextBox" Text="{Binding RNC}" HorizontalAlignment="Left" TextWrapping="Wrap"
                          Height="25" VerticalAlignment="Top" Width="150"/>
             </StackPanel>
+
         </StackPanel>
 
 

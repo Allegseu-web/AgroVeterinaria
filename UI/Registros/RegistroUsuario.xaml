@@ -46,7 +46,7 @@
                     </StackPanel>
                 </Button>
             </StackPanel>
-            
+
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0" Height="25" >
                 <Image Source="/UI/Registros/f2ec734711be580dfa90769a1831a790 (8).png" Margin="25,0,5,0" Height="23" Width="25"/>
                 <Label x:Name="FechaLabel" Content="Fecha" Height="25" Margin="0,0,30,0" FontSize="13"/>
@@ -104,7 +104,7 @@
                 <Image Source="/UI/Registros/icon_trash.ico" Stretch="Uniform" Height="30" Width="50"/>
             </Button>
         </StackPanel>
-        
+
         <!--Control de ventana-->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
             <Button x:Name="AtrasButton" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Regresar"

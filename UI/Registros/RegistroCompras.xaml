@@ -124,6 +124,9 @@
                 Width="50" Height="32" Margin="10,0,10,0" ToolTip="Eliminar" Click="EliminarButton_Click">
                     <Image Source="/UI/Registros/icon_trash.ico" Stretch="Uniform" Height="30" Width="50"/>
                 </Button>
+                <Button x:Name="EnviarCorreoButton" Style="{DynamicResource BotonesSinHover}"  Width="45" Height="32" ToolTip="Enviar correo" Click="EnviarCorreoButton_Click" >
+                    <Image Source="/UI/Registros/icon_envelope.ico" />
+                </Button>
             </StackPanel>
         </StackPanel>
     </Grid>

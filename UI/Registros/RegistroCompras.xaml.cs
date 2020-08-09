@@ -4,6 +4,8 @@ using AgroVeterinaria.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -195,5 +197,60 @@ namespace AgroVeterinaria.UI.Registros
         {
             this.Close();
         }
+
+        private void EnviarCorreoButton_Click(object sender, RoutedEventArgs e)
+        {
+
+           
+        }
+
+        private void EnviarCorreo()
+        {
+            Compras cmp = ComprasBLL.Buscar(Convert.ToInt32(CompraIdTextBox.Text));
+           if(cmp != null)
+            {
+                try
+                {
+
+                    Contexto c = new Contexto();
+                    Suplidores sup = SuplidoresBLL.Buscar(SuplidorComboBox.SelectedIndex);
+                    string cad = ($"Estimado {sup.Nombre}, le informamos que hubo un error en la compra de codigo{Compra.CompraId}, favor de mantenerse en cpntacto ");
+                    MailMessage msg = new MailMessage();
+
+                    msg.From = new MailAddress("franciscothextreme@gmail.com");
+                    msg.To.Add(sup.Email);
+                    msg.Subject = "test";
+                    msg.Body = cad;
+                    //msg.Priority = MailPriority.High;
+
+
+                    SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+
+                    client.UseDefaultCredentials = false;
+
+                    client.EnableSsl = true;
+
+                    client.Credentials = new NetworkCredential("franciscothextreme@gmail.com", "Softendo03");
+                    //client.Host = "smtp.gmail.com";
+                    //client.Port = 587;
+                    client.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+                    client.Send(msg);
+                }
+                catch (Exception e)
+                {
+
+                    MessageBox.Show(e.Message, "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se puede enviar un correo a un suplidor de una compra que aun no existe", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+
     }
 }

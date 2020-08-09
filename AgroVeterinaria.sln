@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgroVeterinaria", "AgroVete
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroVeterinariaTests", "..\AgroVeterinariaTests\AgroVeterinariaTests.csproj", "{029BA3D3-9C86-4BF9-9CB8-C2F5F5417B03}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Intalacion", "..\Intalacion\Intalacion.vdproj", "{8C704C26-5433-48D8-9C63-D2F98BB2F696}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{7498373F-BC54-471A-9955-7DA14F2FB14B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,8 +23,8 @@ Global
 		{029BA3D3-9C86-4BF9-9CB8-C2F5F5417B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{029BA3D3-9C86-4BF9-9CB8-C2F5F5417B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{029BA3D3-9C86-4BF9-9CB8-C2F5F5417B03}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C704C26-5433-48D8-9C63-D2F98BB2F696}.Debug|Any CPU.ActiveCfg = Debug
-		{8C704C26-5433-48D8-9C63-D2F98BB2F696}.Release|Any CPU.ActiveCfg = Release
+		{7498373F-BC54-471A-9955-7DA14F2FB14B}.Debug|Any CPU.ActiveCfg = Debug
+		{7498373F-BC54-471A-9955-7DA14F2FB14B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

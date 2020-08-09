@@ -5,6 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <StartWorkingDirectory>$(MSBuildProjectDirectory)</StartWorkingDirectory>
     <UseWPF>true</UseWPF>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>

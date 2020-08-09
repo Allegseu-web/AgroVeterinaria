@@ -355,5 +355,11 @@ namespace AgroVeterinaria
             AcercaDe acd = new AcercaDe(user);
             acd.ShowDialog();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            ContactarSuplidor csp = new ContactarSuplidor();
+            csp.ShowDialog();
+        }
     }
 }
